@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Xiao Jiang (江筱)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-attachment: fixed;
+            color: #2c3e50;
+        }
+        main {
+            background-color: transparent;
+            padding: 30px 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        nav {
+            background-color: transparent;
+            padding: 20px 10px;
+            margin: 0 auto;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        article {
+            margin-bottom: 2rem;
+        }
+        .project-card {
+            border: none;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        .project-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.5s ease;
+        }
+        .project-card:hover .project-img {
+            transform: scale(1.03);
+        }
+        .nav-active {
+            font-weight: 500;
+            position: relative;
+        }
+        .nav-active:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: currentColor;
+            bottom: -5px;
+            left: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+        /* -- FONT SIZE ADJUSTMENT -- */
+        h1 {
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem; /* Was 2.5rem */
+        }
+        h2 {
+            color: #3498db;
+            font-size: 1.6rem; /* Was 1.8rem */
+            margin: 2rem 0 1.5rem;
+        }
+        h3 {
+            font-size: 1.2rem; /* Was 1.4rem */
+            margin-bottom: 1rem;
+        }
+        p {
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container">
+        <ul>
+            <li><strong>Xiao Jiang (江筱)</strong></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html" class="nav-active">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="XiaoJiang_CV.pdf" role="button" class="outline">Download CV</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <h1>Research</h1>
+        
+        <section>
+            <h2>Research Overview</h2>
+            <p>My research lies at the intersection of condensed matter theory and computational materials science, with a core focus on the fundamental physics of <strong>electron-phonon interactions</strong>. I am passionate about developing and applying unified multi-scale computational frameworks to model how charge carriers couple with lattice vibrations. My work aims to reveal the microscopic mechanisms governing carrier transport, such as polaron formation and dynamics, thereby advancing our fundamental understanding of quantum phenomena in materials.</p>
+        </section>
+        
+        <section>
+            <h2>Ph.D. Projects</h2>
+            <div>
+                <article class="project-card">
+                    <h3>Unveiling Asymmetric Polaron Formation in CeO₂</h3>
+                    <img src="images/project-2.png" alt="Project 1 Illustration" class="project-img">
+                    <p>This research delved into the fundamental physics of polarons. By studying weakly-localized CeO₂, I uncovered the unique coexistence of two different polaron types in the same material: electrons form localized Holstein polarons, while holes form delocalized Fröhlich polarons. This work clarified the microscopic carrier transport mechanisms and the specific roles of different phonon modes in limiting carrier mobility.</p>
+                    <a href="publications.html" role="button" class="outline">View Related Publication</a>
+                </article>
+                <article class="project-card">
+                    <h3>Crystal Symmetry's Role in Polaron Transport</h3>
+                    <img src="images/project-3.png" alt="Project 2 Illustration" class="project-img">
+                    <p>This project established a universal framework for how crystal structure governs polaron behavior. By comparing three phases of BiVO₄ and resolving the polaron controversy in TiO₂, I revealed that crystal symmetry dictates polaron type and transport anisotropy. A key finding was the "crossover" behavior in TiO₂, where anatase and rutile exhibit completely opposite electron and hole polaron types.</p>
+                    <a href="publications.html" role="button" class="outline">View Related Publication</a>
+                </article>
+                <article class="project-card">
+                    <h3>Macro-Meso Modeling for Photoelectrode Design</h3>
+                    <img src="images/project-1.png" alt="Project 3 Illustration" class="project-img">
+                    <p>This project established a predictive model to guide photoelectrode design, bridging quantum mechanical calculations with device-level performance. By developing a continuity equation model fed by first-principles parameters, I successfully predicted the optimal film thickness for p-type CuFeO₂ and guided the structural optimization of n-type Fe₂O₃ from thin films to more efficient nanowire arrays.</p>
+                    <a href="publications.html" role="button" class="outline">View Related Publication</a>
+                </article>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Future Research Interests</h2>
+            <p>Building on my expertise in electron-phonon coupling (EPC), my future research will venture into more complex and emergent quantum phenomena. I aim to focus on two primary directions:</p>
+            <ol>
+                <li><strong>Electron-Phonon Coupling in Strongly Correlated Systems:</strong> I plan to extend and develop first-principles methods to accurately model EPC in strongly correlated materials. The intricate interplay between strong electron-electron repulsion and lattice dynamics in these systems is key to understanding phenomena such as metal-insulator transitions and unconventional superconductivity. My goal is to create a robust computational framework to untangle these competing interactions.</li>
+                <li><strong>Computational Design of Superconducting Materials:</strong> I am highly enthusiastic about applying these advanced EPC calculations to the search for new superconductors. By precisely simulating the phonon-mediated pairing mechanism, I will investigate novel material families with the potential for higher transition temperatures. This includes exploring conventional superconductors under high pressure and investigating the subtle role of lattice vibrations in unconventional superconducting systems.</li>
+                <li><strong>Non-Equilibrium Carrier Dynamics:</strong> I aim to extend my research to carrier transport in non-equilibrium systems, particularly under photo-excitation. While many computational models assume thermal equilibrium, crucial processes in photocatalysis and optoelectronics are governed by the ultrafast dynamics of 'hot' carriers. I plan to develop theoretical frameworks to simulate how these excited carriers relax and transfer energy to the lattice via electron-phonon scattering, providing fundamental insights into energy dissipation and carrier lifetime in materials under illumination.</li>
+            
+            </ol>
+        </section>
+    </main>
+    
+    <footer class="container">
+        <small>© 2025 Xiao Jiang (江筱). All rights reserved.</small>
+    </footer>
+</body>
+</html>

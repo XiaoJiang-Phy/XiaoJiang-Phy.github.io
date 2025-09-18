@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Xiao Jiang (江筱)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-attachment: fixed;
+            color: #2c3e50;
+        }
+        main {
+            background-color: transparent;
+            padding: 30px 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        nav {
+            background-color: transparent;
+            padding: 20px 10px;
+            margin: 0 auto;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        article {
+            margin-bottom: 2rem;
+        }
+        .publication-list {
+            list-style: none;
+            padding-left: 0;
+            counter-reset: pubCounter;
+        }
+        .publication-item {
+            margin-bottom: 25px;
+            padding: 20px 25px;
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 60px;
+        }
+        .publication-item::before {
+            content: counter(pubCounter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            counter-increment: pubCounter;
+        }
+        .publication-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+        .pub-links {
+            margin-top: 15px;
+        }
+        .pub-links a {
+            display: inline-block;
+            margin-right: 15px;
+            padding: 6px 12px;
+            background-color: rgba(52, 152, 219, 0.1);
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .pub-links a:hover {
+            background-color: rgba(52, 152, 219, 0.2);
+            transform: translateY(-2px);
+        }
+        .nav-active {
+            font-weight: 500;
+            position: relative;
+        }
+        .nav-active:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: currentColor;
+            bottom: -5px;
+            left: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+        h1 {
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+        h2 {
+            color: #3498db;
+            font-size: 1.8rem;
+            margin: 2rem 0 1.5rem;
+        }
+        p {
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container">
+        <ul>
+            <li><strong>Xiao Jiang (江筱)</strong></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html" class="nav-active">Publications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="XiaoJiang_CV.pdf" role="button" class="outline">Download CV</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <h1>Publications</h1>
+        
+        <p><em>My name is indicated in <strong>bold</strong> in the citations below.</em></p>
+        
+        <section>
+            <h2>First-Author Publications</h2>
+            <ul class="publication-list">
+                
+                <li class="publication-item">
+                    <strong>Xiao Jiang</strong>, Xu Cheng, Zhanqi Liu, Liyun Ding, Weihua Han*. "Understanding Polaron Dynamics in CeO2 for Advanced Catalytic Material Design". <em> Physical Chemistry Chemical Physics</em>.
+                    <div class="pub-links">
+                        <a href="#" target="_blank">[arXiv]</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <strong>Xiao Jiang</strong>, Xu Cheng, Zhanqi Liu, Liyun Ding, Weihua Han*. "First-Principles Study of Polarons in Multiple Crystal Phases of Bismuth Vanadate". <em>The Journal of Physical Chemistry C</em>.
+                    <div class="pub-links">
+                        <a href="#" target="_blank">[arXiv]</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <strong>Xiao Jiang</strong>, Xu Cheng, Zemin Zhang*, Tao Chen, Kun Tao, Weihua Han*. "Computation-assisted performance optimization for photoelectrochemical photoelectrodes". <em>Applied Physics Letters 120, 063901 (2022)</em>.
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1063/5.0080794" target="_blank">[DOI]</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <strong>Xiao Jiang</strong>, Zemin Zhang, Junfeng Mei, Dongyan Han, Mingzheng Xie, Fangcong Wang, Erqing Xie, Weihua Han*. "Carbon quantum dots based charge bridge between photoanode and electrocatalysts for efficiency water oxidation performance". <em>Electrochimica Acta 273 (2018): 208-215</em>.
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.electacta.2018.04.052" target="_blank">[DOI]</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Co-authored Publications</h2>
+            <ul class="publication-list">
+                <li class="publication-item">
+                    Zhanqi Liu, <strong>Xiao Jiang</strong>, Xu Cheng, Yue Pei, Xinkong Wei, Weihua Han*, Wei Tang, Zhong Lin Wang*. "Catalytic Effect of Gray Gallium Nitride for Hydrogen Peroxide Generation: Insights into Mechanical Stimuli-Driven Semiconductor-Liquid Interface Alteration". <em>ACS nano (2025)</em>.
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1021/acsnano.5c09730" target="_blank">[DOI]</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    Xu Cheng, <strong>Xiao Jiang</strong>, Kun Tao, Qing Su, Yanrong Wang, Erqing Xie*. "Microscopic Nature of Gas Adsorption on WO3 Surfaces: Electron Interaction and Localization". <em>The Journal of Physical Chemistry Letters 11.21 (2020): 9070-9078.</em>.
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1021/acs.jpclett.0c02020" target="_blank">[DOI]</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    Yinyi Ma, <strong>Xiao Jiang</strong>, Rongke Sun, et al. "Z-scheme Bi2O2.33/Bi2S3 heterojunction nanostructures for photocatalytic overall water splitting". <em>Chemical Engineering Journal 382 (2020): 123020.</em>.
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.cej.2019.123020" target="_blank">[DOI]</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    Bo Liu, <strong>Xiao Jiang</strong>, Xiaolin Jiang, et al. "Z-Scheme Photocarrier Transfer Realized in Tungsten Oxide-Based Photocatalysts by Combining with Bismuth Vanadate Quantum Dots". <em>Inorganic Chemistry 60.5 (2021): 3057-3064.</em>.
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1021/acs.inorgchem.0c03342" target="_blank">[DOI]</a>
+                    </div>
+                </li>
+                 <li class="publication-item">
+                    Zemin Zhang, <strong>Xiao Jiang</strong>, Junfeng Mei, et al. "Improved photoelectrocatalytic hydrogen generation through BiVO4 quantum-dots loaded on nano-structured SnO2 and modified with carbon quantum-dots". <em>Chemical Engineering Journal 331 (2018): 48-53.</em>.
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.cej.2017.08.102" target="_blank">[DOI]</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    Jialin Shao, Huiya Liu, <strong>Xiao Jiang</strong>, et al. "High Performance Ferroelectric-modulated Photoelectrodes by Using Grid Charge Collector". <em>Advanced Functional Materials 34.32 (2024): 2316409.</em>.
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1002/adfm.202316409" target="_blank">[DOI]</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    Mengdi Sun, Wanhu Chen, <strong>Xiao Jiang</strong>, et al. "Optoelectrical Regulation of CuBi2O4 Photocathode via Photonic Crystal Structure for Solar-Fuel Conversion". <em>ACS Applied Materials & Interfaces 14.38 (2022): 43946-43954.</em>.
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1021/acsami.2c12309" target="_blank">[DOI]</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer class="container">
+        <small>© 2025 Xiao Jiang (江筱). All rights reserved.</small>
+    </footer>
+</body>
+</html>
