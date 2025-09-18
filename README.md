@@ -1,2 +1,2 @@
 # XiaoJiang-Phy.github.io
-personal academic website
+Personal academic website
