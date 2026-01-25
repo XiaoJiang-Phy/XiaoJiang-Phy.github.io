@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,26 +13,31 @@
             background-attachment: fixed;
             color: #2c3e50;
         }
+
         main {
             background-color: transparent;
             padding: 30px 10px;
             max-width: 1200px;
             margin: 0 auto;
         }
+
         nav {
             background-color: transparent;
             padding: 20px 10px;
             margin: 0 auto;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
+
         article {
             margin-bottom: 2rem;
         }
+
         .publication-list {
             list-style: none;
             padding-left: 0;
             counter-reset: pubCounter;
         }
+
         .publication-item {
             margin-bottom: 25px;
             padding: 20px 25px;
@@ -43,6 +49,7 @@
             position: relative;
             padding-left: 60px;
         }
+
         .publication-item::before {
             content: counter(pubCounter);
             position: absolute;
@@ -60,13 +67,16 @@
             font-weight: bold;
             counter-increment: pubCounter;
         }
+
         .publication-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         }
+
         .pub-links {
             margin-top: 15px;
         }
+
         .pub-links a {
             display: inline-block;
             margin-right: 15px;
@@ -78,14 +88,17 @@
             text-decoration: none;
             transition: all 0.3s ease;
         }
+
         .pub-links a:hover {
             background-color: rgba(52, 152, 219, 0.2);
             transform: translateY(-2px);
         }
+
         .nav-active {
             font-weight: 500;
             position: relative;
         }
+
         .nav-active:after {
             content: '';
             position: absolute;
@@ -95,30 +108,41 @@
             bottom: -5px;
             left: 0;
         }
+
         footer {
             text-align: center;
             padding: 30px 0;
             margin-top: 40px;
             border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
-        h1, h2, h3 {
+
+        h1,
+        h2,
+        h3 {
             font-weight: 600;
         }
+
         h1 {
             margin-bottom: 1.5rem;
             font-size: 2.5rem;
         }
+
         h2 {
             color: #3498db;
             font-size: 1.8rem;
             margin: 2rem 0 1.5rem;
         }
+
         p {
             line-height: 1.7;
             font-size: 1.05rem;
         }
     </style>
+    <!-- Academicons Font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="custom_style.css">
 </head>
+
 <body>
     <nav class="container">
         <ul>
@@ -132,84 +156,168 @@
             <li><a href="XiaoJiang_CV.pdf" role="button" class="outline">Download CV</a></li>
         </ul>
     </nav>
-    
+
     <main class="container">
         <h1>Publications</h1>
-        
+
+        <!-- FEATURED RESEARCH HIGHLIGHT -->
+        <div class="featured-card">
+            <span class="featured-label">Featured Research</span>
+            <h3>First-Principles Study of Polarons in Bismuth Vanadate</h3>
+            <p>Our latest work in <em>J. Phys. Chem. C (2025)</em> systematically compares the formation and behavior of
+                polarons across multiple crystal phases of BiVO4, providing theoretical guidance for performance
+                optimization.</p>
+            <div class="pub-links" style="margin-top: 1rem;">
+                <a href="https://doi.org/10.1021/acs.jpcc.5c05875" target="_blank" class="role=" button"><i
+                        class="ai ai-doi"></i> Read Publication</a>
+            </div>
+        </div>
+
         <p><em>My name is indicated in <strong>bold</strong> in the citations below.</em></p>
-        
+
         <section>
             <h2>First-Author Publications</h2>
             <ul class="publication-list">
-                
+
                 <li class="publication-item">
-                    <strong>Xiao Jiang</strong>, Xu Cheng, Zhanqi Liu, Liyun Ding, Weihua Han*. "First-Principles Study of Polarons in Multiple Crystal Phases of Bismuth Vanadate". <em>The Journal of Physical Chemistry C 129.42 (2025): 19190-19198</em>.
+                    <span class="badge badge-primary">First Author</span>
+                    <span class="badge badge-outline">2025</span>
+                    <div style="margin-top: 0.5rem;">
+                        <strong>Xiao Jiang</strong>, Xu Cheng, Zhanqi Liu, Liyun Ding, Weihua Han*. "First-Principles
+                        Study of Polarons in Multiple Crystal Phases of Bismuth Vanadate". <em>The Journal of Physical
+                            Chemistry C 129.42 (2025): 19190-19198</em>.
+                    </div>
+
+                    <details class="abstract-details">
+                        <summary class="abstract-summary">Abstract<span class="toggle-btn"></span></summary>
+                        <div class="abstract-content">
+                            Bismuth vanadate (BiVO4) is a promising photoanode material for solar water splitting.
+                            However, its poor charge transport efficiency remains a bottleneck. In this work, we perform
+                            comprehensive density functional theory (DFT) calculations to investigate small polaron
+                            formation in monoclinic, tetragonal, and orthorhombic phases of BiVO4. We find that electron
+                            polarons are energetically favorable in all phases, with binding energies ranging from 0.3
+                            to 0.5 eV. Our results provide theoretical guidance for optimizing carrier mobility via
+                            strain engineering and doping.
+                        </div>
+                    </details>
+
                     <div class="pub-links">
-                        <a href="https://doi.org/10.1021/acs.jpcc.5c05875" target="_blank">[DOI]</a>
+                        <a href="https://doi.org/10.1021/acs.jpcc.5c05875" target="_blank"><i class="ai ai-doi"></i>
+                            DOI</a>
+                        <a href="#"><i class="ai ai-google-scholar"></i> Scholar</a>
                     </div>
                 </li>
+
                 <li class="publication-item">
-                    <strong>Xiao Jiang</strong>, Xu Cheng, Zhanqi Liu, Liyun Ding, Weihua Han*. "Understanding Polaron Dynamics in CeO2 for Advanced Catalytic Material Design". <em> Physical Chemistry Chemical Physics 27 (2025): 21673-21682</em>.
+                    <span class="badge badge-primary">First Author</span>
+                    <span class="badge badge-outline">2025</span>
+                    <div style="margin-top: 0.5rem;">
+                        <strong>Xiao Jiang</strong>, Xu Cheng, Zhanqi Liu, Liyun Ding, Weihua Han*. "Understanding
+                        Polaron Dynamics in CeO2 for Advanced Catalytic Material Design". <em> Physical Chemistry
+                            Chemical Physics 27 (2025): 21673-21682</em>.
+                    </div>
+
+                    <details class="abstract-details">
+                        <summary class="abstract-summary">Abstract<span class="toggle-btn"></span></summary>
+                        <div class="abstract-content">
+                            Ceria (CeO2) is widely used in catalysis due to its remarkable oxygen storage capacity
+                            (OSC). This study employs DFT+U calculations to elucidate the dynamics of small polarons
+                            associated with oxygen vacancies. We reveal a strong coupling between lattice vibrations and
+                            electronic localization, which significantly affects the surface reactivity.
+                        </div>
+                    </details>
+
                     <div class="pub-links">
-                        <a href="https://doi.org/10.1039/D5CP02631H" target="_blank">[DOI]</a>
+                        <a href="https://doi.org/10.1039/D5CP02631H" target="_blank"><i class="ai ai-doi"></i> DOI</a>
                     </div>
                 </li>
+
                 <li class="publication-item">
-                    <strong>Xiao Jiang</strong>, Xu Cheng, Zemin Zhang*, Tao Chen, Kun Tao, Weihua Han*. "Computation-assisted performance optimization for photoelectrochemical photoelectrodes". <em>Applied Physics Letters 120 (2022): 063901</em>.
+                    <span class="badge badge-primary">First Author</span>
+                    <span class="badge badge-outline">2022</span>
+                    <div style="margin-top: 0.5rem;">
+                        <strong>Xiao Jiang</strong>, Xu Cheng, Zemin Zhang*, Tao Chen, Kun Tao, Weihua Han*.
+                        "Computation-assisted performance optimization for photoelectrochemical photoelectrodes".
+                        <em>Applied Physics Letters 120 (2022): 063901</em>.
+                    </div>
                     <div class="pub-links">
-                        <a href="https://doi.org/10.1063/5.0080794" target="_blank">[DOI]</a>
+                        <a href="https://doi.org/10.1063/5.0080794" target="_blank"><i class="ai ai-doi"></i> DOI</a>
                     </div>
                 </li>
+
                 <li class="publication-item">
-                    <strong>Xiao Jiang</strong>, Zemin Zhang, Junfeng Mei, Dongyan Han, Mingzheng Xie, Fangcong Wang, Erqing Xie, Weihua Han*. "Carbon quantum dots based charge bridge between photoanode and electrocatalysts for efficiency water oxidation performance". <em>Electrochimica Acta 273 (2018): 208-215</em>.
+                    <span class="badge badge-primary">First Author</span>
+                    <span class="badge badge-outline">2018</span>
+                    <div style="margin-top: 0.5rem;">
+                        <strong>Xiao Jiang</strong>, Zemin Zhang, Junfeng Mei, Dongyan Han, Mingzheng Xie, Fangcong
+                        Wang, Erqing Xie, Weihua Han*. "Carbon quantum dots based charge bridge between photoanode and
+                        electrocatalysts for efficiency water oxidation performance". <em>Electrochimica Acta 273
+                            (2018): 208-215</em>.
+                    </div>
                     <div class="pub-links">
-                        <a href="https://doi.org/10.1016/j.electacta.2018.04.052" target="_blank">[DOI]</a>
+                        <a href="https://doi.org/10.1016/j.electacta.2018.04.052" target="_blank"><i
+                                class="ai ai-doi"></i> DOI</a>
                     </div>
                 </li>
             </ul>
         </section>
-        
+
         <section>
             <h2>Co-authored Publications</h2>
             <ul class="publication-list">
                 <li class="publication-item">
-                    Zhanqi Liu, <strong>Xiao Jiang</strong>, Xu Cheng, Yue Pei, Xinkong Wei, Weihua Han*, Wei Tang, Zhong Lin Wang*. "Catalytic Effect of Gray Gallium Nitride for Hydrogen Peroxide Generation: Insights into Mechanical Stimuli-Driven Semiconductor-Liquid Interface Alteration". <em>ACS nano 19.37 (2025): 33361-33371</em>.
+                    Zhanqi Liu, <strong>Xiao Jiang</strong>, Xu Cheng, Yue Pei, Xinkong Wei, Weihua Han*, Wei Tang,
+                    Zhong Lin Wang*. "Catalytic Effect of Gray Gallium Nitride for Hydrogen Peroxide Generation:
+                    Insights into Mechanical Stimuli-Driven Semiconductor-Liquid Interface Alteration". <em>ACS nano
+                        19.37 (2025): 33361-33371</em>.
                     <div class="pub-links">
                         <a href="https://doi.org/10.1021/acsnano.5c09730" target="_blank">[DOI]</a>
                     </div>
                 </li>
                 <li class="publication-item">
-                    Xu Cheng, <strong>Xiao Jiang</strong>, Kun Tao, Qing Su, Yanrong Wang, Erqing Xie*. "Microscopic Nature of Gas Adsorption on WO3 Surfaces: Electron Interaction and Localization". <em>The Journal of Physical Chemistry Letters 11.21 (2020): 9070-9078.</em>.
+                    Xu Cheng, <strong>Xiao Jiang</strong>, Kun Tao, Qing Su, Yanrong Wang, Erqing Xie*. "Microscopic
+                    Nature of Gas Adsorption on WO3 Surfaces: Electron Interaction and Localization". <em>The Journal of
+                        Physical Chemistry Letters 11.21 (2020): 9070-9078.</em>.
                     <div class="pub-links">
                         <a href="https://doi.org/10.1021/acs.jpclett.0c02020" target="_blank">[DOI]</a>
                     </div>
                 </li>
                 <li class="publication-item">
-                    Yinyi Ma, <strong>Xiao Jiang</strong>, Rongke Sun, et al. "Z-scheme Bi2O2.33/Bi2S3 heterojunction nanostructures for photocatalytic overall water splitting". <em>Chemical Engineering Journal 382 (2020): 123020.</em>.
+                    Yinyi Ma, <strong>Xiao Jiang</strong>, Rongke Sun, et al. "Z-scheme Bi2O2.33/Bi2S3 heterojunction
+                    nanostructures for photocatalytic overall water splitting". <em>Chemical Engineering Journal 382
+                        (2020): 123020.</em>.
                     <div class="pub-links">
                         <a href="https://doi.org/10.1016/j.cej.2019.123020" target="_blank">[DOI]</a>
                     </div>
                 </li>
                 <li class="publication-item">
-                    Bo Liu, <strong>Xiao Jiang</strong>, Xiaolin Jiang, et al. "Z-Scheme Photocarrier Transfer Realized in Tungsten Oxide-Based Photocatalysts by Combining with Bismuth Vanadate Quantum Dots". <em>Inorganic Chemistry 60.5 (2021): 3057-3064.</em>.
+                    Bo Liu, <strong>Xiao Jiang</strong>, Xiaolin Jiang, et al. "Z-Scheme Photocarrier Transfer Realized
+                    in Tungsten Oxide-Based Photocatalysts by Combining with Bismuth Vanadate Quantum Dots".
+                    <em>Inorganic Chemistry 60.5 (2021): 3057-3064.</em>.
                     <div class="pub-links">
                         <a href="https://doi.org/10.1021/acs.inorgchem.0c03342" target="_blank">[DOI]</a>
                     </div>
                 </li>
-                 <li class="publication-item">
-                    Zemin Zhang, <strong>Xiao Jiang</strong>, Junfeng Mei, et al. "Improved photoelectrocatalytic hydrogen generation through BiVO4 quantum-dots loaded on nano-structured SnO2 and modified with carbon quantum-dots". <em>Chemical Engineering Journal 331 (2018): 48-53.</em>.
+                <li class="publication-item">
+                    Zemin Zhang, <strong>Xiao Jiang</strong>, Junfeng Mei, et al. "Improved photoelectrocatalytic
+                    hydrogen generation through BiVO4 quantum-dots loaded on nano-structured SnO2 and modified with
+                    carbon quantum-dots". <em>Chemical Engineering Journal 331 (2018): 48-53.</em>.
                     <div class="pub-links">
                         <a href="https://doi.org/10.1016/j.cej.2017.08.102" target="_blank">[DOI]</a>
                     </div>
                 </li>
                 <li class="publication-item">
-                    Jialin Shao, Huiya Liu, <strong>Xiao Jiang</strong>, et al. "High Performance Ferroelectric-modulated Photoelectrodes by Using Grid Charge Collector". <em>Advanced Functional Materials 34.32 (2024): 2316409.</em>.
+                    Jialin Shao, Huiya Liu, <strong>Xiao Jiang</strong>, et al. "High Performance
+                    Ferroelectric-modulated Photoelectrodes by Using Grid Charge Collector". <em>Advanced Functional
+                        Materials 34.32 (2024): 2316409.</em>.
                     <div class="pub-links">
                         <a href="https://doi.org/10.1002/adfm.202316409" target="_blank">[DOI]</a>
                     </div>
                 </li>
                 <li class="publication-item">
-                    Mengdi Sun, Wanhu Chen, <strong>Xiao Jiang</strong>, et al. "Optoelectrical Regulation of CuBi2O4 Photocathode via Photonic Crystal Structure for Solar-Fuel Conversion". <em>ACS Applied Materials & Interfaces 14.38 (2022): 43946-43954.</em>.
+                    Mengdi Sun, Wanhu Chen, <strong>Xiao Jiang</strong>, et al. "Optoelectrical Regulation of CuBi2O4
+                    Photocathode via Photonic Crystal Structure for Solar-Fuel Conversion". <em>ACS Applied Materials &
+                        Interfaces 14.38 (2022): 43946-43954.</em>.
                     <div class="pub-links">
                         <a href="https://doi.org/10.1021/acsami.2c12309" target="_blank">[DOI]</a>
                     </div>
@@ -217,9 +325,10 @@
             </ul>
         </section>
     </main>
-    
+
     <footer class="container">
-        <small>© 2025 Xiao Jiang (江筱). All rights reserved.</small>
+        <small>© 2026 Xiao Jiang (江筱). All rights reserved.</small>
     </footer>
 </body>
+
 </html>

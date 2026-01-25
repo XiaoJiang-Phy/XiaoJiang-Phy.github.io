@@ -35,7 +35,7 @@
 
 body {
     font-family: var(--font_sans);
-    background-color: var(--bg_base);
+    background-color: transparent;
     color: var(--secondary_color);
     min-height: 100vh;
     overflow-x: hidden;
@@ -100,20 +100,39 @@ p {
 /* NAVIGATION */
 nav.container {
     font-family: var(--font_sans);
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.75);
+    /* Slightly more opaque for better legibility */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    /* Pill/Capsule shape */
+
+    /* Floating positioning */
     position: sticky;
-    top: 0;
+    top: 20px;
     z-index: 100;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+
+    /* Layout & Spacing */
+    margin-top: 20px;
     margin-bottom: 3rem;
-    /* Slight subtle shine on the navbar */
+    padding: 0.8rem 2rem;
+
+    /* Premium Shadow */
     box-shadow:
-        0 4px 6px -1px rgba(0, 0, 0, 0.01),
-        0 2px 4px -1px rgba(0, 0, 0, 0.01);
+        0 10px 30px -10px rgba(0, 0, 0, 0.05),
+        0 4px 6px -2px rgba(0, 0, 0, 0.02);
+
+    transition: all 0.3s ease;
+}
+
+/* Subtle hover interaction for the whole navbar */
+nav.container:hover {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow:
+        0 20px 40px -10px rgba(0, 0, 0, 0.08),
+        0 8px 12px -4px rgba(0, 0, 0, 0.02);
+    transform: translateY(-2px);
 }
 
 nav.container ul li strong {
@@ -151,7 +170,6 @@ main.container h1 {
     -webkit-text-fill-color: transparent;
     display: inline-block;
     padding-bottom: 0.2rem;
-    /* Fix for clipped descenders */
 }
 
 main.container h2 {
@@ -221,6 +239,415 @@ main.container h2::after {
     background: linear-gradient(90deg, var(--primary_color), var(--accent_color)) !important;
 }
 
+/* BADGES & TAGS */
+.badge {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    font-size: 0.75em;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    margin-right: 0.5em;
+    font-family: var(--font_sans);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-primary {
+    color: #fff;
+    background-color: var(--primary_color);
+    border: 1px solid var(--primary_color);
+}
+
+.badge-outline {
+    color: var(--primary_color);
+    background-color: transparent;
+    border: 1px solid var(--primary_color);
+}
+
+.badge-accent {
+    color: #fff;
+    background-color: var(--accent_color);
+    border: 1px solid var(--accent_color);
+}
+
+/* INTERACTIVE ABSTRACTS (details/summary) */
+details.abstract-details {
+    margin-top: 0.8rem;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+details.abstract-details[open] {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+summary.abstract-summary {
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 0.75rem 1.25rem;
+    font-family: var(--font_sans);
+    font-weight: 600;
+    color: var(--primary_color);
+    font-size: 0.95rem;
+    outline: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+summary.abstract-summary:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Explicit Toggle Button Span */
+.toggle-btn {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.4em 1rem;
+    border-radius: 9999px;
+    background-color: rgba(49, 130, 206, 0.15);
+    color: var(--accent_color);
+    white-space: nowrap;
+    margin-left: 1rem;
+    flex-shrink: 0;
+    /* Prevent shrinking */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    border: 1px solid rgba(49, 130, 206, 0.2);
+}
+
+.toggle-btn::before {
+    content: "View Abstract";
+}
+
+summary.abstract-summary:hover .toggle-btn {
+    background-color: var(--accent_color);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(49, 130, 206, 0.2);
+}
+
+details[open] .toggle-btn {
+    background-color: rgba(113, 128, 150, 0.15);
+    color: var(--secondary_color);
+    border-color: rgba(113, 128, 150, 0.2);
+}
+
+details[open] .toggle-btn::before {
+    content: "Hide Abstract";
+}
+
+details[open] summary.abstract-summary:hover .toggle-btn {
+    background-color: var(--secondary_color);
+    color: white;
+}
+
+/* Hide default marker in webkit */
+summary.abstract-summary::-webkit-details-marker {
+    display: none;
+}
+
+.abstract-content {
+    padding: 1rem;
+    font-size: 0.95rem;
+    color: var(--secondary_color);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.4s ease;
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FEATURED RESEARCH HIGHLIGHT CARD */
+.featured-card {
+    position: relative;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.7));
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-left: 5px solid var(--accent_color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.05),
+        0 0 0 4px rgba(49, 130, 206, 0.05);
+    /* Outer glow ring */
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.featured-label {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--accent_color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 6px rgba(49, 130, 206, 0.3);
+}
+
+.featured-card h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: var(--primary_color);
+}
+
+/* CONTACT PAGE: RESEARCHER ID CARD */
+.researcher-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.researcher-card {
+    width: 100%;
+    max-width: 500px;
+    /* Premium Glassmorphism */
+    background: white;
+    /* Fallback */
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9));
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow:
+        0 20px 40px -5px rgba(15, 23, 42, 0.1),
+        /* Deep diffused shadow */
+        0 8px 16px -8px rgba(15, 23, 42, 0.05),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+    /* Inner light rim */
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.researcher-card:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 25px 50px -10px rgba(15, 23, 42, 0.15),
+        0 10px 20px -10px rgba(15, 23, 42, 0.1);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary_color), #2d3748);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoration inside header */
+.card-header::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image:
+        radial-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+    background-size: 20px 20px;
+    transform: rotate(30deg);
+    opacity: 0.3;
+}
+
+.scid-logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #63b3ed;
+    /* Light blue */
+    position: relative;
+    z-index: 1;
+}
+
+.card-header h3 {
+    margin: 0;
+    color: white !important;
+    font-size: 1.8rem;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.02em;
+}
+
+.role-subtitle {
+    margin: 0.5rem 0 0;
+    font-family: var(--font_sans);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    position: relative;
+    z-index: 1;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    background: rgba(241, 245, 249, 0.5);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.contact-row:hover {
+    background: white;
+    border-color: rgba(49, 130, 206, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e2e8f0;
+    color: var(--secondary_color);
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 1.1rem;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info .label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #a0aec0;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.contact-info .value-link {
+    color: var(--primary_color);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.divider-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+    margin: 2rem 0;
+}
+
+.social-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--secondary_color);
+    transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.social-btn i {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--primary_color);
+}
+
+.social-btn span {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border-color: var(--accent_color);
+    color: var(--accent_color);
+}
+
+.social-btn:hover i {
+    color: var(--accent_color);
+}
+
+.card-footer-decoration {
+    text-align: center;
+    padding: 15px;
+    background: #f8fafc;
+    font-size: 0.8rem;
+    color: #cbd5e0;
+    border-top: 1px solid #edf2f7;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* APPLE-LIKE SCROLL REVEAL UTILITIES */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.0s cubic-bezier(0.16, 1, 0.3, 1), transform 1.0s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* MATH & CODE */
 code,
 kbd,
@@ -256,4 +683,52 @@ footer {
     main.container h1 {
         font-size: 2.25rem;
     }
+}
+
+/* RESEARCH PROJECT CARDS */
+.project-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6));
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    backdrop-filter: blur(12px);
+    box-shadow:
+        0 10px 20px -5px rgba(0, 0, 0, 0.05),
+        0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 20px 40px -5px rgba(0, 0, 0, 0.1),
+        0 8px 16px -8px rgba(0, 0, 0, 0.05);
+    border-color: var(--bg_mesh_1);
+}
+
+.project-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.5s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.02);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--primary_color);
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    margin-bottom: 1.5rem;
+    color: var(--secondary_color);
 }
