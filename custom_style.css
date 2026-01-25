@@ -1,0 +1,259 @@
+/* 
+  Academic & Condensed Matter Physics Theme
+  Conventions:
+  - Variables: --snake_case
+  - Method: Pure CSS, Lightweight
+*/
+
+:root {
+    /* Palette - Condensed Matter Inspired */
+    --primary_color: #1a365d;
+    /* Deep Orbital Blue */
+    --secondary_color: #4a5568;
+    /* Fermion Gray */
+    --accent_color: #3182ce;
+    /* Chern Insulator Blue */
+
+    /* Enhanced Background Palette - "Fermi Surface" Gradient */
+    --bg_base: #f8fafc;
+    --bg_mesh_1: rgba(49, 130, 206, 0.03);
+    /* Subtle Blue Trace */
+    --bg_mesh_2: rgba(15, 23, 42, 0.02);
+    /* Deep Void */
+    --lattice_texture: rgba(148, 163, 184, 0.07);
+
+    /* Typography */
+    --font_serif: 'Latin Modern Roman', 'Computer Modern', 'Georgia', serif;
+    --font_sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font_img_caption: 'Consolas', 'Monaco', monospace;
+}
+
+/* GLOBAL RESET & TYPOGRAPHY */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font_sans);
+    background-color: var(--bg_base);
+    color: var(--secondary_color);
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    position: relative;
+}
+
+/* BACKGROUND LAYERS */
+
+/* Layer 1: The Crystal Lattice Grid */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+    /* A sharp, clean lattice grid */
+    background-image:
+        repeating-linear-gradient(90deg, transparent 0, transparent 39px, var(--lattice_texture) 39px, var(--lattice_texture) 40px),
+        repeating-linear-gradient(180deg, transparent 0, transparent 39px, var(--lattice_texture) 39px, var(--lattice_texture) 40px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+/* Layer 2: The "Quantum Potential" Ambient Glow */
+/* Adds depth so it's not flat. Simulates a scattering potential or wave function spread. */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+    /* Behind the grid */
+    background:
+        radial-gradient(circle at 10% 20%, var(--bg_mesh_1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, var(--bg_mesh_1) 0%, transparent 40%),
+        linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font_serif);
+    color: var(--primary_color);
+    margin-top: 0;
+}
+
+p {
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* NAVIGATION */
+nav.container {
+    font-family: var(--font_sans);
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+    /* Slight subtle shine on the navbar */
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.01),
+        0 2px 4px -1px rgba(0, 0, 0, 0.01);
+}
+
+nav.container ul li strong {
+    font-family: var(--font_serif);
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: 0.02em;
+    color: var(--primary_color);
+}
+
+nav.container a {
+    color: var(--secondary_color);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+nav.container a.nav-active {
+    color: var(--accent_color) !important;
+    font-weight: 600;
+}
+
+nav.container a:hover {
+    color: var(--primary_color);
+    text-decoration: none;
+}
+
+/* MAIN CONTENT AREAS */
+main.container h1 {
+    font-size: 3.2rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.04rem;
+    /* Deeper Gradient for Title */
+    background: linear-gradient(135deg, var(--primary_color) 0%, var(--accent_color) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding-bottom: 0.2rem;
+    /* Fix for clipped descenders */
+}
+
+main.container h2 {
+    font-family: var(--font_sans);
+    font-weight: 300;
+    color: var(--secondary_color);
+    font-size: 1.6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+/* Tiny "Bloch Point" decoration on H2 border */
+main.container h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    /* sits on the line */
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent_color);
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+    border-radius: 12px;
+    border: 4px solid white;
+    box-shadow:
+        0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.profile-img:hover {
+    transform: translateY(-4px) scale(1.01);
+}
+
+/* SKILLS CONTAINER */
+.skills-container {
+    /* Glassmorphism enhancement */
+    background: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.03),
+        0 4px 6px -2px rgba(0, 0, 0, 0.01);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin-top: 4rem;
+    border-radius: 16px;
+    /* softer corners */
+}
+
+.skills-heading {
+    font-family: var(--font_serif);
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-bottom-color: rgba(49, 130, 206, 0.2);
+}
+
+.skill-bar {
+    /* Richer gradient for skills */
+    background: linear-gradient(90deg, var(--primary_color), var(--accent_color)) !important;
+}
+
+/* MATH & CODE */
+code,
+kbd,
+samp,
+pre {
+    font-family: 'Fira Code', var(--font_img_caption);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    color: var(--primary_color);
+    padding: 0.1em 0.3em;
+}
+
+/* Footer */
+footer {
+    font-family: var(--font_serif);
+    opacity: 0.7;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    margin-top: 6rem;
+    padding-bottom: 3rem;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+
+    main.container,
+    nav.container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    main.container h1 {
+        font-size: 2.25rem;
+    }
+}
