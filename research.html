@@ -77,6 +77,42 @@
         </section>
 
         <section class="scroll-reveal visible">
+            <h2>Scientific Software Development</h2>
+            <article class="project-card scroll-reveal visible"
+                style="border-left: 3px solid #3498db; background-color: rgba(255, 255, 255, 0.45); padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); margin-bottom: 2rem;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+                    <div>
+                        <h3 style="margin-bottom: 0.2rem; font-size: 1.4rem; color: #2c3e50;">CrystalCanvas</h3>
+                        <p
+                            style="font-size: 0.85rem; color: #7f8c8d; font-family: 'Courier New', Courier, monospace; margin-bottom: 1rem;">
+                            C++ (Eigen/Spglib) · Rust (wgpu/Tauri) · React/TS
+                        </p>
+                    </div>
+                    <a href="https://github.com/XiaoJiang-Phy/CrystalCanvas" target="_blank" role="button"
+                        class="outline" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">
+                        <i class="fab fa-github"></i> Repository
+                    </a>
+                </div>
+
+                <p>
+                    Architected and developed a hardware-accelerated, memory-safe desktop application for computational
+                    materials science. Designed to bridge the gap between abstract lattice mathematics and
+                    high-throughput DFT/MD simulation preparations.
+                </p>
+
+                <ul style="margin-bottom: 0; padding-left: 1.2rem; font-size: 0.95rem; line-height: 1.6;">
+                    <li><strong>Physics Kernel:</strong> Implemented a rigorous C++ engine for arbitrary Miller index
+                        slab cleaving, space group topology evaluation, and Minimum Image Convention (MIC) validation.
+                    </li>
+                    <li><strong>Native Rendering:</strong> Engineered a zero-overhead 3D viewport via Rust/wgpu,
+                        leveraging GPU compute pipelines for real-time atomistic manipulation.</li>
+                    <li><strong>Ecosystem Integration:</strong> Built native high-fidelity topological exporters for
+                        VASP, Quantum ESPRESSO, and LAMMPS to strictly enforce computational provenance.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="scroll-reveal visible">
             <h2>Future Research Interests</h2>
             <p>Building on my expertise in electron-phonon coupling (EPC), my future research will venture into more
                 complex and emergent quantum phenomena. I aim to focus on two primary directions:</p>
