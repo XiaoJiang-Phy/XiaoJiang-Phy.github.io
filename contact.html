@@ -1,89 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html class="light" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Xiao Jiang (江筱)</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <!-- Academicons Font -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <!-- Font Awesome for GitHub/Email icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="custom_style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CV &amp; Contact | Xiao Jiang (江筱)</title>
+<meta name="description" content="Curriculum Vitae and contact information for Xiao Jiang (江筱), Ph.D. in Condensed Matter Physics from Lanzhou University."/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-container-low": "#e9f6fd",
+        "on-background": "#111d23",
+        "secondary": "#4c616c",
+        "primary": "#002e4b",
+        "primary-container": "#00456d",
+        "outline-variant": "#c1c7cb",
+        "background": "#f4faff",
+        "surface-variant": "#d7e4ec",
+        "on-primary-container": "#62b5f8",
+        "on-secondary-container": "#526772",
+        "surface-tint": "#006399",
+        "on-surface-variant": "#42484b",
+        "surface-container-high": "#ddeaf2",
+        "outline": "#72787b",
+        "on-primary": "#ffffff",
+        "secondary-container": "#cfe6f2",
+        "surface": "#f4faff",
+        "surface-container": "#e3f0f8",
+        "surface-container-lowest": "#ffffff",
+        "on-surface": "#111d23",
+        "surface-container-highest": "#d7e4ec",
+      },
+      fontFamily: {
+        "headline": ["Newsreader"],
+        "body": ["Manrope"],
+        "label": ["Space Grotesk"]
+      },
+      borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+    },
+  },
+}
+</script>
+<link rel="stylesheet" href="custom_style.css"/>
 </head>
+<body class="bg-background text-on-background font-body">
 
-<body>
-    <nav class="container">
-        <ul>
-            <li><strong>Xiao Jiang (江筱)</strong></li>
-        </ul>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="contact.html" class="nav-active">Contact</a></li>
-            <li><a href="XiaoJiang_CV.pdf" role="button" class="outline">Download CV</a></li>
-        </ul>
-    </nav>
+<!-- Top Navigation -->
+<header class="bg-[#f4faff]/90 backdrop-blur-md border-b border-outline-variant/20 sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+  <a href="index.html" class="font-['Newsreader'] text-2xl font-bold italic text-primary">Xiao Jiang</a>
+  <div class="hidden md:flex items-center gap-10 font-['Newsreader'] font-medium text-lg tracking-tight">
+    <a class="text-[#264653] hover:text-primary transition-optimized" href="index.html">Home</a>
+    <a class="text-[#264653] hover:text-primary transition-optimized" href="research.html">Research</a>
+    <a class="text-[#264653] hover:text-primary transition-optimized" href="publications.html">Publications</a>
+    <a class="text-surface-tint border-b-2 border-surface-tint pb-1" href="contact.html">CV &amp; Contact</a>
+  </div>
+  <div class="flex items-center gap-4">
+    <span class="material-symbols-outlined text-primary text-2xl">science</span>
+  </div>
+</nav>
+</header>
 
-    <main class="container">
-        <h1>Contact Me</h1>
+<main class="relative">
+<!-- Background Pattern -->
+<div class="absolute inset-0 lattice-bg pointer-events-none"></div>
 
-        <!-- RESEARCHER ID CARD -->
-        <div class="researcher-card-container">
-            <div class="researcher-card">
-                <div class="card-header">
-                    <div class="scid-logo">
-                        <i class="fas fa-atom fa-spin-pulse" style="--fa-animation-duration: 15s;"></i>
-                    </div>
-                    <h3>Xiao Jiang (江筱)</h3>
-                    <p class="role-subtitle">Condensed Matter Physics · First-Principles Calculation</p>
-                </div>
+<div class="max-w-7xl mx-auto px-8 py-20 relative z-10">
 
-                <div class="card-body">
-                    <div class="contact-row">
-                        <div class="contact-icon email-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-info">
-                            <span class="label">Email</span>
-                            <a href="mailto:jiangxiao199412@gmail.com" class="value-link">jiangxiao199412@gmail.com</a>
-                        </div>
-                    </div>
+<!-- Hero Header Section -->
+<section class="mb-32">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+  <div class="lg:col-span-8">
+    <span class="font-label text-xs uppercase tracking-widest text-outline mb-4 block">Curriculum Vitae</span>
+    <h1 class="font-headline text-6xl md:text-8xl text-primary font-medium leading-tight tracking-tighter">Academic <br/><span class="italic text-surface-tint">Record &amp; Contact</span></h1>
+  </div>
+  <div class="lg:col-span-4 pb-4">
+    <a href="XiaoJiang_CV.pdf" class="group flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-md font-label text-sm tracking-widest uppercase transition-all hover:bg-primary-container hover:text-on-primary-container inline-flex" target="_blank">
+      Download PDF CV
+      <span class="material-symbols-outlined text-lg">download</span>
+    </a>
+  </div>
+</div>
+</section>
 
-                    <div class="divider-line"></div>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
 
-                    <div class="social-grid">
-                        <a href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank"
-                            class="social-btn google-scholar">
-                            <i class="ai ai-google-scholar"></i>
-                            <span>Google Scholar</span>
-                        </a>
-                        <a href="https://github.com/XiaoJiang-Phy" target="_blank" class="social-btn github">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                        <!-- Placeholder for future ResearchGate or ORCID -->
-                        <!-- 
-                        <a href="#" class="social-btn orcid">
-                            <i class="ai ai-orcid"></i>
-                            <span>ORCID</span>
-                        </a> 
-                        -->
-                    </div>
-                </div>
+<!-- Left Column: Education, Skills -->
+<div class="lg:col-span-7 space-y-24">
 
-                <div class="card-footer-decoration">
-                    <span>Ph.D.</span>
-                </div>
-            </div>
+  <!-- Education -->
+  <section>
+    <h2 class="font-headline text-3xl italic text-primary mb-10">Education</h2>
+    <div class="space-y-12">
+      <div class="flex flex-col gap-2">
+        <div class="flex justify-between items-baseline">
+          <h3 class="font-body text-xl font-bold text-on-surface">Ph.D. in Condensed Matter Physics</h3>
+          <span class="font-label text-sm text-outline">Completed</span>
         </div>
-    </main>
+        <p class="font-body text-on-surface-variant">Lanzhou University</p>
+        <p class="font-body text-sm text-secondary italic mt-2">Focus: Electron-phonon coupling, polaron physics, computational materials science</p>
+      </div>
+    </div>
+  </section>
 
-    <footer class="container">
-        <small>© 2026 Xiao Jiang (江筱). All rights reserved.</small>
-    </footer>
+  <!-- Technical Expertise -->
+  <section>
+    <h2 class="font-headline text-3xl italic text-primary mb-10">Technical Expertise</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-surface-container-low p-8 rounded-lg flex flex-col gap-4">
+        <span class="material-symbols-outlined text-primary-container">terminal</span>
+        <h4 class="font-label text-xs uppercase tracking-widest text-primary-container font-bold">Programming</h4>
+        <ul class="font-body text-on-surface-variant space-y-2 text-sm">
+          <li class="flex justify-between"><span>Python (NumPy, SciPy)</span></li>
+          <li class="flex justify-between"><span>C++ (Eigen, STL)</span></li>
+          <li class="flex justify-between"><span>Julia</span></li>
+
+        </ul>
+      </div>
+      <div class="bg-surface-container-highest p-8 rounded-lg flex flex-col gap-4">
+        <span class="material-symbols-outlined text-primary-container">dns</span>
+        <h4 class="font-label text-xs uppercase tracking-widest text-primary-container font-bold">Scientific Software</h4>
+        <ul class="font-body text-on-surface-variant space-y-2 text-sm">
+          <li>Quantum ESPRESSO</li>
+          <li>VASP</li>
+          <li>Wannier90</li>
+          <li>EPW</li>
+          <li><a href="https://github.com/TRIQS/dft_tools" target="_blank" class="text-surface-tint hover:underline">TRIQS/dft_tools</a> (contributor)</li>
+        </ul>
+      </div>
+      <div class="md:col-span-2 bg-secondary-container p-8 rounded-lg flex flex-col md:flex-row md:items-center gap-8">
+        <div class="flex flex-col gap-2">
+          <span class="material-symbols-outlined text-on-secondary-container">precision_manufacturing</span>
+          <h4 class="font-label text-xs uppercase tracking-widest text-on-secondary-container font-bold">Methods</h4>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Density Functional Theory</span>
+          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Electron-Phonon Coupling</span>
+          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Tensor Cross Interpolation</span>
+          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Polaron Theory</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages -->
+  <section>
+    <h2 class="font-headline text-3xl italic text-primary mb-10">Languages</h2>
+    <div class="space-y-6">
+      <div class="flex items-start gap-6 border-l-2 border-surface-variant pl-6 py-2">
+        <span class="font-label text-sm text-outline-variant whitespace-nowrap pt-1">Native</span>
+        <div>
+          <h4 class="font-body font-bold text-on-surface">Chinese (中文)</h4>
+        </div>
+      </div>
+      <div class="flex items-start gap-6 border-l-2 border-surface-variant pl-6 py-2">
+        <span class="font-label text-sm text-outline-variant whitespace-nowrap pt-1">Fluent</span>
+        <div>
+          <h4 class="font-body font-bold text-on-surface">English</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Right Column: Contact (Sticky) -->
+<div class="lg:col-span-5">
+<div class="sticky top-32 space-y-12">
+  <!-- Contact Card -->
+  <div class="bg-surface-container-lowest p-10 card-float rounded-lg">
+    <h2 class="font-headline text-3xl italic text-primary mb-8">Contact Information</h2>
+    <div class="space-y-8">
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-surface-tint">alternate_email</span>
+        <div>
+          <p class="font-label text-xs uppercase tracking-widest text-outline mb-1">Email</p>
+          <a class="font-body text-lg font-medium text-on-surface hover:text-surface-tint transition-optimized" href="mailto:jiangxiao199412@gmail.com">jiangxiao199412@gmail.com</a>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-surface-tint">apartment</span>
+        <div>
+          <p class="font-label text-xs uppercase tracking-widest text-outline mb-1">Field</p>
+          <p class="font-body text-on-surface leading-relaxed">
+            Condensed Matter Physics<br/>
+            First-Principles Calculation
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 pt-10 border-t border-outline-variant/15">
+      <p class="font-label text-xs uppercase tracking-widest text-outline mb-6">Profiles</p>
+      <div class="flex flex-wrap gap-4">
+        <a class="flex items-center gap-2 font-body text-sm font-bold text-primary hover:text-surface-tint transition-all group" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank">
+          Google Scholar
+          <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">north_east</span>
+        </a>
+        <a class="flex items-center gap-2 font-body text-sm font-bold text-primary hover:text-surface-tint transition-all group" href="https://github.com/XiaoJiang-Phy" target="_blank">
+          GitHub
+          <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">north_east</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile Image -->
+  <div class="relative group overflow-hidden rounded-lg aspect-square">
+    <img alt="Xiao Jiang profile photo" class="w-full h-full object-cover" src="images/profile.png"/>
+    <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+    <div class="absolute bottom-6 left-6 text-white">
+      <p class="font-label text-[10px] uppercase tracking-[0.3em] opacity-80">Condensed Matter Physics</p>
+      <p class="font-headline italic text-xl">Ph.D.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="w-full border-t border-[#111d23]/10 bg-[#f4faff] mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-7xl mx-auto gap-8">
+  <div class="font-['Newsreader'] text-lg italic text-[#264653]">Xiao Jiang (江筱)</div>
+  <div class="flex flex-wrap justify-center gap-8 font-['Space_Grotesk'] text-xs uppercase tracking-widest">
+    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank">Google Scholar</a>
+    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://github.com/XiaoJiang-Phy" target="_blank">GitHub</a>
+  </div>
+  <p class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-[#264653]/40">© 2026 Xiao Jiang. All rights reserved.</p>
+</div>
+</footer>
+
 </body>
-
 </html>

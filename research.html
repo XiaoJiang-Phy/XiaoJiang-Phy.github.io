@@ -1,149 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html class="light" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Xiao Jiang (江筱)</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <!-- Academicons Font -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="custom_style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Research | Xiao Jiang (江筱)</title>
+<meta name="description" content="Research portfolio of Xiao Jiang — electron-phonon coupling, polaron physics, computational materials design, and CrystalCanvas software."/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-container-low": "#e9f6fd",
+        "on-primary-fixed": "#001d32",
+        "inverse-surface": "#263238",
+        "on-background": "#111d23",
+        "inverse-primary": "#94ccff",
+        "secondary": "#4c616c",
+        "primary": "#002e4b",
+        "primary-container": "#00456d",
+        "outline-variant": "#c1c7cb",
+        "background": "#f4faff",
+        "surface-variant": "#d7e4ec",
+        "on-primary-container": "#62b5f8",
+        "on-secondary-container": "#526772",
+        "surface-dim": "#cfdce4",
+        "surface-tint": "#006399",
+        "on-surface-variant": "#42484b",
+        "surface-container-high": "#ddeaf2",
+        "outline": "#72787b",
+        "on-primary": "#ffffff",
+        "secondary-container": "#cfe6f2",
+        "surface": "#f4faff",
+        "surface-container": "#e3f0f8",
+        "surface-container-lowest": "#ffffff",
+        "on-surface": "#111d23",
+        "surface-container-highest": "#d7e4ec",
+      },
+      fontFamily: {
+        "headline": ["Newsreader"],
+        "body": ["Manrope"],
+        "label": ["Space Grotesk"]
+      },
+      borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+    },
+  },
+}
+</script>
+<link rel="stylesheet" href="custom_style.css"/>
 </head>
+<body class="bg-surface text-on-surface font-body">
 
-<body>
-    <nav class="container">
-        <ul>
-            <li><strong>Xiao Jiang (江筱)</strong></li>
-        </ul>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html" class="nav-active">Research</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="XiaoJiang_CV.pdf" role="button" class="outline">Download CV</a></li>
-        </ul>
-    </nav>
+<!-- TopNavBar -->
+<nav class="bg-[#f4faff]/90 backdrop-blur-md border-b border-outline-variant/20 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+  <a href="index.html" class="font-['Newsreader'] text-2xl font-bold italic text-primary">Xiao Jiang</a>
+  <div class="hidden md:flex items-center gap-10">
+    <a class="text-[#264653] hover:text-primary transition-optimized font-['Newsreader'] font-medium text-lg tracking-tight" href="index.html">Home</a>
+    <a class="text-surface-tint border-b-2 border-surface-tint pb-1 font-['Newsreader'] font-medium text-lg tracking-tight" href="research.html">Research</a>
+    <a class="text-[#264653] hover:text-primary transition-optimized font-['Newsreader'] font-medium text-lg tracking-tight" href="publications.html">Publications</a>
+    <a class="text-[#264653] hover:text-primary transition-optimized font-['Newsreader'] font-medium text-lg tracking-tight" href="contact.html">CV &amp; Contact</a>
+  </div>
+  <span class="material-symbols-outlined text-primary">science</span>
+</div>
+</nav>
 
-    <main class="container">
-        <h1>Research</h1>
+<main class="relative">
+<!-- Lattice Background Motif -->
+<div class="absolute inset-0 lattice-bg pointer-events-none z-0"></div>
 
-        <section class="scroll-reveal visible">
-            <h2>Research Overview</h2>
-            <p>My research lies at the intersection of condensed matter theory and computational materials science, with
-                a core focus on the fundamental physics of <strong>electron-phonon interactions</strong>. I am
-                passionate about developing and applying unified multi-scale computational frameworks to model how
-                charge carriers couple with lattice vibrations. My work aims to reveal the microscopic mechanisms
-                governing carrier transport, such as polaron formation and dynamics, thereby advancing our fundamental
-                understanding of quantum phenomena in materials.</p>
-        </section>
+<!-- Hero Section -->
+<section class="relative z-10 max-w-7xl mx-auto px-8 pt-24 pb-16">
+<div class="max-w-3xl">
+  <h1 class="font-headline text-6xl md:text-8xl text-primary font-bold tracking-tight leading-tight mb-8">
+    Electron-Phonon <span class="italic font-light">Coupling</span> &amp; Beyond
+  </h1>
+  <p class="font-body text-xl text-on-surface-variant leading-relaxed max-w-2xl">
+    My research centers on understanding how charge carriers interact with lattice vibrations in real materials — from first-principles polaron characterization to applying tensor cross interpolation (TCI) for many-body diagrammatic calculations of electron-phonon systems.
+  </p>
+</div>
+</section>
 
-        <section>
-            <h2>Ph.D. Projects</h2>
-            <div class="grid"> <!-- Added grid class for better layout if needed, otherwise Pico stacks them -->
-                <article class="project-card scroll-reveal visible">
-                    <h3>Unveiling Asymmetric Polaron Formation in CeO₂</h3>
-                    <img src="images/project-2.png" alt="Project 1 Illustration" class="project-img">
-                    <p>This research delved into the fundamental physics of polarons. By studying weakly-localized CeO₂,
-                        I uncovered the unique coexistence of two different polaron types in the same material:
-                        electrons form localized Holstein polarons, while holes form delocalized Fröhlich polarons. This
-                        work clarified the microscopic carrier transport mechanisms and the specific roles of different
-                        phonon modes in limiting carrier mobility.</p>
-                    <a href="publications.html" role="button" class="outline">View Related Publication</a>
-                </article>
-                <article class="project-card scroll-reveal visible">
-                    <h3>Crystal Symmetry's Role in Polaron Transport</h3>
-                    <img src="images/project-3.png" alt="Project 2 Illustration" class="project-img">
-                    <p>This project established a universal framework for how crystal structure governs polaron
-                        behavior. By comparing three phases of BiVO₄ and resolving the polaron controversy in TiO₂, I
-                        revealed that crystal symmetry dictates polaron type and transport anisotropy. A key finding was
-                        the "crossover" behavior in TiO₂, where anatase and rutile exhibit completely opposite electron
-                        and hole polaron types.</p>
-                    <a href="publications.html" role="button" class="outline">View Related Publication</a>
-                </article>
-                <article class="project-card scroll-reveal visible">
-                    <h3>Macro-Meso Modeling for Photoelectrode Design</h3>
-                    <img src="images/project-1.png" alt="Project 3 Illustration" class="project-img">
-                    <p>This project established a predictive model to guide photoelectrode design, bridging quantum
-                        mechanical calculations with device-level performance. By developing a continuity equation model
-                        fed by first-principles parameters, I successfully predicted the optimal film thickness for
-                        p-type CuFeO₂ and guided the structural optimization of n-type Fe₂O₃ from thin films to more
-                        efficient nanowire arrays.</p>
-                    <a href="publications.html" role="button" class="outline">View Related Publication</a>
-                </article>
-            </div>
-        </section>
+<!-- Research Bento Grid -->
+<section class="relative z-10 max-w-7xl mx-auto px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
 
-        <section class="scroll-reveal visible">
-            <h2>Scientific Software Development</h2>
-            <article class="project-card scroll-reveal visible"
-                style="border-left: 3px solid #3498db; background-color: rgba(255, 255, 255, 0.45); padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); margin-bottom: 2rem;">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
-                    <div>
-                        <h3 style="margin-bottom: 0.2rem; font-size: 1.4rem; color: #2c3e50;">CrystalCanvas</h3>
-                        <p
-                            style="font-size: 0.85rem; color: #7f8c8d; font-family: 'Courier New', Courier, monospace; margin-bottom: 1rem;">
-                            C++ (Eigen/Spglib) · Rust (wgpu/Tauri) · React/TS
-                        </p>
-                    </div>
-                    <a href="https://github.com/XiaoJiang-Phy/CrystalCanvas" target="_blank" role="button"
-                        class="outline" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">
-                        <i class="fab fa-github"></i> Repository
-                    </a>
-                </div>
+  <!-- Project Card 1: CeO₂ Polaron (Large Featured) -->
+  <div class="md:col-span-8 bg-surface-container-low rounded-xl p-10 flex flex-col justify-between group">
+    <div>
+      <div class="flex items-center gap-4 mb-6">
+        <span class="font-label text-xs tracking-widest text-surface-tint border border-surface-tint/20 px-3 py-1 rounded-full">POLARON PHYSICS</span>
+        <span class="font-label text-xs tracking-widest text-on-surface-variant">PH.D. PROJECT</span>
+      </div>
+      <h2 class="font-headline text-4xl font-bold text-primary mb-6">Unveiling Asymmetric Polaron Formation in CeO₂</h2>
+      <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-10 max-w-2xl">
+        This work studied the fundamental physics of polarons in CeO₂, where I found the coexistence of two different polaron types in the same material: electrons form localized Holstein polarons, while holes form delocalized Fröhlich polarons. The results help clarify the microscopic carrier transport mechanisms and the roles of different phonon modes in limiting carrier mobility.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        <div class="space-y-2">
+          <h4 class="font-label text-[10px] uppercase tracking-tighter text-outline">METHODOLOGY</h4>
+          <p class="font-body font-semibold">DFT+U, Electron-Phonon Coupling</p>
+        </div>
+        <div class="space-y-2">
+          <h4 class="font-label text-[10px] uppercase tracking-tighter text-outline">MATERIAL SYSTEM</h4>
+          <p class="font-body font-semibold">CeO₂ (Ceria)</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <a class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all duration-300" href="publications.html">
+        <span class="material-symbols-outlined text-sm">description</span>
+        View Publication
+      </a>
+    </div>
+  </div>
 
-                <p>
-                    Architected and developed a hardware-accelerated, memory-safe desktop application for computational
-                    materials science. Designed to bridge the gap between abstract lattice mathematics and
-                    high-throughput DFT/MD simulation preparations.
-                </p>
+  <!-- Visualization Side Card -->
+  <div class="md:col-span-4 bg-white rounded-xl overflow-hidden relative flex flex-col">
+    <div class="flex-1 flex items-center justify-center p-4">
+      <img class="w-full h-full object-contain" alt="CeO₂ electron and hole polaron charge density" src="images/project-2.png"/>
+    </div>
+    <div class="p-6 bg-primary/90">
+      <h3 class="font-headline text-xl italic mb-1 text-white">CeO₂ Polarons</h3>
+      <p class="font-body text-xs text-white/80">Holstein vs. Fröhlich polaron coexistence</p>
+    </div>
+  </div>
 
-                <ul style="margin-bottom: 0; padding-left: 1.2rem; font-size: 0.95rem; line-height: 1.6;">
-                    <li><strong>Physics Kernel:</strong> Implemented a rigorous C++ engine for arbitrary Miller index
-                        slab cleaving, space group topology evaluation, and Minimum Image Convention (MIC) validation.
-                    </li>
-                    <li><strong>Native Rendering:</strong> Engineered a zero-overhead 3D viewport via Rust/wgpu,
-                        leveraging GPU compute pipelines for real-time atomistic manipulation.</li>
-                    <li><strong>Ecosystem Integration:</strong> Built native high-fidelity topological exporters for
-                        VASP, Quantum ESPRESSO, and LAMMPS to strictly enforce computational provenance.</li>
-                </ul>
-            </article>
-        </section>
+  <!-- Project Card 2: BiVO₄ & TiO₂ -->
+  <div class="md:col-span-6 bg-surface-container-highest rounded-xl p-10">
+    <span class="font-label text-xs tracking-widest text-surface-tint border border-surface-tint/20 px-3 py-1 rounded-full mb-6 inline-block">CRYSTAL SYMMETRY</span>
+    <h2 class="font-headline text-3xl font-bold text-primary mb-4">Crystal Symmetry's Role in Polaron Transport</h2>
+    <p class="font-body text-on-surface-variant leading-relaxed mb-8">
+      This project studied how crystal structure influences polaron behavior by comparing three phases of BiVO₄ and investigating the polaron controversy in TiO₂. The results suggest that crystal symmetry plays a key role in determining polaron type and transport anisotropy. An interesting finding was the "crossover" behavior in TiO₂, where anatase and rutile exhibit opposite electron and hole polaron types.
+    </p>
+    <div class="mb-8">
+      <img class="w-full object-contain rounded-lg bg-white p-2" alt="Crystal symmetry and polaron transport in BiVO₄" src="images/project-3.png"/>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="publications.html" class="bg-primary text-on-primary px-6 py-3 rounded-md font-label text-sm tracking-wide hover:opacity-90 transition-optimized inline-block">View Publication</a>
+    </div>
+  </div>
 
-        <section class="scroll-reveal visible">
-            <h2>Future Research Interests</h2>
-            <p>Building on my expertise in electron-phonon coupling (EPC), my future research will venture into more
-                complex and emergent quantum phenomena. I aim to focus on two primary directions:</p>
-            <ol>
-                <li><strong>Electron-Phonon Coupling in Strongly Correlated Systems:</strong> I plan to extend and
-                    develop first-principles methods to accurately model EPC in strongly correlated materials. The
-                    intricate interplay between strong electron-electron repulsion and lattice dynamics in these systems
-                    is key to understanding phenomena such as metal-insulator transitions and unconventional
-                    superconductivity. My goal is to create a robust computational framework to untangle these competing
-                    interactions.</li>
-                <li><strong>Computational Design of Superconducting Materials:</strong> I am highly enthusiastic about
-                    applying these advanced EPC calculations to the search for new superconductors. By precisely
-                    simulating the phonon-mediated pairing mechanism, I will investigate novel material families with
-                    the potential for higher transition temperatures. This includes exploring conventional
-                    superconductors under high pressure and investigating the subtle role of lattice vibrations in
-                    unconventional superconducting systems.</li>
-                <li><strong>Non-Equilibrium Carrier Dynamics:</strong> I aim to extend my research to carrier transport
-                    in non-equilibrium systems, particularly under photo-excitation. While many computational models
-                    assume thermal equilibrium, crucial processes in photocatalysis and optoelectronics are governed by
-                    the ultrafast dynamics of 'hot' carriers. I plan to develop theoretical frameworks to simulate how
-                    these excited carriers relax and transfer energy to the lattice via electron-phonon scattering,
-                    providing fundamental insights into energy dissipation and carrier lifetime in materials under
-                    illumination.</li>
+  <!-- Project Card 3: Photoelectrode Design -->
+  <div class="md:col-span-6 bg-surface-container rounded-xl p-10 border-l-4 border-surface-tint">
+    <div class="flex justify-between items-start mb-6">
+      <span class="font-label text-xs tracking-widest text-on-surface-variant">MACRO-MESO MODELING</span>
+      <span class="material-symbols-outlined text-surface-tint">star</span>
+    </div>
+    <h2 class="font-headline text-3xl font-bold text-primary mb-4">Macro-Meso Modeling for Photoelectrode Design</h2>
+    <p class="font-body text-on-surface-variant leading-relaxed mb-8">
+      This project built a continuity equation model fed by first-principles parameters to connect quantum mechanical calculations with device-level performance predictions. Using this approach, I estimated the optimal film thickness for p-type CuFeO₂ and explored the structural optimization of n-type Fe₂O₃ from thin films to nanowire arrays.
+    </p>
+    <ul class="space-y-4 font-body text-sm mb-10">
+      <li class="flex items-start gap-3">
+        <span class="material-symbols-outlined text-surface-tint text-lg">check_circle</span>
+        <span>First-principles parameters → Device-level predictions</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="material-symbols-outlined text-surface-tint text-lg">check_circle</span>
+        <span>Optimized CuFeO₂ film thickness &amp; Fe₂O₃ nanowire design</span>
+      </li>
+    </ul>
+    <div class="mb-8">
+      <img class="w-full h-48 object-contain rounded-lg bg-white p-2" alt="Photoelectrode band diagram — space charge region and continuity equation model" src="images/project-1.png"/>
+    </div>
+  </div>
 
-            </ol>
-        </section>
-    </main>
+</div>
+</section>
 
-    <footer class="container">
-        <small>© 2026 Xiao Jiang (江筱). All rights reserved.</small>
-    </footer>
+<!-- CrystalCanvas Software -->
+<section class="relative z-10 max-w-7xl mx-auto px-8 py-12">
+<div class="bg-primary text-on-primary rounded-xl p-10 md:p-16">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+    <div class="md:col-span-8">
+      <div class="flex items-center gap-4 mb-6">
+        <span class="font-label text-xs tracking-widest text-on-primary-container border border-on-primary-container/30 px-3 py-1 rounded-full">SCIENTIFIC SOFTWARE</span>
+        <span class="font-label text-xs tracking-widest text-on-primary/70">CORE DEVELOPER</span>
+      </div>
+      <h2 class="font-headline text-4xl font-bold mb-6">CrystalCanvas</h2>
+      <p class="font-body text-sm text-on-primary/60 font-['Courier_New'] mb-6">C++ (Eigen/Spglib) · wgpu · React/TS</p>
+      <p class="font-body text-lg text-on-primary/80 leading-relaxed mb-8 max-w-2xl">
+        Developing a hardware-accelerated desktop application for computational materials science, aiming to bridge the gap between crystal structure modeling and DFT/MD simulation preparations.
+      </p>
+      <ul class="space-y-4 font-body text-sm text-on-primary/80 mb-10">
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-on-primary-container text-lg">check_circle</span>
+          <span><strong>Physics Kernel:</strong> C++ engine for Miller index slab cleaving, space group topology evaluation, and MIC validation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-on-primary-container text-lg">check_circle</span>
+          <span><strong>Native Rendering:</strong> GPU compute pipelines for real-time atomistic manipulation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-on-primary-container text-lg">check_circle</span>
+          <span><strong>Ecosystem Integration:</strong> Exporters for VASP, Quantum ESPRESSO, and LAMMPS.</span>
+        </li>
+      </ul>
+      <a href="https://github.com/XiaoJiang-Phy/CrystalCanvas" target="_blank" class="inline-flex items-center gap-2 bg-on-primary text-primary px-6 py-3 rounded-md font-label text-sm tracking-wide hover:opacity-90 transition-optimized">
+        <span class="material-symbols-outlined text-sm">terminal</span>
+        GitHub Repository
+      </a>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Computational Methodology / Technical Stack -->
+<section class="bg-surface-container-low mt-24 py-24 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+  <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+    <div class="max-w-xl">
+      <h2 class="font-headline text-5xl font-bold text-primary mb-4">Skills &amp; Expertise</h2>
+      <p class="font-body text-on-surface-variant">The computational tools and methods supporting my research.</p>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+    <div class="space-y-4">
+      <h3 class="font-label text-sm font-bold border-b border-outline-variant/30 pb-2">PROGRAMMING</h3>
+      <ul class="font-body text-on-surface-variant space-y-2">
+        <li>Python (NumPy, SciPy)</li>
+        <li>C++ (Eigen, STL)</li>
+        <li>Julia</li>
+
+      </ul>
+    </div>
+    <div class="space-y-4">
+      <h3 class="font-label text-sm font-bold border-b border-outline-variant/30 pb-2">SCIENTIFIC SOFTWARE</h3>
+      <ul class="font-body text-on-surface-variant space-y-2">
+        <li>Quantum ESPRESSO</li>
+        <li>VASP</li>
+        <li>Wannier90</li>
+        <li>EPW</li>
+        <li><a href="https://github.com/TRIQS/dft_tools" target="_blank" class="text-surface-tint hover:underline">TRIQS/dft_tools</a> (contributor)</li>
+      </ul>
+    </div>
+    <div class="space-y-4">
+      <h3 class="font-label text-sm font-bold border-b border-outline-variant/30 pb-2">METHODS</h3>
+      <ul class="font-body text-on-surface-variant space-y-2">
+        <li>Density Functional Theory</li>
+        <li>Electron-Phonon Coupling</li>
+        <li>Tensor Cross Interpolation</li>
+        <li>Polaron Theory</li>
+      </ul>
+    </div>
+    <div class="space-y-4">
+      <h3 class="font-label text-sm font-bold border-b border-outline-variant/30 pb-2">LANGUAGES</h3>
+      <ul class="font-body text-on-surface-variant space-y-2">
+        <li>Chinese (Native)</li>
+        <li>English</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Future Research Interests -->
+<section class="relative z-10 max-w-7xl mx-auto px-8 py-32">
+<div class="max-w-3xl">
+  <span class="font-label text-xs uppercase tracking-[0.3em] text-surface-tint mb-4 block">Looking Ahead</span>
+  <h2 class="font-headline text-5xl text-primary mb-12">Future Research Interests</h2>
+  <div class="space-y-12">
+    <div class="border-l-2 border-surface-tint pl-8">
+      <h3 class="font-headline text-2xl text-primary mb-4">Electron-Phonon Coupling in Strongly Correlated Systems</h3>
+      <p class="font-body text-on-surface-variant leading-relaxed">
+        I hope to explore first-principles approaches for modeling EPC in strongly correlated materials. The interplay between strong electron-electron repulsion and lattice dynamics is relevant to understanding metal-insulator transitions and unconventional superconductivity.
+      </p>
+    </div>
+    <div class="border-l-2 border-primary pl-8">
+      <h3 class="font-headline text-2xl text-primary mb-4">Computational Design of Superconducting Materials</h3>
+      <p class="font-body text-on-surface-variant leading-relaxed">
+        I am interested in studying phonon-mediated pairing mechanisms in different material families, including conventional superconductors under high pressure and unconventional systems, to better understand the conditions for higher transition temperatures.
+      </p>
+    </div>
+    <div class="border-l-2 border-outline-variant pl-8">
+      <h3 class="font-headline text-2xl text-primary mb-4">Many-Body Methods for Polaron Systems</h3>
+      <p class="font-body text-on-surface-variant leading-relaxed">
+        Building on recent advances in Quantics Tensor Cross Interpolation, I aim to extend TCI-based diagrammatic approaches to evaluate high-order Feynman diagrams for polaron systems in realistic multi-orbital materials, moving beyond model Hamiltonians toward first-principles accuracy.
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="w-full border-t border-[#111d23]/10">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-7xl mx-auto gap-8">
+  <div class="flex flex-col gap-2">
+    <div class="font-['Newsreader'] text-lg italic text-[#264653]">Xiao Jiang (江筱)</div>
+    <p class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-[#264653]/60">© 2026 Xiao Jiang. All rights reserved.</p>
+  </div>
+  <div class="flex gap-12">
+    <a class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank">Google Scholar</a>
+    <a class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://github.com/XiaoJiang-Phy" target="_blank">GitHub</a>
+    <a class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-[#264653]/60 hover:text-surface-tint transition-optimized" href="contact.html">Contact</a>
+  </div>
+</div>
+</footer>
+
 </body>
-
 </html>
