@@ -214,6 +214,91 @@ tailwind.config = {
 </div>
 </section>
 
+<!-- PolaronTCISolver Showcase -->
+<section class="relative z-10 max-w-7xl mx-auto px-8 py-12">
+<div class="bg-surface-container-low rounded-xl p-10 md:p-16 border-l-4 border-surface-tint">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+    <div class="md:col-span-8">
+      <div class="flex items-center gap-4 mb-6">
+        <span class="font-label text-xs tracking-widest text-surface-tint border border-surface-tint/30 px-3 py-1 rounded-full">SCIENTIFIC SOFTWARE</span>
+        <span class="font-label text-xs tracking-widest text-on-surface-variant">CORE DEVELOPER</span>
+      </div>
+      <h2 class="font-headline text-4xl font-bold text-primary mb-3">PolaronTCISolver</h2>
+      <p class="font-body text-sm text-on-surface-variant/60 font-['Courier_New'] mb-6">C++23 · Eigen · OpenMP · Tensor Train</p>
+      <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8 max-w-2xl">
+        A high-performance Tensor Cross Interpolation (TCI) engine for evaluating high-dimensional integrals and compressing multivariate functions into Tensor Train (TT) format. The library is designed for evaluating polaron Feynman diagrams, but the TCI engine itself is physics-agnostic — any function <em>f</em>&thinsp;:&thinsp;ℤ<sup>N</sup>&thinsp;→&thinsp;ℝ with low Schmidt rank can be decomposed.
+      </p>
+      <ul class="space-y-4 font-body text-sm text-on-surface-variant mb-10">
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-surface-tint text-lg">check_circle</span>
+          <span><strong>Zero-Allocation Hot Path:</strong> C++20 Concepts + <code class="text-xs bg-surface-container-high px-1.5 py-0.5 rounded">std::mdspan</code> out-parameter interface — zero <code class="text-xs bg-surface-container-high px-1.5 py-0.5 rounded">new</code>/<code class="text-xs bg-surface-container-high px-1.5 py-0.5 rounded">delete</code> in the solve loop.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-surface-tint text-lg">check_circle</span>
+          <span><strong>CI Recompression:</strong> Cross-interpolation-based ‖·‖<sub>∞</sub> truncation — superior to SVD for sharp features.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-surface-tint text-lg">check_circle</span>
+          <span><strong>Deterministic Global Search:</strong> Halton QMC + fixed-seed MCMC + rook coordinate descent for robust pivot discovery.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-surface-tint text-lg">check_circle</span>
+          <span><strong>Built-in Diagnostics:</strong> Pre-solve entanglement profiler (von Neumann entropy) + post-solve Monte Carlo convergence validator.</span>
+        </li>
+      </ul>
+
+      <!-- Demo stats highlight -->
+      <div class="bg-surface-container-high/60 rounded-lg p-6 mb-10">
+        <p class="font-label text-[10px] uppercase tracking-widest text-outline mb-3">10D Chain-Coupled Lorentzian Demo</p>
+        <div class="grid grid-cols-3 gap-6">
+          <div>
+            <p class="font-headline text-2xl font-bold text-primary">16<sup>10</sup></p>
+            <p class="font-body text-xs text-on-surface-variant">grid points (~1.1 trillion)</p>
+          </div>
+          <div>
+            <p class="font-headline text-2xl font-bold text-surface-tint">530K</p>
+            <p class="font-body text-xs text-on-surface-variant">TT parameters</p>
+          </div>
+          <div>
+            <p class="font-headline text-2xl font-bold text-primary">2M×</p>
+            <p class="font-body text-xs text-on-surface-variant">compression ratio</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 flex-wrap">
+        <a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-md font-label text-sm tracking-wide hover:opacity-90 transition-optimized">
+          <span class="material-symbols-outlined text-sm">terminal</span>
+          Showcase Repository
+        </a>
+        <span class="font-body text-xs text-on-surface-variant/60 italic">Full source available upon request for academic collaboration.</span>
+      </div>
+    </div>
+    <div class="md:col-span-4 flex flex-col justify-center">
+      <!-- Stylized terminal output preview -->
+      <div class="bg-inverse-surface text-inverse-on-surface rounded-lg p-6 font-['Courier_New'] text-[11px] leading-relaxed overflow-hidden shadow-lg">
+        <div class="flex items-center gap-2 mb-4 pb-3 border-b border-white/10">
+          <span class="w-3 h-3 rounded-full bg-red-400/80"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-400/80"></span>
+          <span class="w-3 h-3 rounded-full bg-green-400/80"></span>
+          <span class="ml-2 text-white/40 text-[10px]">demo_tci</span>
+        </div>
+        <p class="text-green-400/90 mb-2">─── Entanglement Profiling ───</p>
+        <p class="text-white/70">Max entropy: <span class="text-inverse-primary">0.1684</span></p>
+        <p class="text-white/70">TCI feasible: <span class="text-green-400">✅ Yes</span></p>
+        <p class="text-white/30 my-2">···</p>
+        <p class="text-green-400/90 mb-2">─── TCI Learning ───</p>
+        <p class="text-white/70">Status: <span class="text-green-400">✅ Converged</span></p>
+        <p class="text-white/70">Residual: <span class="text-inverse-primary">9.96e-07</span></p>
+        <p class="text-white/30 my-2">···</p>
+        <p class="text-green-400/90 mb-2">─── TT Structure ───</p>
+        <p class="text-white/70">Compression: <span class="text-inverse-primary font-bold">2,073,611×</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
 <!-- Computational Methodology / Technical Stack -->
 <section class="bg-surface-container-low mt-24 py-24 relative overflow-hidden">
 <div class="max-w-7xl mx-auto px-8 relative z-10">
