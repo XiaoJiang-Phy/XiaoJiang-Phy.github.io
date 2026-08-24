@@ -8,8 +8,8 @@ The site follows an editorial design system called **"The Observed Lattice"** �
 
 - **Typography**: [Newsreader](https://fonts.google.com/specimen/Newsreader) (display/headlines), [Manrope](https://fonts.google.com/specimen/Manrope) (body), [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) (labels/UI).
 - **Color System**: Material Design 3 tokens — Deep Orbital Blue (`#002e4b`), Surface Tint (`#006399`), and a full surface/container hierarchy.
-- **Interactivity**: CSS-only abstract toggles (`<details>`/`<summary>`), ambient card shadows, and subtle hover transitions — no custom JavaScript.
-- **Responsive**: Fully responsive grid layouts (mobile-first, 12-column on desktop).
+- **Interactivity**: Lightweight mobile navigation drawer, interactive abstract toggles, 1-click BibTeX citation copying, ambient card shadows, and subtle hover transitions.
+- **Responsive & SEO**: Fully responsive grid layouts (mobile navigation drawer + 12-column desktop grid), custom quantum lattice SVG favicon, Open Graph & Twitter Card social meta tags.
 
 ## Tech Stack
 

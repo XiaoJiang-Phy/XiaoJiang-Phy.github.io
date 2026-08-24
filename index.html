@@ -5,6 +5,24 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Xiao Jiang (江筱) | Condensed Matter Physics</title>
 <meta name="description" content="Academic profile of Xiao Jiang (江筱), Ph.D. in Condensed Matter Physics. Research on electron-phonon coupling, polarons, and computational materials science."/>
+<link rel="canonical" href="https://xiaojiang-phy.github.io/"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://xiaojiang-phy.github.io/"/>
+<meta property="og:title" content="Xiao Jiang (江筱) | Condensed Matter Physics"/>
+<meta property="og:description" content="Ph.D. in Condensed Matter Physics. Research on electron-phonon coupling, polaron physics, tensor cross interpolation (TCI), and computational materials science."/>
+<meta property="og:image" content="https://xiaojiang-phy.github.io/images/profile.png"/>
+<meta property="og:site_name" content="Xiao Jiang (江筱)"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:url" content="https://xiaojiang-phy.github.io/"/>
+<meta name="twitter:title" content="Xiao Jiang (江筱) | Condensed Matter Physics"/>
+<meta name="twitter:description" content="Ph.D. in Condensed Matter Physics. Research on electron-phonon coupling, polaron physics, tensor cross interpolation (TCI), and computational materials science."/>
+<meta name="twitter:image" content="https://xiaojiang-phy.github.io/images/profile.png"/>
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -82,21 +100,34 @@ tailwind.config = {
 <body class="bg-background text-on-background font-body">
 
 <!-- TopNavBar -->
-<header class="bg-[#f4faff]/90 backdrop-blur-md border-b border-outline-variant/20 sticky top-0 z-50">
-<nav class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
-  <div class="font-['Newsreader'] text-2xl font-bold italic text-primary">
+<header class="bg-[#f4faff]/95 backdrop-blur-md border-b border-outline-variant/20 sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-8 py-5 max-w-7xl mx-auto">
+  <a href="index.html" class="font-['Newsreader'] text-2xl font-bold italic text-primary hover:opacity-90">
     Xiao Jiang
-  </div>
+  </a>
   <div class="hidden md:flex items-center gap-10 font-['Newsreader'] font-medium text-lg tracking-tight">
     <a class="text-surface-tint border-b-2 border-surface-tint pb-1" href="index.html">Home</a>
     <a class="text-[#264653] hover:text-primary transition-optimized" href="research.html">Research</a>
     <a class="text-[#264653] hover:text-primary transition-optimized" href="publications.html">Publications</a>
     <a class="text-[#264653] hover:text-primary transition-optimized" href="contact.html">CV &amp; Contact</a>
   </div>
-  <div class="flex items-center">
+  <div class="hidden md:flex items-center">
     <span class="material-symbols-outlined text-primary">science</span>
   </div>
+  <!-- Mobile Menu Button -->
+  <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden p-2 text-primary hover:bg-surface-container-high rounded transition-optimized">
+    <span id="menu-icon" class="material-symbols-outlined text-2xl">menu</span>
+  </button>
 </nav>
+<!-- Mobile Dropdown Menu -->
+<div id="mobile-menu" class="menu-closed md:hidden bg-[#f4faff] border-b border-outline-variant/20 px-8 py-4">
+  <div class="flex flex-col gap-4 font-['Newsreader'] font-medium text-lg">
+    <a class="text-surface-tint font-bold py-1 border-l-2 border-surface-tint pl-3" href="index.html">Home</a>
+    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="research.html">Research</a>
+    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="publications.html">Publications</a>
+    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="contact.html">CV &amp; Contact</a>
+  </div>
+</div>
 </header>
 
 <main class="relative">
@@ -144,7 +175,7 @@ tailwind.config = {
       My research lies at the intersection of <span class="text-surface-tint">condensed matter theory</span> and <span class="text-surface-tint">computational materials science</span>, with a core focus on the fundamental physics of electron-phonon interactions and polaron quasiparticles.
     </p>
     <p class="font-body text-lg text-on-surface-variant leading-relaxed">
-      My current research goal is to implement and apply Tensor Cross Interpolation (TCI) algorithms for evaluating polaron Feynman diagrams in real materials — bridging the gap between model Hamiltonians and first-principles systems. I have built <a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" class="text-surface-tint hover:underline">PolaronTCISolver</a>, a C++23 TCI engine, as the computational backbone of this effort. In parallel, I build open-source scientific tools to accelerate first-principles workflows in the materials science community.
+      My current research goal is to implement and apply Tensor Cross Interpolation (TCI) algorithms for evaluating polaron Feynman diagrams in real materials — bridging the gap between model Hamiltonians and first-principles systems. I have built <a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" rel="noopener noreferrer" class="text-surface-tint hover:underline">PolaronTCISolver</a>, a C++23 TCI engine, as the computational backbone of this effort. In parallel, I build open-source scientific tools to accelerate first-principles workflows in the materials science community.
     </p>
   </div>
 </div>
@@ -187,7 +218,7 @@ tailwind.config = {
     <div class="h-1 bg-primary w-12"></div>
     <span class="font-label text-xs uppercase text-outline">Domain 03</span>
     <h3 class="font-headline text-3xl text-primary">Scientific Software</h3>
-    <p class="font-body text-on-surface-variant">Building tools for computational physics, including <a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" class="text-surface-tint hover:underline"><strong>PolaronTCISolver</strong></a> — a C++23 TCI engine that compresses a 10D function from ~1.1 trillion grid points to 530K tensor train parameters (2M× compression) — and <a href="https://github.com/XiaoJiang-Phy/CrystalCanvas" target="_blank" class="text-surface-tint hover:underline">CrystalCanvas</a>, a desktop application for crystal structure modeling and DFT/MD file preparation.</p>
+    <p class="font-body text-on-surface-variant">Building tools for computational physics, including <a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" rel="noopener noreferrer" class="text-surface-tint hover:underline"><strong>PolaronTCISolver</strong></a> — a C++23 TCI engine that compresses a 10D function from ~1.1 trillion grid points to 530K tensor train parameters (2M× compression) — and <a href="https://github.com/XiaoJiang-Phy/CrystalCanvas" target="_blank" rel="noopener noreferrer" class="text-surface-tint hover:underline">CrystalCanvas</a>, a desktop application for crystal structure modeling and DFT/MD file preparation.</p>
     <div class="mt-auto pt-6 group cursor-pointer flex items-center gap-4">
       <a href="research.html" class="font-label text-xs uppercase tracking-widest group-hover:text-surface-tint transition-optimized">Read More</a>
       <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -252,8 +283,8 @@ tailwind.config = {
     Xiao Jiang (江筱)
   </div>
   <div class="flex gap-12 font-['Space_Grotesk'] text-xs uppercase tracking-widest">
-    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank">Google Scholar</a>
-    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://github.com/XiaoJiang-Phy" target="_blank">GitHub</a>
+    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://github.com/XiaoJiang-Phy" target="_blank" rel="noopener noreferrer">GitHub</a>
     <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="contact.html">Contact</a>
   </div>
   <div class="font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] text-[#264653]/40 text-center md:text-right">
@@ -261,6 +292,30 @@ tailwind.config = {
   </div>
 </div>
 </footer>
+
+<script>
+// Mobile Navigation Toggle
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuIcon = document.getElementById('menu-icon');
+
+if (mobileBtn && mobileMenu) {
+  mobileBtn.addEventListener('click', () => {
+    const isClosed = mobileMenu.classList.contains('menu-closed');
+    if (isClosed) {
+      mobileMenu.classList.remove('menu-closed');
+      mobileMenu.classList.add('menu-open');
+      mobileBtn.setAttribute('aria-expanded', 'true');
+      menuIcon.textContent = 'close';
+    } else {
+      mobileMenu.classList.remove('menu-open');
+      mobileMenu.classList.add('menu-closed');
+      mobileBtn.setAttribute('aria-expanded', 'false');
+      menuIcon.textContent = 'menu';
+    }
+  });
+}
+</script>
 
 </body>
 </html>

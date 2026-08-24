@@ -60,3 +60,73 @@ details.pub-abstract[open] .abstract-toggle::before {
 details.pub-abstract .abstract-toggle::before {
     content: "View Abstract";
 }
+
+/* BibTeX toggle and code block (publications page) */
+details.pub-bibtex > summary {
+    cursor: pointer;
+    list-style: none;
+}
+details.pub-bibtex > summary::-webkit-details-marker {
+    display: none;
+}
+details.pub-bibtex[open] .bibtex-toggle::before {
+    content: "Hide BibTeX";
+}
+details.pub-bibtex .bibtex-toggle::before {
+    content: "Cite / BibTeX";
+}
+
+.bibtex-box {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    background-color: #111d23;
+    color: #cde5ff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: relative;
+    overflow-x: auto;
+}
+
+.copy-bibtex-btn {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    background: rgba(255, 255, 255, 0.12);
+    color: #e6f3fb;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.25rem;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+.copy-bibtex-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+.copy-bibtex-btn.copied {
+    background: #006399;
+    color: #ffffff;
+}
+
+/* Mobile Menu Transitions */
+#mobile-menu {
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-in-out;
+}
+#mobile-menu.menu-closed {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+#mobile-menu.menu-open {
+    max-height: 320px;
+    opacity: 1;
+    pointer-events: auto;
+}

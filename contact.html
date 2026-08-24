@@ -5,7 +5,27 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>CV &amp; Contact | Xiao Jiang (江筱)</title>
 <meta name="description" content="Curriculum Vitae and contact information for Xiao Jiang (江筱), Ph.D. in Condensed Matter Physics from Lanzhou University."/>
+<link rel="canonical" href="https://xiaojiang-phy.github.io/contact.html"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://xiaojiang-phy.github.io/contact.html"/>
+<meta property="og:title" content="CV &amp; Contact | Xiao Jiang (江筱)"/>
+<meta property="og:description" content="Curriculum Vitae and contact information for Xiao Jiang (江筱), Ph.D. in Condensed Matter Physics."/>
+<meta property="og:image" content="https://xiaojiang-phy.github.io/images/profile.png"/>
+<meta property="og:site_name" content="Xiao Jiang (江筱)"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:url" content="https://xiaojiang-phy.github.io/contact.html"/>
+<meta name="twitter:title" content="CV &amp; Contact | Xiao Jiang (江筱)"/>
+<meta name="twitter:description" content="Curriculum Vitae and contact information for Xiao Jiang (江筱), Ph.D. in Condensed Matter Physics."/>
+<meta name="twitter:image" content="https://xiaojiang-phy.github.io/images/profile.png"/>
+
 <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
 <!-- Material Symbols -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -54,19 +74,32 @@ tailwind.config = {
 <body class="bg-background text-on-background font-body">
 
 <!-- Top Navigation -->
-<header class="bg-[#f4faff]/90 backdrop-blur-md border-b border-outline-variant/20 sticky top-0 z-50">
-<nav class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
-  <a href="index.html" class="font-['Newsreader'] text-2xl font-bold italic text-primary">Xiao Jiang</a>
+<header class="bg-[#f4faff]/95 backdrop-blur-md border-b border-outline-variant/20 sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-8 py-5 max-w-7xl mx-auto">
+  <a href="index.html" class="font-['Newsreader'] text-2xl font-bold italic text-primary hover:opacity-90">Xiao Jiang</a>
   <div class="hidden md:flex items-center gap-10 font-['Newsreader'] font-medium text-lg tracking-tight">
     <a class="text-[#264653] hover:text-primary transition-optimized" href="index.html">Home</a>
     <a class="text-[#264653] hover:text-primary transition-optimized" href="research.html">Research</a>
     <a class="text-[#264653] hover:text-primary transition-optimized" href="publications.html">Publications</a>
     <a class="text-surface-tint border-b-2 border-surface-tint pb-1" href="contact.html">CV &amp; Contact</a>
   </div>
-  <div class="flex items-center gap-4">
+  <div class="hidden md:flex items-center gap-4">
     <span class="material-symbols-outlined text-primary text-2xl">science</span>
   </div>
+  <!-- Mobile Menu Button -->
+  <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden p-2 text-primary hover:bg-surface-container-high rounded transition-optimized">
+    <span id="menu-icon" class="material-symbols-outlined text-2xl">menu</span>
+  </button>
 </nav>
+<!-- Mobile Dropdown Menu -->
+<div id="mobile-menu" class="menu-closed md:hidden bg-[#f4faff] border-b border-outline-variant/20 px-8 py-4">
+  <div class="flex flex-col gap-4 font-['Newsreader'] font-medium text-lg">
+    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="index.html">Home</a>
+    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="research.html">Research</a>
+    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="publications.html">Publications</a>
+    <a class="text-surface-tint font-bold py-1 border-l-2 border-surface-tint pl-3" href="contact.html">CV &amp; Contact</a>
+  </div>
+</div>
 </header>
 
 <main class="relative">
@@ -83,7 +116,7 @@ tailwind.config = {
     <h1 class="font-headline text-6xl md:text-8xl text-primary font-medium leading-tight tracking-tighter">Academic <br/><span class="italic text-surface-tint">Record &amp; Contact</span></h1>
   </div>
   <div class="lg:col-span-4 pb-4">
-    <a href="XiaoJiang_CV.pdf" class="group flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-md font-label text-sm tracking-widest uppercase transition-all hover:bg-primary-container hover:text-on-primary-container inline-flex" target="_blank">
+    <a href="XiaoJiang_CV.pdf" class="group flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-md font-label text-sm tracking-widest uppercase transition-all hover:bg-primary-container hover:text-on-primary-container inline-flex" target="_blank" rel="noopener noreferrer">
       Download PDF CV
       <span class="material-symbols-outlined text-lg">download</span>
     </a>
@@ -116,40 +149,60 @@ tailwind.config = {
   <section>
     <h2 class="font-headline text-3xl italic text-primary mb-10">Technical Expertise</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Programming -->
       <div class="bg-surface-container-low p-8 rounded-lg flex flex-col gap-4">
         <span class="material-symbols-outlined text-primary-container">terminal</span>
         <h4 class="font-label text-xs uppercase tracking-widest text-primary-container font-bold">Programming</h4>
         <ul class="font-body text-on-surface-variant space-y-2 text-sm">
           <li class="flex justify-between"><span>Python (NumPy, SciPy)</span></li>
-          <li class="flex justify-between"><span>C++ (C++23, Eigen, STL)</span></li>
+          <li class="flex justify-between"><span>C++ (C++23, Eigen)</span></li>
           <li class="flex justify-between"><span>Julia</span></li>
-
         </ul>
       </div>
-      <div class="bg-surface-container-highest p-8 rounded-lg flex flex-col gap-4">
+
+      <!-- Software Eng & HPC -->
+      <div class="bg-surface-container-low p-8 rounded-lg flex flex-col gap-4">
+        <span class="material-symbols-outlined text-primary-container">memory</span>
+        <h4 class="font-label text-xs uppercase tracking-widest text-primary-container font-bold">Software Eng. &amp; HPC</h4>
+        <ul class="font-body text-on-surface-variant space-y-2 text-sm">
+          <li>CMake, Git/GitHub Workflows</li>
+          <li>Continuous Integration (CI/CD)</li>
+          <li>MPI / OpenMP Parallelization</li>
+          <li>Linux HPC Cluster Environments</li>
+        </ul>
+      </div>
+
+      <!-- Scientific Software -->
+      <div class="bg-surface-container-highest p-8 rounded-lg flex flex-col gap-4 md:col-span-2">
         <span class="material-symbols-outlined text-primary-container">dns</span>
         <h4 class="font-label text-xs uppercase tracking-widest text-primary-container font-bold">Scientific Software</h4>
-        <ul class="font-body text-on-surface-variant space-y-2 text-sm">
+        <ul class="font-body text-on-surface-variant grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm">
           <li>Quantum ESPRESSO</li>
           <li>VASP</li>
           <li>Wannier90</li>
           <li>EPW</li>
-          <li><a href="https://github.com/TRIQS/dft_tools" target="_blank" class="text-surface-tint hover:underline">TRIQS/dft_tools</a> (contributor)</li>
-          <li><a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" class="text-surface-tint hover:underline">PolaronTCISolver</a> (core developer)</li>
-          <li><a href="https://github.com/XiaoJiang-Phy/CrystalCanvas" target="_blank" class="text-surface-tint hover:underline">CrystalCanvas</a> (core developer)</li>
+          <li>Yambo &amp; Elk</li>
+          <li><a href="https://github.com/TRIQS/dft_tools" target="_blank" rel="noopener noreferrer" class="text-surface-tint hover:underline">TRIQS/dft_tools</a> (contributor)</li>
+          <li><a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" rel="noopener noreferrer" class="text-surface-tint hover:underline">PolaronTCISolver</a> (core developer)</li>
+          <li><a href="https://github.com/XiaoJiang-Phy/CrystalCanvas" target="_blank" rel="noopener noreferrer" class="text-surface-tint hover:underline">CrystalCanvas</a> (core developer)</li>
         </ul>
       </div>
+
+      <!-- Methods & Theoretical Models -->
       <div class="md:col-span-2 bg-secondary-container p-8 rounded-lg flex flex-col md:flex-row md:items-center gap-8">
-        <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-2 shrink-0">
           <span class="material-symbols-outlined text-on-secondary-container">precision_manufacturing</span>
-          <h4 class="font-label text-xs uppercase tracking-widest text-on-secondary-container font-bold">Methods</h4>
+          <h4 class="font-label text-xs uppercase tracking-widest text-on-secondary-container font-bold">Theoretical Models &amp; Methods</h4>
         </div>
         <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Density Functional Theory</span>
+          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Density Functional Theory (DFT)</span>
+          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">DFPT</span>
+          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">DMFT</span>
+          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">GW / BSE</span>
           <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Electron-Phonon Coupling</span>
-          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Tensor Cross Interpolation</span>
+          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Tensor Cross Interpolation (TCI) / Tensor Train</span>
+          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Feynman Diagrammatic Methods</span>
           <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Polaron Theory</span>
-          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Feynman Diagrams</span>
           <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Boltzmann Transport</span>
         </div>
       </div>
@@ -167,7 +220,7 @@ tailwind.config = {
         </div>
       </div>
       <div class="flex items-start gap-6 border-l-2 border-surface-variant pl-6 py-2">
-        <span class="font-label text-sm text-outline-variant whitespace-nowrap pt-1">Fluent</span>
+        <span class="font-label text-sm text-outline-variant whitespace-nowrap pt-1">Proficient</span>
         <div>
           <h4 class="font-body font-bold text-on-surface">English</h4>
         </div>
@@ -197,7 +250,7 @@ tailwind.config = {
           <p class="font-label text-xs uppercase tracking-widest text-outline mb-1">Field</p>
           <p class="font-body text-on-surface leading-relaxed">
             Condensed Matter Physics<br/>
-            First-Principles Calculation
+            First-Principles Calculation &amp; Many-Body Methods
           </p>
         </div>
       </div>
@@ -205,11 +258,11 @@ tailwind.config = {
     <div class="mt-12 pt-10 border-t border-outline-variant/15">
       <p class="font-label text-xs uppercase tracking-widest text-outline mb-6">Profiles</p>
       <div class="flex flex-wrap gap-4">
-        <a class="flex items-center gap-2 font-body text-sm font-bold text-primary hover:text-surface-tint transition-all group" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank">
+        <a class="flex items-center gap-2 font-body text-sm font-bold text-primary hover:text-surface-tint transition-all group" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
           Google Scholar
           <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">north_east</span>
         </a>
-        <a class="flex items-center gap-2 font-body text-sm font-bold text-primary hover:text-surface-tint transition-all group" href="https://github.com/XiaoJiang-Phy" target="_blank">
+        <a class="flex items-center gap-2 font-body text-sm font-bold text-primary hover:text-surface-tint transition-all group" href="https://github.com/XiaoJiang-Phy" target="_blank" rel="noopener noreferrer">
           GitHub
           <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">north_east</span>
         </a>
@@ -238,12 +291,36 @@ tailwind.config = {
 <div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-7xl mx-auto gap-8">
   <div class="font-['Newsreader'] text-lg italic text-[#264653]">Xiao Jiang (江筱)</div>
   <div class="flex flex-wrap justify-center gap-8 font-['Space_Grotesk'] text-xs uppercase tracking-widest">
-    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank">Google Scholar</a>
-    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://github.com/XiaoJiang-Phy" target="_blank">GitHub</a>
+    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://github.com/XiaoJiang-Phy" target="_blank" rel="noopener noreferrer">GitHub</a>
   </div>
-  <p class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-[#264653]/40">© 2026 Xiao Jiang. All rights reserved.</p>
+  <p class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-[#264653]/40">© 2026 Xiao Jiang (江筱). All rights reserved.</p>
 </div>
 </footer>
+
+<script>
+// Mobile Navigation Toggle
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuIcon = document.getElementById('menu-icon');
+
+if (mobileBtn && mobileMenu) {
+  mobileBtn.addEventListener('click', () => {
+    const isClosed = mobileMenu.classList.contains('menu-closed');
+    if (isClosed) {
+      mobileMenu.classList.remove('menu-closed');
+      mobileMenu.classList.add('menu-open');
+      mobileBtn.setAttribute('aria-expanded', 'true');
+      menuIcon.textContent = 'close';
+    } else {
+      mobileMenu.classList.remove('menu-open');
+      mobileMenu.classList.add('menu-closed');
+      mobileBtn.setAttribute('aria-expanded', 'false');
+      menuIcon.textContent = 'menu';
+    }
+  });
+}
+</script>
 
 </body>
 </html>

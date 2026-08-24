@@ -5,7 +5,27 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Publications | Xiao Jiang (江筱)</title>
 <meta name="description" content="Full publication list of Xiao Jiang — first-author and co-authored papers in condensed matter physics, polaron theory, and computational materials science."/>
+<link rel="canonical" href="https://xiaojiang-phy.github.io/publications.html"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://xiaojiang-phy.github.io/publications.html"/>
+<meta property="og:title" content="Publications | Xiao Jiang (江筱)"/>
+<meta property="og:description" content="Full publication list of Xiao Jiang — first-author and co-authored papers in condensed matter physics, polaron theory, and computational materials science."/>
+<meta property="og:image" content="https://xiaojiang-phy.github.io/images/project-3.png"/>
+<meta property="og:site_name" content="Xiao Jiang (江筱)"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:url" content="https://xiaojiang-phy.github.io/publications.html"/>
+<meta name="twitter:title" content="Publications | Xiao Jiang (江筱)"/>
+<meta name="twitter:description" content="Full publication list of Xiao Jiang — first-author and co-authored papers in condensed matter physics, polaron theory, and computational materials science."/>
+<meta name="twitter:image" content="https://xiaojiang-phy.github.io/images/project-3.png"/>
+
 <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
 <!-- Material Symbols -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -57,18 +77,33 @@ tailwind.config = {
 <body class="bg-surface text-on-surface font-body">
 
 <!-- TopNavBar -->
-<nav class="bg-[#f4faff]/90 backdrop-blur-md border-b border-outline-variant/20 sticky top-0 z-50">
-<div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
-  <a href="index.html" class="font-['Newsreader'] text-2xl font-bold italic text-primary">Xiao Jiang</a>
+<header class="bg-[#f4faff]/95 backdrop-blur-md border-b border-outline-variant/20 sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-8 py-5 max-w-7xl mx-auto">
+  <a href="index.html" class="font-['Newsreader'] text-2xl font-bold italic text-primary hover:opacity-90">Xiao Jiang</a>
   <div class="hidden md:flex items-center gap-10">
     <a class="text-[#264653] hover:text-primary transition-optimized font-['Newsreader'] font-medium text-lg tracking-tight" href="index.html">Home</a>
     <a class="text-[#264653] hover:text-primary transition-optimized font-['Newsreader'] font-medium text-lg tracking-tight" href="research.html">Research</a>
     <a class="text-surface-tint border-b-2 border-surface-tint pb-1 font-['Newsreader'] font-medium text-lg tracking-tight" href="publications.html">Publications</a>
     <a class="text-[#264653] hover:text-primary transition-optimized font-['Newsreader'] font-medium text-lg tracking-tight" href="contact.html">CV &amp; Contact</a>
   </div>
-  <span class="material-symbols-outlined text-primary">science</span>
-</div>
+  <div class="hidden md:flex items-center">
+    <span class="material-symbols-outlined text-primary">science</span>
+  </div>
+  <!-- Mobile Menu Button -->
+  <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden p-2 text-primary hover:bg-surface-container-high rounded transition-optimized">
+    <span id="menu-icon" class="material-symbols-outlined text-2xl">menu</span>
+  </button>
 </nav>
+<!-- Mobile Dropdown Menu -->
+<div id="mobile-menu" class="menu-closed md:hidden bg-[#f4faff] border-b border-outline-variant/20 px-8 py-4">
+  <div class="flex flex-col gap-4 font-['Newsreader'] font-medium text-lg">
+    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="index.html">Home</a>
+    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="research.html">Research</a>
+    <a class="text-surface-tint font-bold py-1 border-l-2 border-surface-tint pl-3" href="publications.html">Publications</a>
+    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="contact.html">CV &amp; Contact</a>
+  </div>
+</div>
+</header>
 
 <main class="relative">
 <!-- Lattice Background -->
@@ -113,12 +148,15 @@ tailwind.config = {
         <div class="font-label text-[10px] uppercase text-secondary tracking-widest mt-1">Selected Pubs</div>
       </div>
     </div>
+    <div class="mt-6 pt-4 border-t border-outline-variant/20 font-['Space_Grotesk'] text-[10px] text-secondary/70 uppercase tracking-wider">
+      * Source: Google Scholar (Aug 2026)
+    </div>
   </div>
   <div class="px-4">
     <h3 class="font-label text-xs uppercase tracking-widest text-secondary mb-6">External Profiles</h3>
     <ul class="space-y-4 font-body text-sm">
-      <li><a class="flex items-center gap-3 hover:text-surface-tint transition-optimized" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank"><span class="material-symbols-outlined text-base">school</span> Google Scholar</a></li>
-      <li><a class="flex items-center gap-3 hover:text-surface-tint transition-optimized" href="https://github.com/XiaoJiang-Phy" target="_blank"><span class="material-symbols-outlined text-base">terminal</span> GitHub</a></li>
+      <li><a class="flex items-center gap-3 hover:text-surface-tint transition-optimized" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-base">school</span> Google Scholar</a></li>
+      <li><a class="flex items-center gap-3 hover:text-surface-tint transition-optimized" href="https://github.com/XiaoJiang-Phy" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-base">terminal</span> GitHub</a></li>
     </ul>
   </div>
 </div>
@@ -132,7 +170,7 @@ tailwind.config = {
   <span class="font-label text-[10px] uppercase tracking-widest text-surface-tint bg-surface-container px-3 py-1 mb-6 inline-block">Featured Research</span>
   <h3 class="font-headline text-2xl font-bold text-primary mb-4">First-Principles Study of Polarons in Bismuth Vanadate</h3>
   <p class="font-body text-on-surface-variant mb-6">Our latest work in <em>J. Phys. Chem. C (2025)</em> systematically compares the formation and behavior of polarons across multiple crystal phases of BiVO₄, offering insights into carrier transport optimization.</p>
-  <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary flex items-center gap-1 hover:underline" href="https://doi.org/10.1021/acs.jpcc.5c05875" target="_blank">
+  <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary flex items-center gap-1 hover:underline" href="https://doi.org/10.1021/acs.jpcc.5c05875" target="_blank" rel="noopener noreferrer">
     <span class="material-symbols-outlined text-sm">menu_book</span> Read Publication
   </a>
 </div>
@@ -169,10 +207,30 @@ tailwind.config = {
             Bismuth vanadate (BiVO₄) is a promising photoanode material for solar water splitting. However, its poor charge transport efficiency remains a bottleneck. In this work, we perform comprehensive density functional theory (DFT) calculations to investigate small polaron formation in monoclinic, tetragonal, and orthorhombic phases of BiVO₄. We find that electron polarons are energetically favorable in all phases, with binding energies ranging from 0.3 to 0.5 eV. Our results provide theoretical guidance for optimizing carrier mobility via strain engineering and doping.
           </div>
         </details>
-        <div class="pt-2 flex gap-6">
-          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary flex items-center gap-1 hover:underline" href="https://doi.org/10.1021/acs.jpcc.5c05875" target="_blank">
+        <div class="pt-2 flex flex-wrap items-center gap-6">
+          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary flex items-center gap-1 hover:underline" href="https://doi.org/10.1021/acs.jpcc.5c05875" target="_blank" rel="noopener noreferrer">
             DOI: 10.1021/acs.jpcc.5c05875
           </a>
+          <details class="pub-bibtex">
+            <summary class="font-label text-[10px] uppercase tracking-widest font-bold text-surface-tint flex items-center gap-1 hover:underline">
+              <span class="material-symbols-outlined text-sm">format_quote</span>
+              <span class="bibtex-toggle"></span>
+            </summary>
+            <div class="bibtex-box mt-3">
+              <button class="copy-bibtex-btn" onclick="copyBibtex(this)"><span class="material-symbols-outlined text-xs">content_copy</span> Copy</button>
+              <pre>@article{jiang2025first,
+  title = {First-Principles Study of Polarons in Multiple Crystal Phases of Bismuth Vanadate},
+  author = {Jiang, Xiao and Cheng, Xu and Liu, Zhanqi and Ding, Liyun and Han, Weihua},
+  journal = {The Journal of Physical Chemistry C},
+  volume = {129},
+  number = {42},
+  pages = {19190--19198},
+  year = {2025},
+  publisher = {ACS Publications},
+  doi = {10.1021/acs.jpcc.5c05875}
+}</pre>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -202,10 +260,29 @@ tailwind.config = {
             Ceria (CeO₂) is widely used in catalysis due to its remarkable oxygen storage capacity (OSC). This study employs DFT+U calculations to elucidate the dynamics of small polarons associated with oxygen vacancies. We reveal a strong coupling between lattice vibrations and electronic localization, which significantly affects the surface reactivity.
           </div>
         </details>
-        <div class="pt-2 flex gap-6">
-          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary flex items-center gap-1 hover:underline" href="https://doi.org/10.1039/D5CP02631H" target="_blank">
+        <div class="pt-2 flex flex-wrap items-center gap-6">
+          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary flex items-center gap-1 hover:underline" href="https://doi.org/10.1039/D5CP02631H" target="_blank" rel="noopener noreferrer">
             DOI: 10.1039/D5CP02631H
           </a>
+          <details class="pub-bibtex">
+            <summary class="font-label text-[10px] uppercase tracking-widest font-bold text-surface-tint flex items-center gap-1 hover:underline">
+              <span class="material-symbols-outlined text-sm">format_quote</span>
+              <span class="bibtex-toggle"></span>
+            </summary>
+            <div class="bibtex-box mt-3">
+              <button class="copy-bibtex-btn" onclick="copyBibtex(this)"><span class="material-symbols-outlined text-xs">content_copy</span> Copy</button>
+              <pre>@article{jiang2025understanding,
+  title = {Understanding Polaron Dynamics in CeO$_{2}$ for Advanced Catalytic Material Design},
+  author = {Jiang, Xiao and Cheng, Xu and Liu, Zhanqi and Ding, Liyun and Han, Weihua},
+  journal = {Physical Chemistry Chemical Physics},
+  volume = {27},
+  pages = {21673--21682},
+  year = {2025},
+  publisher = {Royal Society of Chemistry},
+  doi = {10.1039/D5CP02631H}
+}</pre>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -224,10 +301,30 @@ tailwind.config = {
           <span class="material-symbols-outlined text-sm">menu_book</span>
           Applied Physics Letters 120 (2022): 063901.
         </div>
-        <div class="pt-2 flex gap-6">
-          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary flex items-center gap-1 hover:underline" href="https://doi.org/10.1063/5.0080794" target="_blank">
+        <div class="pt-2 flex flex-wrap items-center gap-6">
+          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary flex items-center gap-1 hover:underline" href="https://doi.org/10.1063/5.0080794" target="_blank" rel="noopener noreferrer">
             DOI: 10.1063/5.0080794
           </a>
+          <details class="pub-bibtex">
+            <summary class="font-label text-[10px] uppercase tracking-widest font-bold text-surface-tint flex items-center gap-1 hover:underline">
+              <span class="material-symbols-outlined text-sm">format_quote</span>
+              <span class="bibtex-toggle"></span>
+            </summary>
+            <div class="bibtex-box mt-3">
+              <button class="copy-bibtex-btn" onclick="copyBibtex(this)"><span class="material-symbols-outlined text-xs">content_copy</span> Copy</button>
+              <pre>@article{jiang2022computation,
+  title = {Computation-assisted performance optimization for photoelectrochemical photoelectrodes},
+  author = {Jiang, Xiao and Cheng, Xu and Zhang, Zemin and Chen, Tao and Tao, Kun and Han, Weihua},
+  journal = {Applied Physics Letters},
+  volume = {120},
+  number = {6},
+  pages = {063901},
+  year = {2022},
+  publisher = {AIP Publishing},
+  doi = {10.1063/5.0080794}
+}</pre>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -246,10 +343,29 @@ tailwind.config = {
           <span class="material-symbols-outlined text-sm">menu_book</span>
           Electrochimica Acta 273 (2018): 208-215.
         </div>
-        <div class="pt-2 flex gap-6">
-          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary flex items-center gap-1 hover:underline" href="https://doi.org/10.1016/j.electacta.2018.04.052" target="_blank">
+        <div class="pt-2 flex flex-wrap items-center gap-6">
+          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary flex items-center gap-1 hover:underline" href="https://doi.org/10.1016/j.electacta.2018.04.052" target="_blank" rel="noopener noreferrer">
             DOI: 10.1016/j.electacta.2018.04.052
           </a>
+          <details class="pub-bibtex">
+            <summary class="font-label text-[10px] uppercase tracking-widest font-bold text-surface-tint flex items-center gap-1 hover:underline">
+              <span class="material-symbols-outlined text-sm">format_quote</span>
+              <span class="bibtex-toggle"></span>
+            </summary>
+            <div class="bibtex-box mt-3">
+              <button class="copy-bibtex-btn" onclick="copyBibtex(this)"><span class="material-symbols-outlined text-xs">content_copy</span> Copy</button>
+              <pre>@article{jiang2018carbon,
+  title = {Carbon quantum dots based charge bridge between photoanode and electrocatalysts for efficiency water oxidation performance},
+  author = {Jiang, Xiao and Zhang, Zemin and Mei, Junfeng and Han, Dongyan and Xie, Mingzheng and Wang, Fangcong and Xie, Erqing and Han, Weihua},
+  journal = {Electrochimica Acta},
+  volume = {273},
+  pages = {208--215},
+  year = {2018},
+  publisher = {Elsevier},
+  doi = {10.1016/j.electacta.2018.04.052}
+}</pre>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -279,8 +395,28 @@ tailwind.config = {
           <span class="material-symbols-outlined text-sm">menu_book</span>
           ACS Nano 19.37 (2025): 33361-33371.
         </div>
-        <div class="pt-2">
-          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1021/acsnano.5c09730" target="_blank">DOI: 10.1021/acsnano.5c09730</a>
+        <div class="pt-2 flex flex-wrap items-center gap-6">
+          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1021/acsnano.5c09730" target="_blank" rel="noopener noreferrer">DOI: 10.1021/acsnano.5c09730</a>
+          <details class="pub-bibtex">
+            <summary class="font-label text-[10px] uppercase tracking-widest font-bold text-surface-tint flex items-center gap-1 hover:underline">
+              <span class="material-symbols-outlined text-sm">format_quote</span>
+              <span class="bibtex-toggle"></span>
+            </summary>
+            <div class="bibtex-box mt-3">
+              <button class="copy-bibtex-btn" onclick="copyBibtex(this)"><span class="material-symbols-outlined text-xs">content_copy</span> Copy</button>
+              <pre>@article{liu2025catalytic,
+  title = {Catalytic Effect of Gray Gallium Nitride for Hydrogen Peroxide Generation: Insights into Mechanical Stimuli-Driven Semiconductor--Liquid Interface Alteration},
+  author = {Liu, Zhanqi and Jiang, Xiao and Cheng, Xu and Pei, Yue and Wei, Xinkong and Han, Weihua and Tang, Wei and Wang, Zhong Lin},
+  journal = {ACS Nano},
+  volume = {19},
+  number = {37},
+  pages = {33361--33371},
+  year = {2025},
+  publisher = {ACS Publications},
+  doi = {10.1021/acsnano.5c09730}
+}</pre>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -299,8 +435,28 @@ tailwind.config = {
           <span class="material-symbols-outlined text-sm">menu_book</span>
           Advanced Functional Materials 34.32 (2024): 2316409.
         </div>
-        <div class="pt-2">
-          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1002/adfm.202316409" target="_blank">DOI: 10.1002/adfm.202316409</a>
+        <div class="pt-2 flex flex-wrap items-center gap-6">
+          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1002/adfm.202316409" target="_blank" rel="noopener noreferrer">DOI: 10.1002/adfm.202316409</a>
+          <details class="pub-bibtex">
+            <summary class="font-label text-[10px] uppercase tracking-widest font-bold text-surface-tint flex items-center gap-1 hover:underline">
+              <span class="material-symbols-outlined text-sm">format_quote</span>
+              <span class="bibtex-toggle"></span>
+            </summary>
+            <div class="bibtex-box mt-3">
+              <button class="copy-bibtex-btn" onclick="copyBibtex(this)"><span class="material-symbols-outlined text-xs">content_copy</span> Copy</button>
+              <pre>@article{shao2024high,
+  title = {High Performance Ferroelectric-modulated Photoelectrodes by Using Grid Charge Collector},
+  author = {Shao, Jialin and Liu, Huiya and Jiang, Xiao and others},
+  journal = {Advanced Functional Materials},
+  volume = {34},
+  number = {32},
+  pages = {2316409},
+  year = {2024},
+  publisher = {Wiley Online Library},
+  doi = {10.1002/adfm.202316409}
+}</pre>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -319,8 +475,28 @@ tailwind.config = {
           <span class="material-symbols-outlined text-sm">menu_book</span>
           ACS Applied Materials &amp; Interfaces 14.38 (2022): 43946-43954.
         </div>
-        <div class="pt-2">
-          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1021/acsami.2c12309" target="_blank">DOI: 10.1021/acsami.2c12309</a>
+        <div class="pt-2 flex flex-wrap items-center gap-6">
+          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1021/acsami.2c12309" target="_blank" rel="noopener noreferrer">DOI: 10.1021/acsami.2c12309</a>
+          <details class="pub-bibtex">
+            <summary class="font-label text-[10px] uppercase tracking-widest font-bold text-surface-tint flex items-center gap-1 hover:underline">
+              <span class="material-symbols-outlined text-sm">format_quote</span>
+              <span class="bibtex-toggle"></span>
+            </summary>
+            <div class="bibtex-box mt-3">
+              <button class="copy-bibtex-btn" onclick="copyBibtex(this)"><span class="material-symbols-outlined text-xs">content_copy</span> Copy</button>
+              <pre>@article{sun2022optoelectrical,
+  title = {Optoelectrical Regulation of CuBi$_{2}$O$_{4}$ Photocathode via Photonic Crystal Structure for Solar-Fuel Conversion},
+  author = {Sun, Mengdi and Chen, Wanhu and Jiang, Xiao and others},
+  journal = {ACS Applied Materials \& Interfaces},
+  volume = {14},
+  number = {38},
+  pages = {43946--43954},
+  year = {2022},
+  publisher = {ACS Publications},
+  doi = {10.1021/acsami.2c12309}
+}</pre>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -339,8 +515,28 @@ tailwind.config = {
           <span class="material-symbols-outlined text-sm">menu_book</span>
           Inorganic Chemistry 60.5 (2021): 3057-3064.
         </div>
-        <div class="pt-2">
-          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1021/acs.inorgchem.0c03342" target="_blank">DOI: 10.1021/acs.inorgchem.0c03342</a>
+        <div class="pt-2 flex flex-wrap items-center gap-6">
+          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1021/acs.inorgchem.0c03342" target="_blank" rel="noopener noreferrer">DOI: 10.1021/acs.inorgchem.0c03342</a>
+          <details class="pub-bibtex">
+            <summary class="font-label text-[10px] uppercase tracking-widest font-bold text-surface-tint flex items-center gap-1 hover:underline">
+              <span class="material-symbols-outlined text-sm">format_quote</span>
+              <span class="bibtex-toggle"></span>
+            </summary>
+            <div class="bibtex-box mt-3">
+              <button class="copy-bibtex-btn" onclick="copyBibtex(this)"><span class="material-symbols-outlined text-xs">content_copy</span> Copy</button>
+              <pre>@article{liu2021zscheme,
+  title = {Z-Scheme Photocarrier Transfer Realized in Tungsten Oxide-Based Photocatalysts by Combining with Bismuth Vanadate Quantum Dots},
+  author = {Liu, Bo and Jiang, Xiao and Jiang, Xiaolin and others},
+  journal = {Inorganic Chemistry},
+  volume = {60},
+  number = {5},
+  pages = {3057--3064},
+  year = {2021},
+  publisher = {ACS Publications},
+  doi = {10.1021/acs.inorgchem.0c03342}
+}</pre>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -359,8 +555,28 @@ tailwind.config = {
           <span class="material-symbols-outlined text-sm">menu_book</span>
           The Journal of Physical Chemistry Letters 11.21 (2020): 9070-9078.
         </div>
-        <div class="pt-2">
-          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1021/acs.jpclett.0c02020" target="_blank">DOI: 10.1021/acs.jpclett.0c02020</a>
+        <div class="pt-2 flex flex-wrap items-center gap-6">
+          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1021/acs.jpclett.0c02020" target="_blank" rel="noopener noreferrer">DOI: 10.1021/acs.jpclett.0c02020</a>
+          <details class="pub-bibtex">
+            <summary class="font-label text-[10px] uppercase tracking-widest font-bold text-surface-tint flex items-center gap-1 hover:underline">
+              <span class="material-symbols-outlined text-sm">format_quote</span>
+              <span class="bibtex-toggle"></span>
+            </summary>
+            <div class="bibtex-box mt-3">
+              <button class="copy-bibtex-btn" onclick="copyBibtex(this)"><span class="material-symbols-outlined text-xs">content_copy</span> Copy</button>
+              <pre>@article{cheng2020microscopic,
+  title = {Microscopic Nature of Gas Adsorption on WO$_{3}$ Surfaces: Electron Interaction and Localization},
+  author = {Cheng, Xu and Jiang, Xiao and Tao, Kun and Su, Qing and Wang, Yanrong and Xie, Erqing},
+  journal = {The Journal of Physical Chemistry Letters},
+  volume = {11},
+  number = {21},
+  pages = {9070--9078},
+  year = {2020},
+  publisher = {ACS Publications},
+  doi = {10.1021/acs.jpclett.0c02020}
+}</pre>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -379,8 +595,27 @@ tailwind.config = {
           <span class="material-symbols-outlined text-sm">menu_book</span>
           Chemical Engineering Journal 382 (2020): 123020.
         </div>
-        <div class="pt-2">
-          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1016/j.cej.2019.123020" target="_blank">DOI: 10.1016/j.cej.2019.123020</a>
+        <div class="pt-2 flex flex-wrap items-center gap-6">
+          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1016/j.cej.2019.123020" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.cej.2019.123020</a>
+          <details class="pub-bibtex">
+            <summary class="font-label text-[10px] uppercase tracking-widest font-bold text-surface-tint flex items-center gap-1 hover:underline">
+              <span class="material-symbols-outlined text-sm">format_quote</span>
+              <span class="bibtex-toggle"></span>
+            </summary>
+            <div class="bibtex-box mt-3">
+              <button class="copy-bibtex-btn" onclick="copyBibtex(this)"><span class="material-symbols-outlined text-xs">content_copy</span> Copy</button>
+              <pre>@article{ma2020zscheme,
+  title = {Z-scheme Bi$_{2}$O$_{2.33}$/Bi$_{2}$S$_{3}$ heterojunction nanostructures for photocatalytic overall water splitting},
+  author = {Ma, Yinyi and Jiang, Xiao and Sun, Rongke and others},
+  journal = {Chemical Engineering Journal},
+  volume = {382},
+  pages = {123020},
+  year = {2020},
+  publisher = {Elsevier},
+  doi = {10.1016/j.cej.2019.123020}
+}</pre>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -399,8 +634,27 @@ tailwind.config = {
           <span class="material-symbols-outlined text-sm">menu_book</span>
           Chemical Engineering Journal 331 (2018): 48-53.
         </div>
-        <div class="pt-2">
-          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1016/j.cej.2017.08.102" target="_blank">DOI: 10.1016/j.cej.2017.08.102</a>
+        <div class="pt-2 flex flex-wrap items-center gap-6">
+          <a class="font-label text-[10px] uppercase tracking-widest font-bold text-primary hover:underline" href="https://doi.org/10.1016/j.cej.2017.08.102" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.cej.2017.08.102</a>
+          <details class="pub-bibtex">
+            <summary class="font-label text-[10px] uppercase tracking-widest font-bold text-surface-tint flex items-center gap-1 hover:underline">
+              <span class="material-symbols-outlined text-sm">format_quote</span>
+              <span class="bibtex-toggle"></span>
+            </summary>
+            <div class="bibtex-box mt-3">
+              <button class="copy-bibtex-btn" onclick="copyBibtex(this)"><span class="material-symbols-outlined text-xs">content_copy</span> Copy</button>
+              <pre>@article{zhang2018improved,
+  title = {Improved photoelectrocatalytic hydrogen generation through BiVO$_{4}$ quantum-dots loaded on nano-structured SnO$_{2}$ and modified with carbon quantum-dots},
+  author = {Zhang, Zemin and Jiang, Xiao and Mei, Junfeng and others},
+  journal = {Chemical Engineering Journal},
+  volume = {331},
+  pages = {48--53},
+  year = {2018},
+  publisher = {Elsevier},
+  doi = {10.1016/j.cej.2017.08.102}
+}</pre>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -418,15 +672,59 @@ tailwind.config = {
 <div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-7xl mx-auto gap-8">
   <div class="flex flex-col gap-2">
     <div class="font-['Newsreader'] text-lg italic text-[#264653]">Xiao Jiang (江筱)</div>
-    <p class="font-['Space_Grotesk'] text-[10px] text-[#264653]/60 tracking-widest uppercase">© 2026 Xiao Jiang. All rights reserved.</p>
+    <p class="font-['Space_Grotesk'] text-[10px] text-[#264653]/60 tracking-widest uppercase">© 2026 Xiao Jiang (江筱). All rights reserved.</p>
   </div>
-  <div class="flex gap-8">
-    <a class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank">Google Scholar</a>
-    <a class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://github.com/XiaoJiang-Phy" target="_blank">GitHub</a>
-    <a class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-[#264653]/60 hover:text-surface-tint transition-optimized" href="contact.html">Contact</a>
+  <div class="flex gap-8 font-['Space_Grotesk'] text-xs uppercase tracking-widest">
+    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://github.com/XiaoJiang-Phy" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="contact.html">Contact</a>
   </div>
 </div>
 </footer>
+
+<script>
+// Mobile Navigation Toggle
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuIcon = document.getElementById('menu-icon');
+
+if (mobileBtn && mobileMenu) {
+  mobileBtn.addEventListener('click', () => {
+    const isClosed = mobileMenu.classList.contains('menu-closed');
+    if (isClosed) {
+      mobileMenu.classList.remove('menu-closed');
+      mobileMenu.classList.add('menu-open');
+      mobileBtn.setAttribute('aria-expanded', 'true');
+      menuIcon.textContent = 'close';
+    } else {
+      mobileMenu.classList.remove('menu-open');
+      mobileMenu.classList.add('menu-closed');
+      mobileBtn.setAttribute('aria-expanded', 'false');
+      menuIcon.textContent = 'menu';
+    }
+  });
+}
+
+// Copy BibTeX function
+function copyBibtex(button) {
+  const container = button.closest('.bibtex-box');
+  const pre = container ? container.querySelector('pre') : null;
+  if (!pre) return;
+  
+  const text = pre.innerText || pre.textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const originalHtml = button.innerHTML;
+    button.innerHTML = '<span class="material-symbols-outlined text-xs">check</span> Copied!';
+    button.classList.add('copied');
+    setTimeout(() => {
+      button.innerHTML = originalHtml;
+      button.classList.remove('copied');
+    }, 2000);
+  }).catch(err => {
+    console.error('Failed to copy text: ', err);
+  });
+}
+</script>
 
 </body>
 </html>
