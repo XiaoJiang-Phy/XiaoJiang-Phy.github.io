@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Xiao Jiang (江筱) | Condensed Matter Physics</title>
-<meta name="description" content="Academic profile of Xiao Jiang (江筱), Ph.D. in Condensed Matter Physics. Research on electron-phonon coupling, polarons, and computational materials science."/>
+<meta name="description" content="Academic profile of Xiao Jiang (江筱), Ph.D. in Condensed Matter Physics. Research on electron-phonon coupling, polarons, tensor cross interpolation (TCI), and computational materials science."/>
 <link rel="canonical" href="https://xiaojiang-phy.github.io/"/>
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
 
@@ -23,109 +23,93 @@
 <meta name="twitter:description" content="Ph.D. in Condensed Matter Physics. Research on electron-phonon coupling, polaron physics, tensor cross interpolation (TCI), and computational materials science."/>
 <meta name="twitter:image" content="https://xiaojiang-phy.github.io/images/profile.png"/>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans + Inter + JetBrains Mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"/>
 <!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
-  darkMode: "class",
   theme: {
     extend: {
-      colors: {
-        "surface-container-low": "#e9f6fd",
-        "on-primary-fixed": "#001d32",
-        "inverse-surface": "#263238",
-        "on-background": "#111d23",
-        "inverse-primary": "#94ccff",
-        "secondary": "#4c616c",
-        "error-container": "#ffdad6",
-        "on-tertiary-container": "#36bed8",
-        "primary": "#002e4b",
-        "on-tertiary-fixed-variant": "#004e5b",
-        "primary-fixed": "#cde5ff",
-        "on-error-container": "#93000a",
-        "primary-container": "#00456d",
-        "outline-variant": "#c1c7cb",
-        "background": "#f4faff",
-        "on-error": "#ffffff",
-        "inverse-on-surface": "#e6f3fb",
-        "surface-variant": "#d7e4ec",
-        "tertiary-container": "#004955",
-        "on-tertiary": "#ffffff",
-        "on-primary-fixed-variant": "#004b74",
-        "error": "#ba1a1a",
-        "on-primary-container": "#62b5f8",
-        "on-secondary": "#ffffff",
-        "on-secondary-container": "#526772",
-        "surface-dim": "#cfdce4",
-        "tertiary": "#00313a",
-        "surface-tint": "#006399",
-        "surface-bright": "#f4faff",
-        "on-surface-variant": "#42484b",
-        "secondary-fixed-dim": "#b4cad6",
-        "surface-container-high": "#ddeaf2",
-        "primary-fixed-dim": "#94ccff",
-        "outline": "#72787b",
-        "on-primary": "#ffffff",
-        "tertiary-fixed-dim": "#58d6f1",
-        "secondary-container": "#cfe6f2",
-        "on-secondary-fixed-variant": "#354a53",
-        "surface": "#f4faff",
-        "secondary-fixed": "#cfe6f2",
-        "surface-container": "#e3f0f8",
-        "tertiary-fixed": "#a7edff",
-        "on-tertiary-fixed": "#001f25",
-        "surface-container-lowest": "#ffffff",
-        "on-surface": "#111d23",
-        "surface-container-highest": "#d7e4ec",
-        "on-secondary-fixed": "#071e27"
-      },
       fontFamily: {
-        "headline": ["Newsreader"],
-        "body": ["Manrope"],
-        "label": ["Space Grotesk"]
+        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
-      borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-    },
-  },
+      colors: {
+        brand: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+        },
+        dark: {
+          950: '#030712',
+          900: '#0f172a',
+          800: '#1e293b',
+          700: '#334155',
+          600: '#475569',
+        }
+      }
+    }
+  }
 }
 </script>
 <link rel="stylesheet" href="custom_style.css"/>
 </head>
-<body class="bg-background text-on-background font-body">
+<body class="bg-[#fafafa] text-dark-900 font-sans antialiased selection:bg-brand-600 selection:text-white">
 
-<!-- TopNavBar -->
-<header class="bg-[#f4faff]/95 backdrop-blur-md border-b border-outline-variant/20 sticky top-0 z-50">
-<nav class="flex justify-between items-center w-full px-8 py-5 max-w-7xl mx-auto">
-  <a href="index.html" class="font-['Newsreader'] text-2xl font-bold italic text-primary hover:opacity-90">
-    Xiao Jiang
-  </a>
-  <div class="hidden md:flex items-center gap-10 font-['Newsreader'] font-medium text-lg tracking-tight">
-    <a class="text-surface-tint border-b-2 border-surface-tint pb-1" href="index.html">Home</a>
-    <a class="text-[#264653] hover:text-primary transition-optimized" href="research.html">Research</a>
-    <a class="text-[#264653] hover:text-primary transition-optimized" href="publications.html">Publications</a>
-    <a class="text-[#264653] hover:text-primary transition-optimized" href="contact.html">CV &amp; Contact</a>
+<!-- Header / Navigation -->
+<header class="bg-white/85 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-6 py-4 max-w-6xl mx-auto">
+  <div class="flex items-center gap-3">
+    <div class="w-8 h-8 rounded-lg bg-dark-900 text-white flex items-center justify-center font-heading font-bold text-sm tracking-tighter">
+      XJ
+    </div>
+    <a href="index.html" class="font-heading font-bold text-lg text-dark-900 hover:text-brand-600 transition-optimized flex items-center gap-2">
+      <span>Xiao Jiang</span>
+      <span class="text-xs text-slate-400 font-mono font-normal">江筱</span>
+    </a>
   </div>
-  <div class="hidden md:flex items-center">
-    <span class="material-symbols-outlined text-primary">science</span>
+
+  <!-- Desktop Nav -->
+  <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+    <a class="text-brand-600 font-semibold border-b-2 border-brand-600 pb-1" href="index.html">Home</a>
+    <a class="hover:text-dark-900 transition-optimized" href="research.html">Research</a>
+    <a class="hover:text-dark-900 transition-optimized" href="publications.html">Publications</a>
+    <a class="hover:text-dark-900 transition-optimized" href="contact.html">CV &amp; Contact</a>
   </div>
+
+  <div class="hidden md:flex items-center gap-3">
+    <a href="XiaoJiang_CV.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-optimized shadow-sm">
+      <span class="material-symbols-outlined text-sm">download</span>
+      CV (PDF)
+    </a>
+  </div>
+
   <!-- Mobile Menu Button -->
-  <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden p-2 text-primary hover:bg-surface-container-high rounded transition-optimized">
+  <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden p-2 text-dark-900 hover:bg-slate-100 rounded-lg transition-optimized">
     <span id="menu-icon" class="material-symbols-outlined text-2xl">menu</span>
   </button>
 </nav>
+
 <!-- Mobile Dropdown Menu -->
-<div id="mobile-menu" class="menu-closed md:hidden bg-[#f4faff] border-b border-outline-variant/20 px-8 py-4">
-  <div class="flex flex-col gap-4 font-['Newsreader'] font-medium text-lg">
-    <a class="text-surface-tint font-bold py-1 border-l-2 border-surface-tint pl-3" href="index.html">Home</a>
-    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="research.html">Research</a>
-    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="publications.html">Publications</a>
-    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="contact.html">CV &amp; Contact</a>
+<div id="mobile-menu" class="menu-closed md:hidden bg-white border-b border-slate-200 px-6 py-4">
+  <div class="flex flex-col gap-3 font-medium text-sm">
+    <a class="text-brand-600 font-bold py-1.5 border-l-2 border-brand-600 pl-3 bg-brand-50/50 rounded-r" href="index.html">Home</a>
+    <a class="text-slate-600 hover:text-dark-900 py-1.5 pl-3 transition-optimized" href="research.html">Research</a>
+    <a class="text-slate-600 hover:text-dark-900 py-1.5 pl-3 transition-optimized" href="publications.html">Publications</a>
+    <a class="text-slate-600 hover:text-dark-900 py-1.5 pl-3 transition-optimized" href="contact.html">CV &amp; Contact</a>
+    <div class="pt-2 border-t border-slate-100">
+      <a href="XiaoJiang_CV.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-medium text-brand-600">
+        <span class="material-symbols-outlined text-sm">download</span> Download CV (PDF)
+      </a>
+    </div>
   </div>
 </div>
 </header>
@@ -133,164 +117,244 @@ tailwind.config = {
 <main class="relative">
 
 <!-- Hero Section -->
-<section class="max-w-7xl mx-auto px-8 py-20 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-  <div class="md:col-span-7 z-10">
-    <span class="font-label text-xs uppercase tracking-[0.3em] text-surface-tint mb-6 block">Condensed Matter Physics</span>
-    <h1 class="font-headline text-6xl md:text-8xl font-light leading-none mb-8 text-primary">
-      Xiao Jiang <span class="italic font-normal">江筱</span>
-    </h1>
-    <p class="font-body text-xl text-on-surface-variant max-w-xl leading-relaxed mb-4">
-      Ph.D. in Condensed Matter Physics
-    </p>
-    <p class="font-body text-lg text-on-surface-variant max-w-xl leading-relaxed mb-10">
-      Exploring many-body computational methods — tensor cross interpolation (TCI) and first-principles calculations — to investigate electron-phonon coupling and polaron physics in correlated materials.
-    </p>
-    <div class="flex gap-6 items-center">
-      <a href="research.html" class="bg-primary text-on-primary px-8 py-4 font-label text-sm uppercase tracking-widest hover:opacity-90 transition-optimized inline-block">
-        View Research
+<section class="relative overflow-hidden pt-16 pb-24 grid-bg border-b border-slate-200/80">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7 space-y-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-mono font-medium">
+        <span class="material-symbols-outlined text-sm">science</span>
+        Condensed Matter Physics · Computational Physics
+      </div>
+      
+      <h1 class="font-heading text-5xl sm:text-6xl lg:text-7xl font-extrabold text-dark-900 tracking-tight leading-[1.1]">
+        Xiao Jiang <span class="text-slate-400 font-normal text-3xl sm:text-4xl block sm:inline font-mono">江筱</span>
+      </h1>
+      
+      <p class="text-xl text-slate-700 font-medium leading-relaxed">
+        Ph.D. in Condensed Matter Physics
+      </p>
+
+      <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-normal">
+        Investigating <span class="text-dark-900 font-medium">electron–phonon interactions</span> and <span class="text-dark-900 font-medium">polaron quasiparticles</span> in correlated materials using first-principles calculations and <span class="text-brand-600 font-semibold">Tensor Cross Interpolation (TCI)</span> for high-dimensional diagrammatic integration.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4 pt-4">
+        <a href="research.html" class="bg-dark-900 hover:bg-dark-800 text-white px-6 py-3 rounded-lg font-medium text-sm transition-optimized shadow-sm flex items-center gap-2">
+          View Research Portfolio
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+        <a href="contact.html" class="bg-white hover:bg-slate-50 border border-slate-300 text-dark-900 px-5 py-3 rounded-lg font-medium text-sm transition-optimized shadow-sm flex items-center gap-2">
+          <span class="material-symbols-outlined text-sm">mail</span>
+          Contact &amp; CV
+        </a>
+      </div>
+    </div>
+
+    <!-- Natural Color Photo Card (No Grayscale!) -->
+    <div class="lg:col-span-5">
+      <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 relative">
+        <div class="aspect-[4/5] rounded-xl overflow-hidden bg-slate-100 relative">
+          <img src="images/profile.png" alt="Xiao Jiang (江筱)" class="w-full h-full object-cover"/>
+        </div>
+        <div class="mt-3 p-3 bg-slate-50 rounded-lg flex justify-between items-center text-xs font-mono">
+          <div>
+            <p class="font-semibold text-slate-900 font-sans">Xiao Jiang (江筱)</p>
+            <p class="text-[11px] text-slate-500">Ph.D. · Lanzhou University</p>
+          </div>
+          <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-md font-medium text-[10px]">
+            Independent Researcher
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research Philosophy Statement -->
+<section class="py-20 bg-white border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+    <div class="md:col-span-4">
+      <span class="text-xs font-mono uppercase tracking-wider text-brand-600 font-semibold block mb-2">Research Statement</span>
+      <h2 class="font-heading text-3xl font-bold text-dark-900 tracking-tight">Core Vision</h2>
+    </div>
+    <div class="md:col-span-8 space-y-5">
+      <p class="text-xl text-dark-900 leading-relaxed font-normal">
+        My research lies at the interface of <strong class="text-brand-600 font-semibold">condensed matter theory</strong> and <strong class="text-brand-600 font-semibold">scientific software engineering</strong>, focusing on the fundamental physics of electron–phonon interactions and polaron transport.
+      </p>
+      <p class="text-base text-slate-600 leading-relaxed">
+        My current focus is developing Tensor Cross Interpolation (TCI) methods for evaluating polaron Feynman diagrams in real materials — bridging model Hamiltonians with first-principles systems. I have built <a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" rel="noopener noreferrer" class="text-brand-600 font-medium hover:underline font-mono">PolaronTCISolver</a> (C++23) as the numerical engine of this effort, and <a href="https://github.com/XiaoJiang-Phy/CrystalCanvas" target="_blank" rel="noopener noreferrer" class="text-brand-600 font-medium hover:underline font-mono">CrystalCanvas</a> (WebGPU/C++) for crystal modeling and DFT workflow preparation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Research Domains (Modern Cards) -->
+<section class="py-20 max-w-6xl mx-auto px-6">
+  <div class="flex justify-between items-end mb-12">
+    <div>
+      <span class="text-xs font-mono uppercase tracking-wider text-brand-600 font-semibold block mb-2">Current Focus</span>
+      <h2 class="font-heading text-3xl sm:text-4xl font-bold text-dark-900 tracking-tight">Research Domains</h2>
+    </div>
+    <a href="research.html" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 hover:text-brand-700">
+      All Research Details
+      <span class="material-symbols-outlined text-sm">arrow_forward</span>
+    </a>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Card 1 -->
+    <div class="card-modern p-8 rounded-2xl flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between mb-6">
+          <span class="text-xs font-mono font-semibold text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Domain 01</span>
+          <span class="material-symbols-outlined text-slate-400 text-xl">grain</span>
+        </div>
+        <h3 class="font-heading text-xl font-bold text-dark-900 mb-3">Polaron Many-Body Theory</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          Applying Quantics Tensor Cross Interpolation (QTCI) to evaluate high-dimensional electron–phonon Feynman diagrams beyond Migdal approximation for multi-orbital polaron systems.
+        </p>
+      </div>
+      <a href="research.html" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-600 hover:text-brand-700">
+        Read More
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
       </a>
-      <a href="contact.html" class="font-label text-sm uppercase tracking-widest text-primary hover:bg-surface-container-high px-4 py-4 transition-optimized inline-block">
-        Contact Me
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card-modern p-8 rounded-2xl flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between mb-6">
+          <span class="text-xs font-mono font-semibold text-cyan-600 bg-cyan-50 px-2.5 py-1 rounded">Domain 02</span>
+          <span class="material-symbols-outlined text-slate-400 text-xl">hub</span>
+        </div>
+        <h3 class="font-heading text-xl font-bold text-dark-900 mb-3">Electron–Phonon Coupling</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          Investigating how crystal symmetry modulates polaron type, transport anisotropy, and dielectric screening in transition-metal oxides (BiVO₄, CeO₂) via DFT and DFPT.
+        </p>
+      </div>
+      <a href="research.html" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-600 hover:text-brand-700">
+        Read More
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-modern p-8 rounded-2xl flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between mb-6">
+          <span class="text-xs font-mono font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded">Domain 03</span>
+          <span class="material-symbols-outlined text-slate-400 text-xl">terminal</span>
+        </div>
+        <h3 class="font-heading text-xl font-bold text-dark-900 mb-3">Scientific Software</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          Building high-performance physics software: <strong class="text-dark-900">PolaronTCISolver</strong> (C++23 TCI engine with 2,000,000× compression) and <strong class="text-dark-900">CrystalCanvas</strong> (GPU crystal modeling).
+        </p>
+      </div>
+      <a href="research.html" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-600 hover:text-brand-700">
+        Read More
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
       </a>
     </div>
   </div>
-  <div class="md:col-span-5 relative">
-    <div class="aspect-[4/5] bg-surface-container-high relative overflow-hidden">
-      <img alt="Profile photo of Xiao Jiang" class="w-full h-full object-cover profile-treatment" src="images/profile.png"/>
-      <div class="absolute inset-0 border-[24px] border-background/20 pointer-events-none"></div>
-    </div>
-    <!-- Lattice Motif Accent -->
-    <div class="absolute -bottom-12 -right-12 w-48 h-48 lattice-bg z-0"></div>
-  </div>
 </section>
 
-<!-- About Statement (Editorial Style) -->
-<section class="bg-surface-container-low py-32">
-<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-16">
-  <div class="md:col-span-4">
-    <h2 class="font-headline text-4xl italic text-primary">Research Philosophy</h2>
-  </div>
-  <div class="md:col-span-8 space-y-8">
-    <p class="font-body text-2xl leading-relaxed text-on-background">
-      My research lies at the intersection of <span class="text-surface-tint">condensed matter theory</span> and <span class="text-surface-tint">computational materials science</span>, with a core focus on the fundamental physics of electron-phonon interactions and polaron quasiparticles.
-    </p>
-    <p class="font-body text-lg text-on-surface-variant leading-relaxed">
-      My current research goal is to implement and apply Tensor Cross Interpolation (TCI) algorithms for evaluating polaron Feynman diagrams in real materials — bridging the gap between model Hamiltonians and first-principles systems. I have built <a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" rel="noopener noreferrer" class="text-surface-tint hover:underline">PolaronTCISolver</a>, a C++23 TCI engine, as the computational backbone of this effort. In parallel, I build open-source scientific tools to accelerate first-principles workflows in the materials science community.
-    </p>
-  </div>
-</div>
-</section>
+<!-- Recent Publications -->
+<section class="py-20 bg-white border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+      <div>
+        <span class="text-xs font-mono uppercase tracking-wider text-brand-600 font-semibold block mb-2">Dissemination</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-dark-900 tracking-tight">Recent Publications</h2>
+      </div>
+      <a href="publications.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 hover:text-brand-700">
+        View All 11 Publications
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+    </div>
 
-<!-- Research at a Glance (Asymmetric Grid) -->
-<section class="py-32 max-w-7xl mx-auto px-8">
-<div class="mb-20 flex justify-between items-end">
-  <div>
-    <span class="font-label text-xs uppercase tracking-[0.3em] text-surface-tint mb-4 block">Current Focus</span>
-    <h2 class="font-headline text-5xl text-primary">Research Domains</h2>
-  </div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-  <!-- Research Card 1 -->
-  <div class="flex flex-col gap-6">
-    <div class="h-1 bg-primary w-12"></div>
-    <span class="font-label text-xs uppercase text-outline">Domain 01</span>
-    <h3 class="font-headline text-3xl text-primary">Polaron Many-Body Theory</h3>
-    <p class="font-body text-on-surface-variant">Applying Quantics Tensor Cross Interpolation (QTCI) — a tensor decomposition framework pioneered by recent advances in the community — to evaluate Feynman diagrams for multi-orbital polaron systems in correlated electron-phonon models.</p>
-    <div class="mt-auto pt-6 group cursor-pointer flex items-center gap-4">
-      <a href="research.html" class="font-label text-xs uppercase tracking-widest group-hover:text-surface-tint transition-optimized">Read More</a>
-      <span class="material-symbols-outlined text-sm">arrow_forward</span>
-    </div>
-  </div>
-  <!-- Research Card 2 -->
-  <div class="bg-surface-container p-10 flex flex-col gap-6 relative">
-    <div class="h-1 bg-surface-tint w-12"></div>
-    <span class="font-label text-xs uppercase text-outline">Domain 02</span>
-    <h3 class="font-headline text-3xl text-primary">Electron-Phonon Coupling</h3>
-    <p class="font-body text-on-surface-variant">Studying how crystal symmetry influences polaron type and transport anisotropy in transition-metal oxides through first-principles DFT calculations and electron-phonon coupling analysis.</p>
-    <div class="mt-auto pt-6 group cursor-pointer flex items-center gap-4">
-      <a href="research.html" class="font-label text-xs uppercase tracking-widest group-hover:text-surface-tint transition-optimized">Read More</a>
-      <span class="material-symbols-outlined text-sm">arrow_forward</span>
-    </div>
-    <div class="absolute inset-0 lattice-bg pointer-events-none opacity-5"></div>
-  </div>
-  <!-- Research Card 3 -->
-  <div class="flex flex-col gap-6">
-    <div class="h-1 bg-primary w-12"></div>
-    <span class="font-label text-xs uppercase text-outline">Domain 03</span>
-    <h3 class="font-headline text-3xl text-primary">Scientific Software</h3>
-    <p class="font-body text-on-surface-variant">Building tools for computational physics, including <a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" rel="noopener noreferrer" class="text-surface-tint hover:underline"><strong>PolaronTCISolver</strong></a> — a C++23 TCI engine that compresses a 10D function from ~1.1 trillion grid points to 530K tensor train parameters (2M× compression) — and <a href="https://github.com/XiaoJiang-Phy/CrystalCanvas" target="_blank" rel="noopener noreferrer" class="text-surface-tint hover:underline">CrystalCanvas</a>, a desktop application for crystal structure modeling and DFT/MD file preparation.</p>
-    <div class="mt-auto pt-6 group cursor-pointer flex items-center gap-4">
-      <a href="research.html" class="font-label text-xs uppercase tracking-widest group-hover:text-surface-tint transition-optimized">Read More</a>
-      <span class="material-symbols-outlined text-sm">arrow_forward</span>
-    </div>
-  </div>
-</div>
-</section>
+    <div class="space-y-6">
+      <!-- Pub 1 -->
+      <article class="p-6 rounded-xl border border-slate-200 bg-[#fafafa] hover:border-slate-300 transition-optimized">
+        <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-xs text-brand-600 font-semibold bg-brand-50 px-2 py-0.5 rounded">2025</span>
+              <span class="text-xs font-mono uppercase text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-medium">First Author</span>
+            </div>
+            <h3 class="font-heading text-lg sm:text-xl font-bold text-dark-900 hover:text-brand-600 transition-optimized">
+              <a href="publications.html">First-Principles Study of Polarons in Multiple Crystal Phases of Bismuth Vanadate</a>
+            </h3>
+            <p class="text-sm text-slate-600">
+              <strong class="text-dark-900">Xiao Jiang</strong>, Xu Cheng, Zhanqi Liu, Liyun Ding, Weihua Han*. <em>The Journal of Physical Chemistry C</em> 129.42 (2025): 19190–19198.
+            </p>
+          </div>
+          <a href="https://doi.org/10.1021/acs.jpcc.5c05875" target="_blank" rel="noopener noreferrer" class="shrink-0 text-xs font-mono text-slate-500 hover:text-brand-600 font-medium flex items-center gap-1">
+            DOI: 10.1021/acs.jpcc.5c05875 ↗
+          </a>
+        </div>
+      </article>
 
-<!-- Recent Dispatches -->
-<section class="bg-surface py-32 border-t border-outline-variant/15">
-<div class="max-w-7xl mx-auto px-8">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
-  <div class="md:col-span-4">
-    <h2 class="font-headline text-5xl text-primary mb-8 leading-tight">Recent<br/>Publications</h2>
-    <p class="font-body text-on-surface-variant pr-12">Selected recent publications and research highlights.</p>
+      <!-- Pub 2 -->
+      <article class="p-6 rounded-xl border border-slate-200 bg-[#fafafa] hover:border-slate-300 transition-optimized">
+        <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-xs text-brand-600 font-semibold bg-brand-50 px-2 py-0.5 rounded">2025</span>
+              <span class="text-xs font-mono uppercase text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-medium">First Author</span>
+            </div>
+            <h3 class="font-heading text-lg sm:text-xl font-bold text-dark-900 hover:text-brand-600 transition-optimized">
+              <a href="publications.html">Understanding Polaron Dynamics in CeO₂ for Advanced Catalytic Material Design</a>
+            </h3>
+            <p class="text-sm text-slate-600">
+              <strong class="text-dark-900">Xiao Jiang</strong>, Xu Cheng, Zhanqi Liu, Liyun Ding, Weihua Han*. <em>Physical Chemistry Chemical Physics</em> 27 (2025): 21673–21682.
+            </p>
+          </div>
+          <a href="https://doi.org/10.1039/D5CP02631H" target="_blank" rel="noopener noreferrer" class="shrink-0 text-xs font-mono text-slate-500 hover:text-brand-600 font-medium flex items-center gap-1">
+            DOI: 10.1039/D5CP02631H ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- Pub 3 -->
+      <article class="p-6 rounded-xl border border-slate-200 bg-[#fafafa] hover:border-slate-300 transition-optimized">
+        <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-xs text-brand-600 font-semibold bg-brand-50 px-2 py-0.5 rounded">2025</span>
+              <span class="text-xs font-mono uppercase text-slate-600 bg-slate-100 px-2 py-0.5 rounded font-medium">Co-Author</span>
+            </div>
+            <h3 class="font-heading text-lg sm:text-xl font-bold text-dark-900 hover:text-brand-600 transition-optimized">
+              <a href="publications.html">Catalytic Effect of Gray Gallium Nitride for Hydrogen Peroxide Generation</a>
+            </h3>
+            <p class="text-sm text-slate-600">
+              Zhanqi Liu, <strong class="text-dark-900">Xiao Jiang</strong>, Xu Cheng, Yue Pei, Xinkong Wei, Weihua Han*, Wei Tang, Zhong Lin Wang*. <em>ACS Nano</em> 19.37 (2025): 33361–33371.
+            </p>
+          </div>
+          <a href="https://doi.org/10.1021/acsnano.5c09730" target="_blank" rel="noopener noreferrer" class="shrink-0 text-xs font-mono text-slate-500 hover:text-brand-600 font-medium flex items-center gap-1">
+            DOI: 10.1021/acsnano.5c09730 ↗
+          </a>
+        </div>
+      </article>
+    </div>
   </div>
-  <div class="md:col-span-8 space-y-12">
-    <!-- News Item 1 -->
-    <div class="flex flex-col md:flex-row md:items-start gap-8 pb-12 border-b border-outline-variant/20">
-      <span class="font-label text-xs text-outline pt-2">2025</span>
-      <div class="flex-1">
-        <a href="publications.html" class="block">
-          <h4 class="font-headline text-2xl text-primary mb-4 hover:text-surface-tint cursor-pointer transition-optimized">First-Principles Study of Polarons in Multiple Crystal Phases of Bismuth Vanadate</h4>
-        </a>
-        <p class="text-on-surface-variant font-body mb-4"><strong>Xiao Jiang</strong>, Xu Cheng, Zhanqi Liu, Liyun Ding, Weihua Han*. <em>J. Phys. Chem. C</em> 129, 19190–19198.</p>
-        <span class="font-label text-[10px] uppercase tracking-widest text-surface-tint bg-surface-container px-3 py-1">First Author</span>
-      </div>
-    </div>
-    <!-- News Item 2 -->
-    <div class="flex flex-col md:flex-row md:items-start gap-8 pb-12 border-b border-outline-variant/20">
-      <span class="font-label text-xs text-outline pt-2">2025</span>
-      <div class="flex-1">
-        <a href="publications.html" class="block">
-          <h4 class="font-headline text-2xl text-primary mb-4 hover:text-surface-tint cursor-pointer transition-optimized">Understanding Polaron Dynamics in CeO₂ for Advanced Catalytic Material Design</h4>
-        </a>
-        <p class="text-on-surface-variant font-body mb-4"><strong>Xiao Jiang</strong>, Xu Cheng, Zhanqi Liu, Liyun Ding, Weihua Han*. <em>Phys. Chem. Chem. Phys.</em> 27, 21673–21682.</p>
-        <span class="font-label text-[10px] uppercase tracking-widest text-surface-tint bg-surface-container px-3 py-1">First Author</span>
-      </div>
-    </div>
-    <!-- News Item 3 -->
-    <div class="flex flex-col md:flex-row md:items-start gap-8">
-      <span class="font-label text-xs text-outline pt-2">2025</span>
-      <div class="flex-1">
-        <a href="publications.html" class="block">
-          <h4 class="font-headline text-2xl text-primary mb-4 hover:text-surface-tint cursor-pointer transition-optimized">Catalytic Effect of Gray Gallium Nitride for Hydrogen Peroxide Generation</h4>
-        </a>
-        <p class="text-on-surface-variant font-body mb-4">Zhanqi Liu, <strong>Xiao Jiang</strong>, et al. <em>ACS Nano</em> 19, 33361–33371.</p>
-        <span class="font-label text-[10px] uppercase tracking-widest text-surface-tint bg-surface-container px-3 py-1">Co-Author</span>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 </section>
 
 </main>
 
 <!-- Footer -->
-<footer class="w-full border-t border-[#111d23]/10">
-<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 mt-20 max-w-7xl mx-auto gap-8">
-  <div class="font-['Newsreader'] text-lg italic text-[#264653]">
-    Xiao Jiang (江筱)
+<footer class="bg-white border-t border-slate-200 py-12 text-sm text-slate-500">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div class="font-heading font-semibold text-dark-900">
+      Xiao Jiang (江筱) · 2026
+    </div>
+    <div class="flex flex-wrap justify-center gap-8 font-mono text-xs">
+      <a href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-optimized">Google Scholar</a>
+      <a href="https://github.com/XiaoJiang-Phy" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-optimized">GitHub</a>
+      <a href="contact.html" class="hover:text-brand-600 transition-optimized">Contact</a>
+    </div>
+    <div class="text-xs text-slate-400 font-mono">
+      © 2026 All rights reserved.
+    </div>
   </div>
-  <div class="flex gap-12 font-['Space_Grotesk'] text-xs uppercase tracking-widest">
-    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://github.com/XiaoJiang-Phy" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="contact.html">Contact</a>
-  </div>
-  <div class="font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.2em] text-[#264653]/40 text-center md:text-right">
-    © 2026 Xiao Jiang (江筱). All rights reserved.
-  </div>
-</div>
 </footer>
 
 <script>

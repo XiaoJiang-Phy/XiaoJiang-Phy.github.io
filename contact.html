@@ -23,279 +23,308 @@
 <meta name="twitter:description" content="Curriculum Vitae and contact information for Xiao Jiang (江筱), Ph.D. in Condensed Matter Physics."/>
 <meta name="twitter:image" content="https://xiaojiang-phy.github.io/images/profile.png"/>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans + Inter + JetBrains Mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"/>
 <!-- Material Symbols -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
-  darkMode: "class",
   theme: {
     extend: {
-      colors: {
-        "surface-container-low": "#e9f6fd",
-        "on-background": "#111d23",
-        "secondary": "#4c616c",
-        "primary": "#002e4b",
-        "primary-container": "#00456d",
-        "outline-variant": "#c1c7cb",
-        "background": "#f4faff",
-        "surface-variant": "#d7e4ec",
-        "on-primary-container": "#62b5f8",
-        "on-secondary-container": "#526772",
-        "surface-tint": "#006399",
-        "on-surface-variant": "#42484b",
-        "surface-container-high": "#ddeaf2",
-        "outline": "#72787b",
-        "on-primary": "#ffffff",
-        "secondary-container": "#cfe6f2",
-        "surface": "#f4faff",
-        "surface-container": "#e3f0f8",
-        "surface-container-lowest": "#ffffff",
-        "on-surface": "#111d23",
-        "surface-container-highest": "#d7e4ec",
-      },
       fontFamily: {
-        "headline": ["Newsreader"],
-        "body": ["Manrope"],
-        "label": ["Space Grotesk"]
+        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
-      borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-    },
-  },
+      colors: {
+        brand: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+        },
+        dark: {
+          950: '#030712',
+          900: '#0f172a',
+          800: '#1e293b',
+          700: '#334155',
+          600: '#475569',
+        }
+      }
+    }
+  }
 }
 </script>
 <link rel="stylesheet" href="custom_style.css"/>
 </head>
-<body class="bg-background text-on-background font-body">
+<body class="bg-[#fafafa] text-dark-900 font-sans antialiased selection:bg-brand-600 selection:text-white">
 
-<!-- Top Navigation -->
-<header class="bg-[#f4faff]/95 backdrop-blur-md border-b border-outline-variant/20 sticky top-0 z-50">
-<nav class="flex justify-between items-center w-full px-8 py-5 max-w-7xl mx-auto">
-  <a href="index.html" class="font-['Newsreader'] text-2xl font-bold italic text-primary hover:opacity-90">Xiao Jiang</a>
-  <div class="hidden md:flex items-center gap-10 font-['Newsreader'] font-medium text-lg tracking-tight">
-    <a class="text-[#264653] hover:text-primary transition-optimized" href="index.html">Home</a>
-    <a class="text-[#264653] hover:text-primary transition-optimized" href="research.html">Research</a>
-    <a class="text-[#264653] hover:text-primary transition-optimized" href="publications.html">Publications</a>
-    <a class="text-surface-tint border-b-2 border-surface-tint pb-1" href="contact.html">CV &amp; Contact</a>
+<!-- Header / Navigation -->
+<header class="bg-white/85 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-6 py-4 max-w-6xl mx-auto">
+  <div class="flex items-center gap-3">
+    <div class="w-8 h-8 rounded-lg bg-dark-900 text-white flex items-center justify-center font-heading font-bold text-sm tracking-tighter">
+      XJ
+    </div>
+    <a href="index.html" class="font-heading font-bold text-lg text-dark-900 hover:text-brand-600 transition-optimized flex items-center gap-2">
+      <span>Xiao Jiang</span>
+      <span class="text-xs text-slate-400 font-mono font-normal">江筱</span>
+    </a>
   </div>
-  <div class="hidden md:flex items-center gap-4">
-    <span class="material-symbols-outlined text-primary text-2xl">science</span>
+
+  <!-- Desktop Nav -->
+  <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+    <a class="hover:text-dark-900 transition-optimized" href="index.html">Home</a>
+    <a class="hover:text-dark-900 transition-optimized" href="research.html">Research</a>
+    <a class="hover:text-dark-900 transition-optimized" href="publications.html">Publications</a>
+    <a class="text-brand-600 font-semibold border-b-2 border-brand-600 pb-1" href="contact.html">CV &amp; Contact</a>
   </div>
+
+  <div class="hidden md:flex items-center gap-3">
+    <a href="XiaoJiang_CV.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-optimized shadow-sm">
+      <span class="material-symbols-outlined text-sm">download</span>
+      CV (PDF)
+    </a>
+  </div>
+
   <!-- Mobile Menu Button -->
-  <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden p-2 text-primary hover:bg-surface-container-high rounded transition-optimized">
+  <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden p-2 text-dark-900 hover:bg-slate-100 rounded-lg transition-optimized">
     <span id="menu-icon" class="material-symbols-outlined text-2xl">menu</span>
   </button>
 </nav>
+
 <!-- Mobile Dropdown Menu -->
-<div id="mobile-menu" class="menu-closed md:hidden bg-[#f4faff] border-b border-outline-variant/20 px-8 py-4">
-  <div class="flex flex-col gap-4 font-['Newsreader'] font-medium text-lg">
-    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="index.html">Home</a>
-    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="research.html">Research</a>
-    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="publications.html">Publications</a>
-    <a class="text-surface-tint font-bold py-1 border-l-2 border-surface-tint pl-3" href="contact.html">CV &amp; Contact</a>
+<div id="mobile-menu" class="menu-closed md:hidden bg-white border-b border-slate-200 px-6 py-4">
+  <div class="flex flex-col gap-3 font-medium text-sm">
+    <a class="text-slate-600 hover:text-dark-900 py-1.5 pl-3 transition-optimized" href="index.html">Home</a>
+    <a class="text-slate-600 hover:text-dark-900 py-1.5 pl-3 transition-optimized" href="research.html">Research</a>
+    <a class="text-slate-600 hover:text-dark-900 py-1.5 pl-3 transition-optimized" href="publications.html">Publications</a>
+    <a class="text-brand-600 font-bold py-1.5 border-l-2 border-brand-600 pl-3 bg-brand-50/50 rounded-r" href="contact.html">CV &amp; Contact</a>
   </div>
 </div>
 </header>
 
 <main class="relative">
-<!-- Background Pattern -->
-<div class="absolute inset-0 lattice-bg pointer-events-none"></div>
 
-<div class="max-w-7xl mx-auto px-8 py-20 relative z-10">
-
-<!-- Hero Header Section -->
-<section class="mb-32">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
-  <div class="lg:col-span-8">
-    <span class="font-label text-xs uppercase tracking-widest text-outline mb-4 block">Curriculum Vitae</span>
-    <h1 class="font-headline text-6xl md:text-8xl text-primary font-medium leading-tight tracking-tighter">Academic <br/><span class="italic text-surface-tint">Record &amp; Contact</span></h1>
+<!-- Hero Section -->
+<section class="pt-16 pb-20 grid-bg border-b border-slate-200/80">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+    <div class="lg:col-span-8">
+      <span class="text-xs font-mono uppercase tracking-wider text-brand-600 font-semibold block mb-3">Curriculum Vitae</span>
+      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dark-900 tracking-tight leading-[1.15]">
+        Academic Record &amp; Contact
+      </h1>
+      <p class="mt-4 text-lg text-slate-600 max-w-2xl leading-relaxed">
+        Ph.D. in Condensed Matter Physics · Lanzhou University. Below is a summary of technical capabilities, software development, and contact information.
+      </p>
+    </div>
+    <div class="lg:col-span-4 lg:text-right pb-2">
+      <a href="XiaoJiang_CV.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-dark-900 hover:bg-dark-800 text-white px-6 py-3.5 rounded-xl font-medium text-sm transition-optimized shadow-sm">
+        <span class="material-symbols-outlined text-lg">download</span>
+        Download PDF CV
+      </a>
+    </div>
   </div>
-  <div class="lg:col-span-4 pb-4">
-    <a href="XiaoJiang_CV.pdf" class="group flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-md font-label text-sm tracking-widest uppercase transition-all hover:bg-primary-container hover:text-on-primary-container inline-flex" target="_blank" rel="noopener noreferrer">
-      Download PDF CV
-      <span class="material-symbols-outlined text-lg">download</span>
-    </a>
-  </div>
-</div>
 </section>
 
-<!-- Main Content Grid -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+<!-- Content Grid -->
+<div class="max-w-6xl mx-auto px-6 py-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
-<!-- Left Column: Education, Skills -->
-<div class="lg:col-span-7 space-y-24">
+<!-- Left Column: Education & Skills (7 cols) -->
+<div class="lg:col-span-7 space-y-16">
 
-  <!-- Education -->
-  <section>
-    <h2 class="font-headline text-3xl italic text-primary mb-10">Education</h2>
-    <div class="space-y-12">
-      <div class="flex flex-col gap-2">
-        <div class="flex justify-between items-baseline">
-          <h3 class="font-body text-xl font-bold text-on-surface">Ph.D. in Condensed Matter Physics</h3>
-          <span class="font-label text-sm text-outline">Completed</span>
-        </div>
-        <p class="font-body text-on-surface-variant">Lanzhou University</p>
-        <p class="font-body text-sm text-secondary italic mt-2">Focus: Electron-phonon coupling, polaron physics, computational materials science</p>
+  <!-- Education Section -->
+  <section class="card-modern p-8 rounded-2xl space-y-6">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-brand-600 text-2xl">school</span>
+      <h2 class="font-heading text-2xl font-bold text-dark-900">Education</h2>
+    </div>
+
+    <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 space-y-2">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+        <h3 class="font-heading text-lg font-bold text-dark-900">Ph.D. in Condensed Matter Physics</h3>
+        <span class="font-mono text-xs text-brand-600 font-semibold bg-brand-50 px-2 py-0.5 rounded">Completed</span>
       </div>
+      <p class="text-sm text-slate-700 font-medium">Lanzhou University</p>
+      <p class="text-xs text-slate-500 leading-relaxed pt-1">
+        Specialization: Electron–phonon coupling, polaron physics, tensor cross interpolation, and first-principles computational materials science.
+      </p>
     </div>
   </section>
 
   <!-- Technical Expertise -->
-  <section>
-    <h2 class="font-headline text-3xl italic text-primary mb-10">Technical Expertise</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <section class="card-modern p-8 rounded-2xl space-y-8">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-brand-600 text-2xl">terminal</span>
+      <h2 class="font-heading text-2xl font-bold text-dark-900">Technical Expertise</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      
       <!-- Programming -->
-      <div class="bg-surface-container-low p-8 rounded-lg flex flex-col gap-4">
-        <span class="material-symbols-outlined text-primary-container">terminal</span>
-        <h4 class="font-label text-xs uppercase tracking-widest text-primary-container font-bold">Programming</h4>
-        <ul class="font-body text-on-surface-variant space-y-2 text-sm">
-          <li class="flex justify-between"><span>Python (NumPy, SciPy)</span></li>
-          <li class="flex justify-between"><span>C++ (C++23, Eigen)</span></li>
-          <li class="flex justify-between"><span>Julia</span></li>
+      <div class="p-5 bg-slate-50 rounded-xl border border-slate-100 space-y-2">
+        <span class="text-xs font-mono font-bold text-brand-600 uppercase tracking-wider block">Programming</span>
+        <ul class="text-xs font-medium text-slate-700 space-y-1.5">
+          <li class="flex items-center gap-1.5"><span class="text-brand-600">▪</span> Python (NumPy, SciPy)</li>
+          <li class="flex items-center gap-1.5"><span class="text-brand-600">▪</span> C++ (C++23, Eigen)</li>
+          <li class="flex items-center gap-1.5"><span class="text-brand-600">▪</span> Julia</li>
         </ul>
       </div>
 
       <!-- Software Eng & HPC -->
-      <div class="bg-surface-container-low p-8 rounded-lg flex flex-col gap-4">
-        <span class="material-symbols-outlined text-primary-container">memory</span>
-        <h4 class="font-label text-xs uppercase tracking-widest text-primary-container font-bold">Software Eng. &amp; HPC</h4>
-        <ul class="font-body text-on-surface-variant space-y-2 text-sm">
-          <li>CMake, Git/GitHub Workflows</li>
-          <li>Continuous Integration (CI/CD)</li>
-          <li>MPI / OpenMP Parallelization</li>
-          <li>Linux HPC Cluster Environments</li>
+      <div class="p-5 bg-slate-50 rounded-xl border border-slate-100 space-y-2">
+        <span class="text-xs font-mono font-bold text-cyan-600 uppercase tracking-wider block">Software Eng. &amp; HPC</span>
+        <ul class="text-xs font-medium text-slate-700 space-y-1.5">
+          <li class="flex items-center gap-1.5"><span class="text-cyan-600">▪</span> CMake, Git/GitHub CI/CD</li>
+          <li class="flex items-center gap-1.5"><span class="text-cyan-600">▪</span> MPI / OpenMP Parallelization</li>
+          <li class="flex items-center gap-1.5"><span class="text-cyan-600">▪</span> Linux HPC Environments</li>
         </ul>
       </div>
 
       <!-- Scientific Software -->
-      <div class="bg-surface-container-highest p-8 rounded-lg flex flex-col gap-4 md:col-span-2">
-        <span class="material-symbols-outlined text-primary-container">dns</span>
-        <h4 class="font-label text-xs uppercase tracking-widest text-primary-container font-bold">Scientific Software</h4>
-        <ul class="font-body text-on-surface-variant grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm">
-          <li>Quantum ESPRESSO</li>
-          <li>VASP</li>
-          <li>Wannier90</li>
-          <li>EPW</li>
-          <li>Yambo &amp; Elk</li>
-          <li><a href="https://github.com/TRIQS/dft_tools" target="_blank" rel="noopener noreferrer" class="text-surface-tint hover:underline">TRIQS/dft_tools</a> (contributor)</li>
-          <li><a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" rel="noopener noreferrer" class="text-surface-tint hover:underline">PolaronTCISolver</a> (core developer)</li>
-          <li><a href="https://github.com/XiaoJiang-Phy/CrystalCanvas" target="_blank" rel="noopener noreferrer" class="text-surface-tint hover:underline">CrystalCanvas</a> (core developer)</li>
-        </ul>
+      <div class="p-5 bg-slate-50 rounded-xl border border-slate-100 space-y-2 sm:col-span-2">
+        <span class="text-xs font-mono font-bold text-emerald-600 uppercase tracking-wider block">Scientific Software</span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-xs font-medium text-slate-700">
+          <div><span class="text-emerald-600">▪</span> Quantum ESPRESSO</div>
+          <div><span class="text-emerald-600">▪</span> VASP &amp; Wannier90</div>
+          <div><span class="text-emerald-600">▪</span> EPW, Yambo, Elk</div>
+          <div><span class="text-emerald-600">▪</span> <a href="https://github.com/TRIQS/dft_tools" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">TRIQS/dft_tools</a> (contributor)</div>
+          <div><span class="text-emerald-600">▪</span> <a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">PolaronTCISolver</a> (developer)</div>
+          <div><span class="text-emerald-600">▪</span> <a href="https://github.com/XiaoJiang-Phy/CrystalCanvas" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">CrystalCanvas</a> (developer)</div>
+        </div>
       </div>
 
-      <!-- Methods & Theoretical Models -->
-      <div class="md:col-span-2 bg-secondary-container p-8 rounded-lg flex flex-col md:flex-row md:items-center gap-8">
-        <div class="flex flex-col gap-2 shrink-0">
-          <span class="material-symbols-outlined text-on-secondary-container">precision_manufacturing</span>
-          <h4 class="font-label text-xs uppercase tracking-widest text-on-secondary-container font-bold">Theoretical Models &amp; Methods</h4>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Density Functional Theory (DFT)</span>
-          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">DFPT</span>
-          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">DMFT</span>
-          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">GW / BSE</span>
-          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Electron-Phonon Coupling</span>
-          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Tensor Cross Interpolation (TCI) / Tensor Train</span>
-          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Feynman Diagrammatic Methods</span>
-          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Polaron Theory</span>
-          <span class="px-3 py-1 bg-surface/50 rounded-full text-xs font-label text-on-secondary-container">Boltzmann Transport</span>
+      <!-- Theoretical Models & Methods -->
+      <div class="p-5 bg-slate-50 rounded-xl border border-slate-100 space-y-3 sm:col-span-2">
+        <span class="text-xs font-mono font-bold text-indigo-600 uppercase tracking-wider block">Theoretical Models &amp; Methods</span>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 bg-white rounded-md text-xs font-medium text-slate-700 border border-slate-200">DFT</span>
+          <span class="px-2.5 py-1 bg-white rounded-md text-xs font-medium text-slate-700 border border-slate-200">DFPT</span>
+          <span class="px-2.5 py-1 bg-white rounded-md text-xs font-medium text-slate-700 border border-slate-200">DMFT</span>
+          <span class="px-2.5 py-1 bg-white rounded-md text-xs font-medium text-slate-700 border border-slate-200">GW / BSE</span>
+          <span class="px-2.5 py-1 bg-white rounded-md text-xs font-medium text-slate-700 border border-slate-200">Electron–Phonon Coupling</span>
+          <span class="px-2.5 py-1 bg-white rounded-md text-xs font-medium text-slate-700 border border-slate-200">Tensor Cross Interpolation (TCI)</span>
+          <span class="px-2.5 py-1 bg-white rounded-md text-xs font-medium text-slate-700 border border-slate-200">Feynman Diagrammatics</span>
+          <span class="px-2.5 py-1 bg-white rounded-md text-xs font-medium text-slate-700 border border-slate-200">Polaron Transport</span>
+          <span class="px-2.5 py-1 bg-white rounded-md text-xs font-medium text-slate-700 border border-slate-200">Boltzmann Transport</span>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- Languages -->
-  <section>
-    <h2 class="font-headline text-3xl italic text-primary mb-10">Languages</h2>
-    <div class="space-y-6">
-      <div class="flex items-start gap-6 border-l-2 border-surface-variant pl-6 py-2">
-        <span class="font-label text-sm text-outline-variant whitespace-nowrap pt-1">Native</span>
-        <div>
-          <h4 class="font-body font-bold text-on-surface">Chinese (中文)</h4>
-        </div>
+  <section class="card-modern p-8 rounded-2xl space-y-6">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-brand-600 text-2xl">language</span>
+      <h2 class="font-heading text-2xl font-bold text-dark-900">Languages</h2>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 text-xs font-mono">
+      <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+        <span class="text-slate-400 block mb-1">Native Language</span>
+        <span class="font-sans text-sm font-bold text-dark-900">Chinese (中文)</span>
       </div>
-      <div class="flex items-start gap-6 border-l-2 border-surface-variant pl-6 py-2">
-        <span class="font-label text-sm text-outline-variant whitespace-nowrap pt-1">Proficient</span>
-        <div>
-          <h4 class="font-body font-bold text-on-surface">English</h4>
-        </div>
+      <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+        <span class="text-slate-400 block mb-1">Professional</span>
+        <span class="font-sans text-sm font-bold text-dark-900">English (Proficient)</span>
       </div>
     </div>
   </section>
 
 </div>
 
-<!-- Right Column: Contact (Sticky) -->
-<div class="lg:col-span-5">
-<div class="sticky top-32 space-y-12">
+<!-- Right Column: Contact Card & Photo (5 cols) -->
+<div class="lg:col-span-5 space-y-8 sticky top-28">
+
   <!-- Contact Card -->
-  <div class="bg-surface-container-lowest p-10 card-float rounded-lg">
-    <h2 class="font-headline text-3xl italic text-primary mb-8">Contact Information</h2>
-    <div class="space-y-8">
-      <div class="flex gap-4">
-        <span class="material-symbols-outlined text-surface-tint">alternate_email</span>
+  <div class="card-modern p-8 rounded-2xl space-y-6">
+    <h3 class="font-heading text-xl font-bold text-dark-900">Contact Information</h3>
+
+    <div class="space-y-4 text-sm">
+      <div class="flex items-start gap-3">
+        <span class="material-symbols-outlined text-brand-600 text-xl shrink-0 mt-0.5">mail</span>
         <div>
-          <p class="font-label text-xs uppercase tracking-widest text-outline mb-1">Email</p>
-          <a class="font-body text-lg font-medium text-on-surface hover:text-surface-tint transition-optimized" href="mailto:jiangxiao.phy@gmail.com">jiangxiao.phy@gmail.com</a>
+          <p class="text-xs text-slate-400 font-mono uppercase">Email</p>
+          <a href="mailto:jiangxiao.phy@gmail.com" class="font-medium text-dark-900 hover:text-brand-600 transition-optimized font-mono text-xs sm:text-sm">
+            jiangxiao.phy@gmail.com
+          </a>
         </div>
       </div>
-      <div class="flex gap-4">
-        <span class="material-symbols-outlined text-surface-tint">apartment</span>
+
+      <div class="flex items-start gap-3">
+        <span class="material-symbols-outlined text-brand-600 text-xl shrink-0 mt-0.5">location_on</span>
         <div>
-          <p class="font-label text-xs uppercase tracking-widest text-outline mb-1">Field</p>
-          <p class="font-body text-on-surface leading-relaxed">
+          <p class="text-xs text-slate-400 font-mono uppercase">Field</p>
+          <p class="font-medium text-dark-900 text-xs sm:text-sm">
             Condensed Matter Physics<br/>
-            First-Principles Calculation &amp; Many-Body Methods
+            First-Principles &amp; Many-Body Theory
           </p>
         </div>
       </div>
     </div>
-    <div class="mt-12 pt-10 border-t border-outline-variant/15">
-      <p class="font-label text-xs uppercase tracking-widest text-outline mb-6">Profiles</p>
-      <div class="flex flex-wrap gap-4">
-        <a class="flex items-center gap-2 font-body text-sm font-bold text-primary hover:text-surface-tint transition-all group" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-          Google Scholar
-          <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">north_east</span>
+
+    <div class="pt-6 border-t border-slate-100 space-y-3">
+      <p class="text-xs text-slate-400 font-mono uppercase">Scholarly Profiles</p>
+      <div class="flex flex-col gap-2">
+        <a href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-50 hover:bg-slate-100 rounded-xl text-xs font-semibold text-dark-900 flex items-center justify-between transition-optimized border border-slate-100">
+          <span class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-brand-600 text-base">school</span>
+            Google Scholar
+          </span>
+          <span class="text-slate-400 font-mono">↗</span>
         </a>
-        <a class="flex items-center gap-2 font-body text-sm font-bold text-primary hover:text-surface-tint transition-all group" href="https://github.com/XiaoJiang-Phy" target="_blank" rel="noopener noreferrer">
-          GitHub
-          <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">north_east</span>
+        
+        <a href="https://github.com/XiaoJiang-Phy" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-50 hover:bg-slate-100 rounded-xl text-xs font-semibold text-dark-900 flex items-center justify-between transition-optimized border border-slate-100">
+          <span class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-brand-600 text-base">code</span>
+            GitHub (XiaoJiang-Phy)
+          </span>
+          <span class="text-slate-400 font-mono">↗</span>
         </a>
       </div>
     </div>
   </div>
 
-  <!-- Profile Image -->
-  <div class="relative group overflow-hidden rounded-lg aspect-square">
-    <img alt="Xiao Jiang profile photo" class="w-full h-full object-cover" src="images/profile.png"/>
-    <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
-    <div class="absolute bottom-6 left-6 text-white">
-      <p class="font-label text-[10px] uppercase tracking-[0.3em] opacity-80">Condensed Matter Physics</p>
-      <p class="font-headline italic text-xl">Ph.D.</p>
+  <!-- Profile Image Card (Full Natural Color!) -->
+  <div class="card-modern p-3 rounded-2xl">
+    <div class="aspect-[4/5] rounded-xl overflow-hidden bg-slate-100 relative">
+      <img src="images/profile.png" alt="Xiao Jiang (江筱)" class="w-full h-full object-cover"/>
+    </div>
+    <div class="p-3 text-center">
+      <p class="font-heading font-bold text-dark-900">Xiao Jiang (江筱)</p>
+      <p class="text-xs text-slate-500 font-mono">Ph.D. in Condensed Matter Physics</p>
     </div>
   </div>
-</div>
+
 </div>
 
 </div>
 </div>
+
 </main>
 
 <!-- Footer -->
-<footer class="w-full border-t border-[#111d23]/10 bg-[#f4faff] mt-20">
-<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-7xl mx-auto gap-8">
-  <div class="font-['Newsreader'] text-lg italic text-[#264653]">Xiao Jiang (江筱)</div>
-  <div class="flex flex-wrap justify-center gap-8 font-['Space_Grotesk'] text-xs uppercase tracking-widest">
-    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://github.com/XiaoJiang-Phy" target="_blank" rel="noopener noreferrer">GitHub</a>
+<footer class="bg-white border-t border-slate-200 py-12 text-sm text-slate-500">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div class="font-heading font-semibold text-dark-900">
+      Xiao Jiang (江筱) · 2026
+    </div>
+    <div class="flex flex-wrap justify-center gap-8 font-mono text-xs">
+      <a href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-optimized">Google Scholar</a>
+      <a href="https://github.com/XiaoJiang-Phy" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-optimized">GitHub</a>
+      <a href="contact.html" class="hover:text-brand-600 transition-optimized">Contact</a>
+    </div>
+    <div class="text-xs text-slate-400 font-mono">
+      © 2026 All rights reserved.
+    </div>
   </div>
-  <p class="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-[#264653]/40">© 2026 Xiao Jiang (江筱). All rights reserved.</p>
-</div>
 </footer>
 
 <script>

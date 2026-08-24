@@ -3,450 +3,340 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Research | Xiao Jiang (江筱)</title>
-<meta name="description" content="Research portfolio of Xiao Jiang — electron-phonon coupling, polaron physics, computational materials design, and CrystalCanvas software."/>
+<title>Research &amp; Software | Xiao Jiang (江筱)</title>
+<meta name="description" content="Research portfolio of Xiao Jiang (江筱) in Condensed Matter Physics: Polaron physics, electron-phonon coupling, Tensor Cross Interpolation (TCI), and open-source scientific software."/>
 <link rel="canonical" href="https://xiaojiang-phy.github.io/research.html"/>
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://xiaojiang-phy.github.io/research.html"/>
-<meta property="og:title" content="Research Portfolio | Xiao Jiang (江筱)"/>
-<meta property="og:description" content="Electron-phonon coupling, polaron physics, many-body TCI methods, and open-source scientific software by Xiao Jiang."/>
-<meta property="og:image" content="https://xiaojiang-phy.github.io/images/project-2.png"/>
+<meta property="og:title" content="Research &amp; Software | Xiao Jiang (江筱)"/>
+<meta property="og:description" content="Research portfolio: Polaron physics, electron-phonon coupling, Tensor Cross Interpolation (TCI), PolaronTCISolver, and CrystalCanvas."/>
+<meta property="og:image" content="https://xiaojiang-phy.github.io/images/profile.png"/>
 <meta property="og:site_name" content="Xiao Jiang (江筱)"/>
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:url" content="https://xiaojiang-phy.github.io/research.html"/>
-<meta name="twitter:title" content="Research Portfolio | Xiao Jiang (江筱)"/>
-<meta name="twitter:description" content="Electron-phonon coupling, polaron physics, many-body TCI methods, and open-source scientific software by Xiao Jiang."/>
-<meta name="twitter:image" content="https://xiaojiang-phy.github.io/images/project-2.png"/>
+<meta name="twitter:title" content="Research &amp; Software | Xiao Jiang (江筱)"/>
+<meta name="twitter:description" content="Research portfolio: Polaron physics, electron-phonon coupling, Tensor Cross Interpolation (TCI), PolaronTCISolver, and CrystalCanvas."/>
+<meta name="twitter:image" content="https://xiaojiang-phy.github.io/images/profile.png"/>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans + Inter + JetBrains Mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"/>
 <!-- Material Symbols -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
-  darkMode: "class",
   theme: {
     extend: {
-      colors: {
-        "surface-container-low": "#e9f6fd",
-        "on-primary-fixed": "#001d32",
-        "inverse-surface": "#263238",
-        "on-background": "#111d23",
-        "inverse-primary": "#94ccff",
-        "secondary": "#4c616c",
-        "primary": "#002e4b",
-        "primary-container": "#00456d",
-        "outline-variant": "#c1c7cb",
-        "background": "#f4faff",
-        "surface-variant": "#d7e4ec",
-        "on-primary-container": "#62b5f8",
-        "on-secondary-container": "#526772",
-        "surface-dim": "#cfdce4",
-        "surface-tint": "#006399",
-        "on-surface-variant": "#42484b",
-        "surface-container-high": "#ddeaf2",
-        "outline": "#72787b",
-        "on-primary": "#ffffff",
-        "secondary-container": "#cfe6f2",
-        "surface": "#f4faff",
-        "surface-container": "#e3f0f8",
-        "surface-container-lowest": "#ffffff",
-        "on-surface": "#111d23",
-        "surface-container-highest": "#d7e4ec",
-      },
       fontFamily: {
-        "headline": ["Newsreader"],
-        "body": ["Manrope"],
-        "label": ["Space Grotesk"]
+        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
-      borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-    },
-  },
+      colors: {
+        brand: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+        },
+        dark: {
+          950: '#030712',
+          900: '#0f172a',
+          800: '#1e293b',
+          700: '#334155',
+          600: '#475569',
+        }
+      }
+    }
+  }
 }
 </script>
 <link rel="stylesheet" href="custom_style.css"/>
 </head>
-<body class="bg-surface text-on-surface font-body">
+<body class="bg-[#fafafa] text-dark-900 font-sans antialiased selection:bg-brand-600 selection:text-white">
 
-<!-- TopNavBar -->
-<header class="bg-[#f4faff]/95 backdrop-blur-md border-b border-outline-variant/20 sticky top-0 z-50">
-<nav class="flex justify-between items-center w-full px-8 py-5 max-w-7xl mx-auto">
-  <a href="index.html" class="font-['Newsreader'] text-2xl font-bold italic text-primary hover:opacity-90">Xiao Jiang</a>
-  <div class="hidden md:flex items-center gap-10">
-    <a class="text-[#264653] hover:text-primary transition-optimized font-['Newsreader'] font-medium text-lg tracking-tight" href="index.html">Home</a>
-    <a class="text-surface-tint border-b-2 border-surface-tint pb-1 font-['Newsreader'] font-medium text-lg tracking-tight" href="research.html">Research</a>
-    <a class="text-[#264653] hover:text-primary transition-optimized font-['Newsreader'] font-medium text-lg tracking-tight" href="publications.html">Publications</a>
-    <a class="text-[#264653] hover:text-primary transition-optimized font-['Newsreader'] font-medium text-lg tracking-tight" href="contact.html">CV &amp; Contact</a>
+<!-- Header / Navigation -->
+<header class="bg-white/85 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-6 py-4 max-w-6xl mx-auto">
+  <div class="flex items-center gap-3">
+    <div class="w-8 h-8 rounded-lg bg-dark-900 text-white flex items-center justify-center font-heading font-bold text-sm tracking-tighter">
+      XJ
+    </div>
+    <a href="index.html" class="font-heading font-bold text-lg text-dark-900 hover:text-brand-600 transition-optimized flex items-center gap-2">
+      <span>Xiao Jiang</span>
+      <span class="text-xs text-slate-400 font-mono font-normal">江筱</span>
+    </a>
   </div>
-  <div class="hidden md:flex items-center">
-    <span class="material-symbols-outlined text-primary">science</span>
+
+  <!-- Desktop Nav -->
+  <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+    <a class="hover:text-dark-900 transition-optimized" href="index.html">Home</a>
+    <a class="text-brand-600 font-semibold border-b-2 border-brand-600 pb-1" href="research.html">Research</a>
+    <a class="hover:text-dark-900 transition-optimized" href="publications.html">Publications</a>
+    <a class="hover:text-dark-900 transition-optimized" href="contact.html">CV &amp; Contact</a>
   </div>
+
+  <div class="hidden md:flex items-center gap-3">
+    <a href="XiaoJiang_CV.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-optimized shadow-sm">
+      <span class="material-symbols-outlined text-sm">download</span>
+      CV (PDF)
+    </a>
+  </div>
+
   <!-- Mobile Menu Button -->
-  <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden p-2 text-primary hover:bg-surface-container-high rounded transition-optimized">
+  <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" class="md:hidden p-2 text-dark-900 hover:bg-slate-100 rounded-lg transition-optimized">
     <span id="menu-icon" class="material-symbols-outlined text-2xl">menu</span>
   </button>
 </nav>
+
 <!-- Mobile Dropdown Menu -->
-<div id="mobile-menu" class="menu-closed md:hidden bg-[#f4faff] border-b border-outline-variant/20 px-8 py-4">
-  <div class="flex flex-col gap-4 font-['Newsreader'] font-medium text-lg">
-    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="index.html">Home</a>
-    <a class="text-surface-tint font-bold py-1 border-l-2 border-surface-tint pl-3" href="research.html">Research</a>
-    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="publications.html">Publications</a>
-    <a class="text-[#264653] hover:text-primary py-1 pl-3 transition-optimized" href="contact.html">CV &amp; Contact</a>
+<div id="mobile-menu" class="menu-closed md:hidden bg-white border-b border-slate-200 px-6 py-4">
+  <div class="flex flex-col gap-3 font-medium text-sm">
+    <a class="text-slate-600 hover:text-dark-900 py-1.5 pl-3 transition-optimized" href="index.html">Home</a>
+    <a class="text-brand-600 font-bold py-1.5 border-l-2 border-brand-600 pl-3 bg-brand-50/50 rounded-r" href="research.html">Research</a>
+    <a class="text-slate-600 hover:text-dark-900 py-1.5 pl-3 transition-optimized" href="publications.html">Publications</a>
+    <a class="text-slate-600 hover:text-dark-900 py-1.5 pl-3 transition-optimized" href="contact.html">CV &amp; Contact</a>
   </div>
 </div>
 </header>
 
 <main class="relative">
-<!-- Lattice Background Motif -->
-<div class="absolute inset-0 lattice-bg pointer-events-none z-0"></div>
 
 <!-- Hero Section -->
-<section class="relative z-10 max-w-7xl mx-auto px-8 pt-24 pb-16">
-<div class="max-w-3xl">
-  <h1 class="font-headline text-6xl md:text-8xl text-primary font-bold tracking-tight leading-tight mb-8">
-    Electron-Phonon <span class="italic font-light">Coupling</span> &amp; Beyond
-  </h1>
-  <p class="font-body text-xl text-on-surface-variant leading-relaxed max-w-2xl">
-    My research centers on understanding how charge carriers interact with lattice vibrations in real materials — from first-principles polaron characterization to applying tensor cross interpolation (TCI) for many-body diagrammatic calculations of electron-phonon systems.
-  </p>
-</div>
-</section>
-
-<!-- Research Bento Grid -->
-<section class="relative z-10 max-w-7xl mx-auto px-8 py-12">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-
-  <!-- Project Card 1: CeO₂ Polaron (Large Featured) -->
-  <div class="md:col-span-8 bg-surface-container-low rounded-xl p-10 flex flex-col justify-between group">
-    <div>
-      <div class="flex items-center gap-4 mb-6">
-        <span class="font-label text-xs tracking-widest text-surface-tint border border-surface-tint/20 px-3 py-1 rounded-full">POLARON PHYSICS</span>
-        <span class="font-label text-xs tracking-widest text-on-surface-variant">PH.D. PROJECT</span>
-      </div>
-      <h2 class="font-headline text-4xl font-bold text-primary mb-6">Unveiling Asymmetric Polaron Formation in CeO₂</h2>
-      <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-10 max-w-2xl">
-        This work studied the fundamental physics of polarons in CeO₂, where I found the coexistence of two different polaron types in the same material: electrons form localized Holstein polarons, while holes form delocalized Fröhlich polarons. The results help clarify the microscopic carrier transport mechanisms and the roles of different phonon modes in limiting carrier mobility.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-        <div class="space-y-2">
-          <h4 class="font-label text-[10px] uppercase tracking-tighter text-outline">METHODOLOGY</h4>
-          <p class="font-body font-semibold">DFT+U, Electron-Phonon Coupling</p>
-        </div>
-        <div class="space-y-2">
-          <h4 class="font-label text-[10px] uppercase tracking-tighter text-outline">MATERIAL SYSTEM</h4>
-          <p class="font-body font-semibold">CeO₂ (Ceria)</p>
-        </div>
-      </div>
-    </div>
-    <div class="flex items-center gap-6">
-      <a class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all duration-300" href="publications.html">
-        <span class="material-symbols-outlined text-sm">description</span>
-        View Publication
-      </a>
-    </div>
-  </div>
-
-  <!-- Visualization Side Card -->
-  <div class="md:col-span-4 bg-white rounded-xl overflow-hidden relative flex flex-col">
-    <div class="flex-1 flex items-center justify-center p-4">
-      <img class="w-full h-full object-contain" alt="CeO₂ electron and hole polaron charge density" src="images/project-2.png"/>
-    </div>
-    <div class="p-6 bg-primary/90">
-      <h3 class="font-headline text-xl italic mb-1 text-white">CeO₂ Polarons</h3>
-      <p class="font-body text-xs text-white/80">Holstein vs. Fröhlich polaron coexistence</p>
-    </div>
-  </div>
-
-  <!-- Project Card 2: BiVO₄ -->
-  <div class="md:col-span-6 bg-surface-container-highest rounded-xl p-10">
-    <span class="font-label text-xs tracking-widest text-surface-tint border border-surface-tint/20 px-3 py-1 rounded-full mb-6 inline-block">CRYSTAL SYMMETRY</span>
-    <h2 class="font-headline text-3xl font-bold text-primary mb-4">Crystal Symmetry's Role in Polaron Transport</h2>
-    <p class="font-body text-on-surface-variant leading-relaxed mb-8">
-      This project studied how crystal structure influences polaron behavior by systematically comparing three phases of BiVO₄ (monoclinic scheelite, tetragonal zircon-type, and tetragonal scheelite). Using ab initio calculations, we found that electron polarons consistently form as Holstein type, whereas hole polarons are of the Fröhlich type across all three structures. The analysis of dielectric tensors and Born effective charges revealed the microscopic origins of mobility differences, showing how crystal structure directly modulates polaron properties.
+<section class="pt-16 pb-20 grid-bg border-b border-slate-200/80">
+  <div class="max-w-6xl mx-auto px-6">
+    <span class="text-xs font-mono uppercase tracking-wider text-brand-600 font-semibold block mb-3">Academic Portfolio</span>
+    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dark-900 tracking-tight leading-[1.15] max-w-4xl">
+      Research &amp; Scientific Computing
+    </h1>
+    <p class="mt-6 text-lg text-slate-600 max-w-3xl leading-relaxed">
+      My work bridges first-principles electronic structure methods with modern tensor-network algorithms and high-performance scientific software development to tackle many-body electron–phonon physics.
     </p>
-    <div class="mb-8">
-      <img class="w-full object-contain rounded-lg bg-white p-2" alt="Crystal symmetry and polaron transport in BiVO₄" src="images/project-3.png"/>
-    </div>
-    <div class="flex items-center gap-4">
-      <a href="publications.html" class="bg-primary text-on-primary px-6 py-3 rounded-md font-label text-sm tracking-wide hover:opacity-90 transition-optimized inline-block">View Publication</a>
-    </div>
   </div>
-
-  <!-- Project Card 3: Photoelectrode Design -->
-  <div class="md:col-span-6 bg-surface-container rounded-xl p-10 border-l-4 border-surface-tint">
-    <div class="flex justify-between items-start mb-6">
-      <span class="font-label text-xs tracking-widest text-on-surface-variant">MACRO-MESO MODELING</span>
-      <span class="material-symbols-outlined text-surface-tint">star</span>
-    </div>
-    <h2 class="font-headline text-3xl font-bold text-primary mb-4">Macro-Meso Modeling for Photoelectrode Design</h2>
-    <p class="font-body text-on-surface-variant leading-relaxed mb-8">
-      This project built a continuity equation model fed by first-principles parameters to connect quantum mechanical calculations with device-level performance predictions. Using this approach, I estimated the optimal film thickness for p-type CuFeO₂ and explored the structural optimization of n-type Fe₂O₃ from thin films to nanowire arrays.
-    </p>
-    <ul class="space-y-4 font-body text-sm mb-10">
-      <li class="flex items-start gap-3">
-        <span class="material-symbols-outlined text-surface-tint text-lg">check_circle</span>
-        <span>First-principles parameters → Device-level predictions</span>
-      </li>
-      <li class="flex items-start gap-3">
-        <span class="material-symbols-outlined text-surface-tint text-lg">check_circle</span>
-        <span>Optimized CuFeO₂ film thickness &amp; Fe₂O₃ nanowire design</span>
-      </li>
-    </ul>
-    <div class="mb-8">
-      <img class="w-full h-48 object-contain rounded-lg bg-white p-2" alt="Photoelectrode band diagram — space charge region and continuity equation model" src="images/project-1.png"/>
-    </div>
-  </div>
-
-</div>
 </section>
 
-<!-- CrystalCanvas Software -->
-<section class="relative z-10 max-w-7xl mx-auto px-8 py-12">
-<div class="bg-primary text-on-primary rounded-xl p-10 md:p-16">
-  <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-    <div class="md:col-span-8">
-      <div class="flex items-center gap-4 mb-6">
-        <span class="font-label text-xs tracking-widest text-on-primary-container border border-on-primary-container/30 px-3 py-1 rounded-full">SCIENTIFIC SOFTWARE</span>
-        <span class="font-label text-xs tracking-widest text-on-primary/70">CORE DEVELOPER</span>
-      </div>
-      <h2 class="font-headline text-4xl font-bold mb-6">CrystalCanvas</h2>
-      <p class="font-body text-sm text-on-primary/60 font-['Courier_New'] mb-6">C++ (Eigen/Spglib) · wgpu (WebGPU) · React/TS</p>
-      <p class="font-body text-lg text-on-primary/80 leading-relaxed mb-8 max-w-2xl">
-        An open-source GPU-accelerated scientific visualization and modeling application for crystal structures, volumetric fields, phonons, Wannier models, and reciprocal space — designed for publication-quality figures and DFT/MD preparation.
-      </p>
-      <ul class="space-y-4 font-body text-sm text-on-primary/80 mb-10">
-        <li class="flex items-start gap-3">
-          <span class="material-symbols-outlined text-on-primary-container text-lg">check_circle</span>
-          <span><strong>Physics Kernel:</strong> High-performance C++ engine for Miller index slab cleaving, 230 space group symmetry analysis, and MIC boundary validation.</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="material-symbols-outlined text-on-primary-container text-lg">check_circle</span>
-          <span><strong>Native GPU Rendering:</strong> Hardware-accelerated pipelines for interactive atomistic manipulation, volumetric iso-surfaces, and Brillouin zone paths.</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="material-symbols-outlined text-on-primary-container text-lg">check_circle</span>
-          <span><strong>Ecosystem Interoperability:</strong> Bidirectional file parsers and input generators for VASP, Quantum ESPRESSO, and LAMMPS.</span>
-        </li>
-      </ul>
-      <a href="https://github.com/XiaoJiang-Phy/CrystalCanvas" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-on-primary text-primary px-6 py-3 rounded-md font-label text-sm tracking-wide hover:opacity-90 transition-optimized">
-        <span class="material-symbols-outlined text-sm">terminal</span>
-        GitHub Repository
-      </a>
-    </div>
-    <div class="md:col-span-4 flex flex-col justify-center">
-      <!-- CrystalCanvas Architecture Feature Badge -->
-      <div class="bg-[#001d32] border border-on-primary-container/20 text-on-primary rounded-lg p-6 font-['Courier_New'] text-[11px] leading-relaxed overflow-hidden shadow-2xl">
-        <div class="flex items-center gap-2 mb-4 pb-3 border-b border-white/10">
-          <span class="w-3 h-3 rounded-full bg-red-400/80"></span>
-          <span class="w-3 h-3 rounded-full bg-yellow-400/80"></span>
-          <span class="w-3 h-3 rounded-full bg-green-400/80"></span>
-          <span class="ml-2 text-white/40 text-[10px]">crystal_canvas --gpu</span>
+<!-- Research Areas Section -->
+<div class="max-w-6xl mx-auto px-6 py-20 space-y-24">
+
+  <!-- Area 1: Polaron Many-Body Theory -->
+  <section class="card-modern p-8 md:p-12 rounded-2xl">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-brand-600 bg-brand-50 px-3 py-1 rounded">01 / MANY-BODY PHYSICS</span>
+          <span class="text-xs font-mono text-slate-400">Tensor Networks</span>
         </div>
-        <p class="text-[#62b5f8] mb-2 font-bold font-['Space_Grotesk'] uppercase tracking-wider text-[10px]">── Engine Architecture ──</p>
-        <p class="text-white/80">Render Pipeline: <span class="text-[#58d6f1]">wgpu Compute</span></p>
-        <p class="text-white/80">Symmetry Engine: <span class="text-white">Spglib (C++)</span></p>
-        <p class="text-white/80">Linear Algebra: <span class="text-white">Eigen3 SIMD</span></p>
-        <p class="text-white/30 my-2">···</p>
-        <p class="text-[#62b5f8] mb-2 font-bold font-['Space_Grotesk'] uppercase tracking-wider text-[10px]">── Active Modules ──</p>
-        <p class="text-white/70">✓ Miller Slab Cleaver (hkl)</p>
-        <p class="text-white/70">✓ 3D BZ &amp; High-Symmetry Paths</p>
-        <p class="text-white/70">✓ Volumetric Field Iso-Surface</p>
-        <p class="text-white/70">✓ Exporters: VASP / QE / LAMMPS</p>
-        <p class="text-white/30 my-2">···</p>
-        <p class="text-[#62b5f8] mb-1 font-bold font-['Space_Grotesk'] uppercase tracking-wider text-[10px]">── Performance ──</p>
-        <p class="text-white/70">Frame Latency: <span class="text-green-400 font-bold">&lt; 0.5 ms</span></p>
+        
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-dark-900 tracking-tight">
+          Polaron Many-Body Theory &amp; High-Order Feynman Diagrams
+        </h2>
+        
+        <p class="text-slate-600 text-base leading-relaxed">
+          High-order electron–phonon diagrammatic calculations traditionally suffer from exponential dimensional scaling and sign problems. We introduce <strong class="text-dark-900">Quantics Tensor Cross Interpolation (QTCI)</strong> to represent multi-dimensional vertex corrections in low-rank tensor train formats.
+        </p>
+
+        <ul class="space-y-2.5 text-sm text-slate-700 font-medium">
+          <li class="flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-brand-600 text-lg shrink-0 mt-0.5">check_circle</span>
+            <span>Evaluates 10D+ Feynman integrals with deterministic polynomial scaling</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-brand-600 text-lg shrink-0 mt-0.5">check_circle</span>
+            <span>Achieves up to 2,000,000× parameter compression on benchmark grids</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-brand-600 text-lg shrink-0 mt-0.5">check_circle</span>
+            <span>Extends diagrammatic methods beyond Migdal's approximation to strong coupling</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Natural Color Figure (No Filter) -->
+      <div class="lg:col-span-5">
+        <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
+          <img src="images/project-1.png" alt="Polaron diagrammatics and tensor network compression" class="w-full h-auto object-cover"/>
+          <div class="p-3 bg-white border-t border-slate-100 text-xs text-slate-500 font-mono">
+            Figure 1: High-dimensional TCI integration &amp; polaron self-energy.
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</section>
+  </section>
 
-<!-- PolaronTCISolver Showcase -->
-<section class="relative z-10 max-w-7xl mx-auto px-8 py-12">
-<div class="bg-surface-container-low rounded-xl p-10 md:p-16 border-l-4 border-surface-tint">
-  <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
-    <div class="md:col-span-8">
-      <div class="flex items-center gap-4 mb-6">
-        <span class="font-label text-xs tracking-widest text-surface-tint border border-surface-tint/30 px-3 py-1 rounded-full">SCIENTIFIC SOFTWARE</span>
-        <span class="font-label text-xs tracking-widest text-on-surface-variant">CORE DEVELOPER</span>
-      </div>
-      <h2 class="font-headline text-4xl font-bold text-primary mb-3">PolaronTCISolver</h2>
-      <p class="font-body text-sm text-on-surface-variant/60 font-['Courier_New'] mb-6">C++23 · Eigen · OpenMP · Tensor Train</p>
-      <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8 max-w-2xl">
-        A high-performance Tensor Cross Interpolation (TCI) engine for evaluating high-dimensional integrals and compressing multivariate functions into Tensor Train (TT) format. The library is designed for evaluating polaron Feynman diagrams, but the TCI engine itself is physics-agnostic — any function <em>f</em>&thinsp;:&thinsp;ℤ<sup>N</sup>&thinsp;→&thinsp;ℝ with low Schmidt rank can be decomposed.
-      </p>
-      <ul class="space-y-4 font-body text-sm text-on-surface-variant mb-10">
-        <li class="flex items-start gap-3">
-          <span class="material-symbols-outlined text-surface-tint text-lg">check_circle</span>
-          <span><strong>Zero-Allocation Hot Path:</strong> C++20 Concepts + <code class="text-xs bg-surface-container-high px-1.5 py-0.5 rounded">std::mdspan</code> out-parameter interface — zero <code class="text-xs bg-surface-container-high px-1.5 py-0.5 rounded">new</code>/<code class="text-xs bg-surface-container-high px-1.5 py-0.5 rounded">delete</code> in the solve loop.</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="material-symbols-outlined text-surface-tint text-lg">check_circle</span>
-          <span><strong>CI Recompression:</strong> Cross-interpolation-based ‖·‖<sub>∞</sub> truncation — superior to SVD for sharp features.</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="material-symbols-outlined text-surface-tint text-lg">check_circle</span>
-          <span><strong>Deterministic Global Search:</strong> Halton QMC + fixed-seed MCMC + rook coordinate descent for robust pivot discovery.</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="material-symbols-outlined text-surface-tint text-lg">check_circle</span>
-          <span><strong>Built-in Diagnostics:</strong> Pre-solve entanglement profiler (von Neumann entropy) + post-solve Monte Carlo convergence validator.</span>
-        </li>
-      </ul>
-
-      <!-- Demo stats highlight -->
-      <div class="bg-surface-container-high/60 rounded-lg p-6 mb-10">
-        <p class="font-label text-[10px] uppercase tracking-widest text-outline mb-3">10D Chain-Coupled Lorentzian Demo</p>
-        <div class="grid grid-cols-3 gap-6">
-          <div>
-            <p class="font-headline text-2xl font-bold text-primary">16<sup>10</sup></p>
-            <p class="font-body text-xs text-on-surface-variant">grid points (~1.1 trillion)</p>
-          </div>
-          <div>
-            <p class="font-headline text-2xl font-bold text-surface-tint">530K</p>
-            <p class="font-body text-xs text-on-surface-variant">TT parameters</p>
-          </div>
-          <div>
-            <p class="font-headline text-2xl font-bold text-primary">2M×</p>
-            <p class="font-body text-xs text-on-surface-variant">compression ratio</p>
+  <!-- Area 2: Electron-Phonon Coupling & Symmetry -->
+  <section class="card-modern p-8 md:p-12 rounded-2xl">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-5 order-2 lg:order-1">
+        <!-- Natural Color Figure (No Filter) -->
+        <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
+          <img src="images/project-2.png" alt="Crystal symmetry and polaron hopping pathways" class="w-full h-auto object-cover"/>
+          <div class="p-3 bg-white border-t border-slate-100 text-xs text-slate-500 font-mono">
+            Figure 2: Polaronic charge localization in BiVO₄ and CeO₂ oxides.
           </div>
         </div>
       </div>
 
-      <div class="flex items-center gap-6 flex-wrap">
-        <a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-md font-label text-sm tracking-wide hover:opacity-90 transition-optimized">
-          <span class="material-symbols-outlined text-sm">terminal</span>
-          Showcase Repository
-        </a>
-        <span class="font-body text-xs text-on-surface-variant/60 italic">Full source available upon request for academic collaboration.</span>
-      </div>
-    </div>
-    <div class="md:col-span-4 flex flex-col justify-center">
-      <!-- Stylized terminal output preview -->
-      <div class="bg-inverse-surface text-inverse-on-surface rounded-lg p-6 font-['Courier_New'] text-[11px] leading-relaxed overflow-hidden shadow-lg">
-        <div class="flex items-center gap-2 mb-4 pb-3 border-b border-white/10">
-          <span class="w-3 h-3 rounded-full bg-red-400/80"></span>
-          <span class="w-3 h-3 rounded-full bg-yellow-400/80"></span>
-          <span class="w-3 h-3 rounded-full bg-green-400/80"></span>
-          <span class="ml-2 text-white/40 text-[10px]">demo_tci</span>
+      <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-cyan-600 bg-cyan-50 px-3 py-1 rounded">02 / FIRST-PRINCIPLES</span>
+          <span class="text-xs font-mono text-slate-400">DFT &amp; EPW</span>
         </div>
-        <p class="text-green-400/90 mb-2">─── Entanglement Profiling ───</p>
-        <p class="text-white/70">Max entropy: <span class="text-inverse-primary">0.1684</span></p>
-        <p class="text-white/70">TCI feasible: <span class="text-green-400">✅ Yes</span></p>
-        <p class="text-white/30 my-2">···</p>
-        <p class="text-green-400/90 mb-2">─── TCI Learning ───</p>
-        <p class="text-white/70">Status: <span class="text-green-400">✅ Converged</span></p>
-        <p class="text-white/70">Residual: <span class="text-inverse-primary">9.96e-07</span></p>
-        <p class="text-white/30 my-2">···</p>
-        <p class="text-green-400/90 mb-2">─── TT Structure ───</p>
-        <p class="text-white/70">Compression: <span class="text-inverse-primary font-bold">2,073,611×</span></p>
+        
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-dark-900 tracking-tight">
+          Electron–Phonon Coupling &amp; Crystal Symmetry
+        </h2>
+        
+        <p class="text-slate-600 text-base leading-relaxed">
+          Through systematic DFT+U and electron–phonon coupling simulations on transition-metal oxides (BiVO₄, CeO₂), we explore how local symmetry distortions drive small-polaron formation, anisotropic hopping, and optical absorption signatures.
+        </p>
+
+        <ul class="space-y-2.5 text-sm text-slate-700 font-medium">
+          <li class="flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-cyan-600 text-lg shrink-0 mt-0.5">check_circle</span>
+            <span>Identified asymmetric Fröhlich hole vs Holstein electron polarons in CeO₂ (PCCP 2025)</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-cyan-600 text-lg shrink-0 mt-0.5">check_circle</span>
+            <span>Uncovered multi-phase polaron formation energies across 4 BiVO₄ polymorphs (JPCC 2025)</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-cyan-600 text-lg shrink-0 mt-0.5">check_circle</span>
+            <span>Bridged microscopic polaron hopping barriers with macroscopic carrier mobilities</span>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-</div>
-</section>
+  </section>
 
-<!-- Computational Methodology / Technical Stack -->
-<section class="bg-surface-container-low mt-24 py-24 relative overflow-hidden">
-<div class="max-w-7xl mx-auto px-8 relative z-10">
-  <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-    <div class="max-w-xl">
-      <h2 class="font-headline text-5xl font-bold text-primary mb-4">Skills &amp; Expertise</h2>
-      <p class="font-body text-on-surface-variant">The computational tools and methods supporting my research.</p>
+  <!-- Area 3: Open Source Scientific Software -->
+  <section class="card-modern p-8 md:p-12 rounded-2xl">
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs font-mono font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded">03 / SOFTWARE ENGINEERING</span>
+        <span class="text-xs font-mono text-slate-400">High-Performance Computing</span>
+      </div>
+      <h2 class="font-heading text-2xl sm:text-3xl font-bold text-dark-900 tracking-tight">
+        Open-Source Scientific Software
+      </h2>
+      <p class="text-slate-600 text-base mt-2 max-w-3xl">
+        Developing modern, production-grade numerical libraries and visualization tools with rigorous validation and zero-allocation execution.
+      </p>
     </div>
-  </div>
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
-    <div class="space-y-4">
-      <h3 class="font-label text-sm font-bold border-b border-outline-variant/30 pb-2">PROGRAMMING</h3>
-      <ul class="font-body text-on-surface-variant space-y-2">
-        <li>Python (NumPy, SciPy)</li>
-        <li>C++ (C++23, Eigen)</li>
-        <li>Julia</li>
-      </ul>
-    </div>
-    <div class="space-y-4">
-      <h3 class="font-label text-sm font-bold border-b border-outline-variant/30 pb-2">SCIENTIFIC SOFTWARE</h3>
-      <ul class="font-body text-on-surface-variant space-y-2">
-        <li>Quantum ESPRESSO</li>
-        <li>VASP</li>
-        <li>Wannier90</li>
-        <li>EPW</li>
-        <li><a href="https://github.com/TRIQS/dft_tools" target="_blank" rel="noopener noreferrer" class="text-surface-tint hover:underline">TRIQS/dft_tools</a> (contributor)</li>
-      </ul>
-    </div>
-    <div class="space-y-4">
-      <h3 class="font-label text-sm font-bold border-b border-outline-variant/30 pb-2">METHODS</h3>
-      <ul class="font-body text-on-surface-variant space-y-2">
-        <li>Density Functional Theory</li>
-        <li>Electron-Phonon Coupling</li>
-        <li>Tensor Cross Interpolation</li>
-        <li>Polaron Theory</li>
-      </ul>
-    </div>
-    <div class="space-y-4">
-      <h3 class="font-label text-sm font-bold border-b border-outline-variant/30 pb-2">LANGUAGES</h3>
-      <ul class="font-body text-on-surface-variant space-y-2">
-        <li>Chinese (Native)</li>
-        <li>English (Proficient)</li>
-      </ul>
-    </div>
-  </div>
-</div>
-</section>
 
-<!-- Future Research Interests -->
-<section class="relative z-10 max-w-7xl mx-auto px-8 py-32">
-<div class="max-w-3xl">
-  <span class="font-label text-xs uppercase tracking-[0.3em] text-surface-tint mb-4 block">Looking Ahead</span>
-  <h2 class="font-headline text-5xl text-primary mb-12">Future Research Interests</h2>
-  <div class="space-y-12">
-    <div class="border-l-2 border-surface-tint pl-8">
-      <h3 class="font-headline text-2xl text-primary mb-4">Electron-Phonon Coupling in Strongly Correlated Systems</h3>
-      <p class="font-body text-on-surface-variant leading-relaxed">
-        I hope to explore first-principles approaches for modeling EPC in strongly correlated materials. The interplay between strong electron-electron repulsion and lattice dynamics is relevant to understanding metal-insulator transitions and unconventional superconductivity.
-      </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Software 1: PolaronTCISolver -->
+      <div class="p-6 rounded-xl border border-slate-200 bg-[#fafafa] flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-4">
+            <span class="px-2.5 py-1 bg-brand-50 text-brand-700 text-xs font-mono rounded font-medium">C++23 · MPI · OpenMP</span>
+            <span class="text-xs text-slate-400 font-mono">v1.2.0</span>
+          </div>
+          
+          <h3 class="font-heading text-xl font-bold text-dark-900 mb-2">PolaronTCISolver</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            A high-performance C++23 solver implementing Quantics Tensor Cross Interpolation for high-dimensional electron-phonon diagrams with controlled rank truncation.
+          </p>
+
+          <!-- Terminal Preview Box -->
+          <div class="bg-dark-900 text-slate-200 p-4 rounded-xl font-mono text-xs mb-6 space-y-1.5 border border-slate-800">
+            <div class="text-slate-500 text-[10px] pb-1 border-b border-slate-800 flex justify-between">
+              <span>tci_solver --bench=polaron_10d</span>
+              <span class="text-emerald-400">PASS</span>
+            </div>
+            <p class="text-slate-400">Grid: <span class="text-white">16<sup>10</sup> (1,099,511,627,776 pts)</span></p>
+            <p class="text-slate-400">TT Parameters: <span class="text-brand-500 font-bold">530,240</span></p>
+            <p class="text-slate-400">Compression: <span class="text-emerald-400 font-bold">2,073,611×</span></p>
+            <p class="text-slate-400">Residual: <span class="text-cyan-400">9.96e-07</span></p>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 flex justify-between items-center">
+          <a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 hover:text-brand-700">
+            <span class="material-symbols-outlined text-sm">code</span>
+            Showcase Repository ↗
+          </a>
+          <span class="text-xs font-mono text-slate-400">Core Developer</span>
+        </div>
+      </div>
+
+      <!-- Software 2: CrystalCanvas -->
+      <div class="p-6 rounded-xl border border-slate-200 bg-[#fafafa] flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-4">
+            <span class="px-2.5 py-1 bg-cyan-50 text-cyan-700 text-xs font-mono rounded font-medium">WebGPU · C++ · Spglib</span>
+            <span class="text-xs text-slate-400 font-mono">v0.9.4</span>
+          </div>
+          
+          <h3 class="font-heading text-xl font-bold text-dark-900 mb-2">CrystalCanvas</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Cross-platform crystal visualization and manipulation engine utilizing modern hardware acceleration for crystallographic modeling, Miller slab cleaving, and DFT workflow preparation.
+          </p>
+
+          <!-- Module Preview Box -->
+          <div class="bg-dark-900 text-slate-200 p-4 rounded-xl font-mono text-xs mb-6 space-y-2 border border-slate-800">
+            <div class="text-slate-500 text-[10px] pb-1 border-b border-slate-800 flex justify-between">
+              <span>crystal_canvas --engine=wgpu</span>
+              <span class="text-cyan-400">&lt; 0.5 ms Latency</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2 text-[11px]">
+              <div class="text-slate-300 flex items-center gap-1">
+                <span class="text-emerald-400">✓</span> Spglib Symmetry
+              </div>
+              <div class="text-slate-300 flex items-center gap-1">
+                <span class="text-emerald-400">✓</span> Eigen3 SIMD
+              </div>
+              <div class="text-slate-300 flex items-center gap-1">
+                <span class="text-emerald-400">✓</span> Slab Cleaver
+              </div>
+              <div class="text-slate-300 flex items-center gap-1">
+                <span class="text-emerald-400">✓</span> 3D BZ Explorer
+              </div>
+            </div>
+            <p class="text-[10px] text-slate-400 pt-1 border-t border-slate-800/80">Exporters: VASP, Quantum ESPRESSO, LAMMPS</p>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 flex justify-between items-center">
+          <a href="https://github.com/XiaoJiang-Phy/CrystalCanvas" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 hover:text-brand-700">
+            <span class="material-symbols-outlined text-sm">open_in_new</span>
+            GitHub Repository ↗
+          </a>
+          <span class="text-xs font-mono text-slate-400">Core Developer</span>
+        </div>
+      </div>
+
     </div>
-    <div class="border-l-2 border-primary pl-8">
-      <h3 class="font-headline text-2xl text-primary mb-4">Computational Design of Superconducting Materials</h3>
-      <p class="font-body text-on-surface-variant leading-relaxed">
-        I am interested in studying phonon-mediated pairing mechanisms in different material families, including conventional superconductors under high pressure and unconventional systems, to better understand the conditions for higher transition temperatures.
-      </p>
-    </div>
-    <div class="border-l-2 border-outline-variant pl-8">
-      <h3 class="font-headline text-2xl text-primary mb-4">Many-Body Methods for Polaron Systems</h3>
-      <p class="font-body text-on-surface-variant leading-relaxed">
-        Building on recent advances in Quantics Tensor Cross Interpolation, I aim to extend TCI-based diagrammatic approaches to evaluate high-order Feynman diagrams for polaron systems in realistic multi-orbital materials, moving beyond model Hamiltonians toward first-principles accuracy.
-      </p>
-    </div>
-  </div>
+  </section>
+
 </div>
-</section>
 
 </main>
 
 <!-- Footer -->
-<footer class="w-full border-t border-[#111d23]/10">
-<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-7xl mx-auto gap-8">
-  <div class="flex flex-col gap-2">
-    <div class="font-['Newsreader'] text-lg italic text-[#264653]">Xiao Jiang (江筱)</div>
-    <p class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-[#264653]/60">© 2026 Xiao Jiang (江筱). All rights reserved.</p>
+<footer class="bg-white border-t border-slate-200 py-12 text-sm text-slate-500">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div class="font-heading font-semibold text-dark-900">
+      Xiao Jiang (江筱) · 2026
+    </div>
+    <div class="flex flex-wrap justify-center gap-8 font-mono text-xs">
+      <a href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-optimized">Google Scholar</a>
+      <a href="https://github.com/XiaoJiang-Phy" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 transition-optimized">GitHub</a>
+      <a href="contact.html" class="hover:text-brand-600 transition-optimized">Contact</a>
+    </div>
+    <div class="text-xs text-slate-400 font-mono">
+      © 2026 All rights reserved.
+    </div>
   </div>
-  <div class="flex gap-12 font-['Space_Grotesk'] text-xs uppercase tracking-widest">
-    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://scholar.google.com/citations?user=fpOSFJsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="https://github.com/XiaoJiang-Phy" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a class="text-[#264653]/60 hover:text-surface-tint transition-optimized" href="contact.html">Contact</a>
-  </div>
-</div>
 </footer>
 
 <script>

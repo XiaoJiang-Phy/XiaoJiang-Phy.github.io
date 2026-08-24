@@ -1,49 +1,50 @@
 /*
-  Design System: "The Observed Lattice"
-  Academic Research Portfolio — Condensed Matter Physics
-  Fonts: Newsreader (Display) · Manrope (Body) · Space Grotesk (Labels)
+  Design System: "Quantum Modernist"
+  Academic Research Portfolio — Condensed Matter Physics & Scientific Computing
+  Fonts: Plus Jakarta Sans (Headings) · Inter (Body & UI) · JetBrains Mono (Code/Labels)
   Framework: Tailwind CSS CDN
 */
 
 /* Material Symbols icon tuning */
 .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 24;
     vertical-align: middle;
 }
 
 body {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #fafafa;
+    color: #0f172a;
 }
 
-/* Lattice dot-pattern background motif — 5% opacity, fixed behind content */
-.lattice-bg {
-    background-image: radial-gradient(circle, #c1c7cb 1px, transparent 1px);
-    background-size: 40px 40px;
-    opacity: 0.1;
+/* Subtle Modern Grid Background */
+.grid-bg {
+    background-size: 32px 32px;
+    background-image: linear-gradient(to right, rgba(226, 232, 240, 0.6) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(226, 232, 240, 0.6) 1px, transparent 1px);
 }
 
-/* Minimal hover/color transitions for a controlled, editorial feel */
+/* Smooth Transitions */
 .transition-optimized {
-    transition: color 0.15s ease-in-out,
-                background-color 0.15s ease-in-out,
-                border-color 0.15s ease-in-out,
-                transform 0.15s ease-in-out;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Selection color override */
+/* Modern Selection Color */
 ::selection {
-    background-color: #00456d;
-    color: #cde5ff;
+    background-color: #2563eb;
+    color: #ffffff;
 }
 
-/* Ambient shadow for floating cards (tinted with on-surface, NOT pure black) */
-.card-float {
-    box-shadow: 0 20px 40px rgba(17, 29, 35, 0.06);
+/* Card Elevation & Glow */
+.card-modern {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* Profile image treatment */
-.profile-treatment {
-    opacity: 0.95;
+.card-modern:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
 }
 
 /* Abstract toggle (publications page) */
@@ -77,41 +78,44 @@ details.pub-bibtex .bibtex-toggle::before {
 }
 
 .bibtex-box {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    font-size: 0.78rem;
-    line-height: 1.5;
-    background-color: #111d23;
-    color: #cde5ff;
-    border-radius: 0.5rem;
-    padding: 1rem;
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.76rem;
+    line-height: 1.55;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    border: 1px solid #1e293b;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
     position: relative;
     overflow-x: auto;
 }
 
 .copy-bibtex-btn {
     position: absolute;
-    top: 0.6rem;
-    right: 0.6rem;
-    background: rgba(255, 255, 255, 0.12);
-    color: #e6f3fb;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f8fafc;
     font-size: 0.7rem;
-    padding: 0.25rem 0.6rem;
-    border-radius: 0.25rem;
-    font-family: 'Space Grotesk', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-weight: 500;
+    padding: 0.3rem 0.65rem;
+    border-radius: 0.375rem;
+    font-family: 'JetBrains Mono', monospace;
     display: inline-flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.35rem;
     cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     transition: all 0.15s ease-in-out;
 }
 .copy-bibtex-btn:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
     color: #ffffff;
 }
 .copy-bibtex-btn.copied {
-    background: #006399;
+    background: #2563eb;
+    border-color: #3b82f6;
     color: #ffffff;
 }
 
@@ -126,7 +130,7 @@ details.pub-bibtex .bibtex-toggle::before {
     overflow: hidden;
 }
 #mobile-menu.menu-open {
-    max-height: 320px;
+    max-height: 350px;
     opacity: 1;
     pointer-events: auto;
 }

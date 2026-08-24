@@ -4,12 +4,12 @@ Personal academic website hosted on [GitHub Pages](https://xiaojiang-phy.github.
 
 ## Design
 
-The site follows an editorial design system called **"The Observed Lattice"** — a minimal, typographically driven layout inspired by condensed matter physics concepts (lattice dot-patterns, crystallographic motifs).
+The site follows a cutting-edge scientific computing aesthetic called **"Quantum Modernist"** — a minimalist, high-precision layout inspired by modern theoretical & computational physics laboratories.
 
-- **Typography**: [Newsreader](https://fonts.google.com/specimen/Newsreader) (display/headlines), [Manrope](https://fonts.google.com/specimen/Manrope) (body), [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) (labels/UI).
-- **Color System**: Material Design 3 tokens — Deep Orbital Blue (`#002e4b`), Surface Tint (`#006399`), and a full surface/container hierarchy.
-- **Interactivity**: Lightweight mobile navigation drawer, interactive abstract toggles, 1-click BibTeX citation copying, ambient card shadows, and subtle hover transitions.
-- **Responsive & SEO**: Fully responsive grid layouts (mobile navigation drawer + 12-column desktop grid), custom quantum lattice SVG favicon, Open Graph & Twitter Card social meta tags.
+- **Typography**: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) (display/headlines), [Inter](https://fonts.google.com/specimen/Inter) (body/navigation), [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) (code, mathematical parameters, labels/UI).
+- **Color System**: Clean pure white background (`#fafafa` / `#ffffff`), Deep Slate Dark (`#0f172a`), Electric Blue (`#2563eb`), and Quantum Cyan (`#06b6d4`).
+- **Interactivity**: Lightweight mobile navigation drawer, interactive abstract toggles, 1-click BibTeX citation copying, ambient card hover elevations, and zero-dependency vanilla JavaScript.
+- **Responsive & SEO**: Fully responsive layouts, custom quantum lattice SVG favicon, Open Graph & Twitter Card social meta tags.
 
 ## Tech Stack
 
