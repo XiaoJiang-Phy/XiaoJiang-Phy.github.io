@@ -238,32 +238,38 @@ tailwind.config = {
       <div class="p-6 rounded-xl border border-slate-200 bg-[#fafafa] flex flex-col justify-between">
         <div>
           <div class="flex justify-between items-center mb-4">
-            <span class="px-2.5 py-1 bg-brand-50 text-brand-700 text-xs font-mono rounded font-medium">C++23 · MPI · OpenMP</span>
-            <span class="text-xs text-slate-400 font-mono">v1.2.0</span>
+            <span class="px-2.5 py-1 bg-brand-50 text-brand-700 text-xs font-mono rounded font-medium">C++23 · Eigen3 · OpenMP</span>
+            <span class="text-xs text-slate-400 font-mono">v0.5.0</span>
           </div>
           
           <h3 class="font-heading text-xl font-bold text-dark-900 mb-2">PolaronTCISolver</h3>
           <p class="text-slate-600 text-sm leading-relaxed mb-6">
-            A high-performance C++23 solver implementing Quantics Tensor Cross Interpolation for high-dimensional electron-phonon diagrams with controlled rank truncation.
+            A C++23 Tensor Cross Interpolation library for high-dimensional electron–phonon diagram kernels, with explicit numerical diagnostics and independent-reference workflows.
           </p>
 
-          <!-- Terminal Preview Box -->
-          <div class="bg-dark-900 text-slate-200 p-4 rounded-xl font-mono text-xs mb-6 space-y-1.5 border border-slate-800">
-            <div class="text-slate-500 text-[10px] pb-1 border-b border-slate-800 flex justify-between">
-              <span>tci_solver --bench=polaron_10d</span>
-              <span class="text-emerald-400">PASS</span>
+          <figure class="mb-4 rounded-xl overflow-hidden border border-slate-200 bg-white">
+            <img src="images/polaron-tci-topology-storage.svg" alt="Topology-dependent parameter storage in a fixed six-dimensional TCI benchmark" class="w-full h-auto"/>
+            <figcaption class="px-3 py-2 bg-slate-50 border-t border-slate-100 text-[11px] text-slate-500 leading-relaxed">
+              Successful second-order single-orbital Holstein toy-model configurations at a fixed Nτ = N<sub>k</sub> = 16 grid. Storage factors refer to logical entries divided by TT parameters.
+            </figcaption>
+          </figure>
+
+          <div class="bg-dark-900 text-slate-200 p-3.5 rounded-xl font-mono text-xs mb-6 border border-slate-800">
+            <div class="text-slate-500 text-[10px] pb-1.5 border-b border-slate-800 flex justify-between">
+              <span>reference validation · first-order bare Rainbow</span>
+              <span class="text-emerald-400">DISCRETE AGREEMENT</span>
             </div>
-            <p class="text-slate-400">Grid: <span class="text-white">16<sup>10</sup> (1,099,511,627,776 pts)</span></p>
-            <p class="text-slate-400">TT Parameters: <span class="text-brand-500 font-bold">530,240</span></p>
-            <p class="text-slate-400">Compression: <span class="text-emerald-400 font-bold">2,073,611×</span></p>
-            <p class="text-slate-400">Residual: <span class="text-cyan-400">9.96e-07</span></p>
+            <div class="pt-2 flex justify-between items-baseline gap-3">
+              <span class="text-slate-400">TCI vs. exhaustive 64² grid</span>
+              <span class="text-cyan-300 font-semibold whitespace-nowrap">ε<sub>rel</sub> = 8.26e−15</span>
+            </div>
           </div>
         </div>
 
         <div class="pt-4 border-t border-slate-200 flex justify-between items-center">
-          <a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver-Showcase" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 hover:text-brand-700">
+          <a href="https://github.com/XiaoJiang-Phy/PolaronTCISolver" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 hover:text-brand-700">
             <span class="material-symbols-outlined text-sm">code</span>
-            Showcase Repository ↗
+            GitHub Repository ↗
           </a>
           <span class="text-xs font-mono text-slate-400">Core Developer</span>
         </div>
